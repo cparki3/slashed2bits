@@ -178,14 +178,12 @@
      <None Include="Assets\2DDL\Shaders\OffsetShader.shader" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_timeline_stream_progress_track.xml" />
      <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_social_topbar.xml" />
-     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\SpriteMask\Resources\ClearStencil.shader" />
      <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_endscreen.xml" />
      <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_action_list.xml" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Circle.shader" />
      <None Include="Assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
      <None Include="Assets\Plugins\Android\res\values\strings.xml" />
-     <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
      <None Include="Assets\SpriteMask\Resources\SpriteMask.shader" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_microphone_bg.xml" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_browser_button_share.xml" />
@@ -196,10 +194,8 @@
      <None Include="Assets\Plugins\Android\everyplay\res\values-ko\everyplay_strings.xml" />
      <None Include="Assets\Plugins\Android\everyplay\AndroidManifest.xml" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Texture.shader" />
-     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_splashscreen.xml" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_control_button.xml" />
-     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Blinds.shader" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_editor_trimmer_handle.xml" />
      <None Include="Assets\2DDL\Shaders\StencilMask.shader" />
@@ -237,7 +233,6 @@
      <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_facecam.xml" />
      <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_timeline.xml" />
      <None Include="Assets\SpriteMask\Resources\SpriteDefault.shader" />
-     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
      <None Include="Assets\Plugins\Android\everyplay\res\values\everyplay_attrs.xml" />
      <None Include="Assets\JMO Assets\Cartoon FX\CartoonFX2 Readme.txt" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_facecam_bg.xml" />
@@ -246,7 +241,6 @@
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_header_install_button.xml" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_topbar_closebutton.xml" />
      <None Include="Assets\Plugins\Everyplay\Helpers\Shaders\EveryplayCrossfade.shader" />
-     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_button_blue.xml" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Fade.shader" />
      <None Include="Assets\Plugins\Android\everyplay\proguard-project.txt" />
