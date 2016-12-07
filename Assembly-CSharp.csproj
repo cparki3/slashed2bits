@@ -198,6 +198,7 @@
      <Compile Include="Assets\ootii\MessageDispatcher\Demos\Scenes\ObjectEx.cs" />
      <Compile Include="Assets\ootii\MessageDispatcher\Demos\Scenes\Sample.cs" />
      <Compile Include="Assets\ootii\MessageDispatcher\Demos\Scenes\UI.cs" />
+     <Compile Include="Assets\ventTracker.cs" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_buttonbar_button.xml" />
      <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_slimprogressbar.xml" />
      <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_microphone_editor.xml" />
