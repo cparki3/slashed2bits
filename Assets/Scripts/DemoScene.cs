@@ -181,7 +181,7 @@ public class DemoScene : MonoBehaviour
 
 		canInterract = false;
 		//Debug.Log( "onTriggerExitEvent: " + col.gameObject.name );
-		col.gameObject.SendMessage("hideHighlight");
+		col.gameObject.SendMessage("hideHighlight", null, SendMessageOptions.DontRequireReceiver);
 	}
 
 	#endregion

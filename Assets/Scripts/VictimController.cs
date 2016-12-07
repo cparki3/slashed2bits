@@ -6,7 +6,6 @@ using UnityEngine.UI;
 using com.ootii.Utilities.Debug;
 using System;
 using Rewired;
-using DynamicLight2D;
 
 public class VictimController : MonoBehaviour {
 
@@ -21,8 +20,7 @@ public class VictimController : MonoBehaviour {
 
 	//victim sight definitions
 	[Header("Victim Sight")]
-	public DynamicLight victimSight;
-	public GameObject sightContainer;
+	//public GameObject sightContainer;
 	public MeshRenderer visionMesh;
 	public float alertVisionDistance = 1.0f;
 	public Transform startSight;
@@ -158,11 +156,11 @@ public class VictimController : MonoBehaviour {
 		if (normalizedHorizontalSpeed > 0) {
 			victimImage.transform.localScale = new Vector2 (-1, 1);
 			normalizedHorizontalSpeed = walkSpeed * -1;
-			sightContainer.transform.eulerAngles = visionLeft;
+			//sightContainer.transform.eulerAngles = visionLeft;
 		} else {
 			victimImage.transform.localScale = new Vector2 (1, 1);
 			normalizedHorizontalSpeed = walkSpeed;
-			sightContainer.transform.eulerAngles = visionRight;
+			//sightContainer.transform.eulerAngles = visionRight;
 		}
 		hitWall = false;
 	}
@@ -217,7 +215,7 @@ public class VictimController : MonoBehaviour {
 	{
 		if (!isDead && canKill) {
 			victimCollider.enabled = false;
-			sightContainer.SetActive (false);
+			//sightContainer.SetActive (false);
 			isDead = true;
 			canKill = false;
 			vicSprite.color = Color.white;
