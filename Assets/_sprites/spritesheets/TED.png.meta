@@ -1,0 +1,1057 @@
+fileFormatVersion: 2
+guid: 83dd66b64e261174bb946aad138d406c
+timeCreated: 1480125300
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Ted_Attack_A_01
+    21300002: Ted_Attack_A_02
+    21300004: Ted_Attack_A_03
+    21300006: Ted_Attack_A_04
+    21300008: Ted_Attack_A_05
+    21300010: Ted_Attack_A_06
+    21300012: Ted_Attack_A_07
+    21300014: Ted_Attack_A_08
+    21300016: Ted_Attack_A_09
+    21300018: Ted_Attack_A_10
+    21300020: Ted_Attack_A_11
+    21300022: Ted_Attack_A_12
+    21300024: Ted_Attack_A_13
+    21300026: Ted_Attack_A_14
+    21300028: Ted_Attack_A_15
+    21300030: Ted_Attack_A_16
+    21300032: Ted_Attack_B_01
+    21300034: Ted_Attack_B_02
+    21300036: Ted_Attack_B_03
+    21300038: Ted_Attack_B_04
+    21300040: Ted_Attack_B_05
+    21300042: Ted_Attack_B_06
+    21300044: Ted_Attack_B_07
+    21300046: Ted_Attack_B_08
+    21300048: Ted_Attack_B_09
+    21300050: Ted_Attack_B_10
+    21300052: Ted_Attack_B_11
+    21300054: Ted_Attack_B_12
+    21300056: Ted_Attack_B_13
+    21300058: Ted_Attack_B_14
+    21300060: Ted_Attack_B_15
+    21300062: Ted_Attack_B_16
+    21300064: Ted_Attack_B_17
+    21300066: Ted_Attack_B_18
+    21300068: Ted_Attack_B_19
+    21300070: Ted_Attack_B_20
+    21300072: Ted_Attack_B_21
+    21300074: Ted_Blink_01
+    21300076: Ted_Death_A_01
+    21300078: Ted_Death_A_02
+    21300080: Ted_Death_A_03
+    21300082: Ted_Death_A_04
+    21300084: Ted_Death_A_05
+    21300086: Ted_Death_A_06
+    21300088: Ted_Death_A_07
+    21300090: Ted_Death_A_08
+    21300092: Ted_Death_A_09
+    21300094: Ted_Death_A_10
+    21300096: Ted_Death_A_11
+    21300098: Ted_Death_A_12
+    21300100: Ted_Death_A_13
+    21300102: Ted_Death_A_14
+    21300104: Ted_Death_A_15
+    21300106: Ted_Death_A_16
+    21300108: Ted_Death_A_17
+    21300110: Ted_Death_A_18
+    21300112: Ted_Death_A_19
+    21300114: Ted_Death_A_20
+    21300116: Ted_Death_A_21
+    21300118: Ted_Death_A_22
+    21300120: Ted_Death_A_23
+    21300122: Ted_Idol_01
+    21300124: Ted_Walk_01
+    21300126: Ted_Walk_02
+    21300128: Ted_Walk_03
+    21300130: Ted_Walk_04
+    21300132: Ted_Walk_05
+    21300134: Ted_Walk_06
+    21300136: Ted_Walk_07
+    21300138: Ted_Walk_08
+    21300140: Ted_Walk_09
+    21300142: Ted_Walk_10
+    21300144: Ted_Walk_11
+    21300146: Ted_Walk_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -2
+  maxTextureSize: 256
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Ted_Attack_A_01
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 38
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_A_02
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 6
+        width: 26
+        height: 30
+      alignment: 9
+      pivot: {x: 0.61538464, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_A_03
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 69
+        width: 27
+        height: 30
+      alignment: 9
+      pivot: {x: 0.7037037, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_A_04
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 69
+        width: 27
+        height: 30
+      alignment: 9
+      pivot: {x: 0.7037037, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_A_05
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 70
+        width: 29
+        height: 32
+      alignment: 9
+      pivot: {x: 0.37931034, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_A_06
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 116
+        width: 29
+        height: 37
+      alignment: 9
+      pivot: {x: 0.27586207, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_A_07
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 116
+        width: 29
+        height: 37
+      alignment: 9
+      pivot: {x: 0.27586207, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_A_08
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 97
+        width: 29
+        height: 37
+      alignment: 9
+      pivot: {x: 0.27586207, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_A_09
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 94
+        width: 29
+        height: 37
+      alignment: 9
+      pivot: {x: 0.27586207, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_A_10
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 78
+        width: 29
+        height: 37
+      alignment: 9
+      pivot: {x: 0.27586207, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_A_11
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 78
+        width: 29
+        height: 37
+      alignment: 9
+      pivot: {x: 0.27586207, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_A_12
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 78
+        width: 29
+        height: 37
+      alignment: 9
+      pivot: {x: 0.27586207, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_A_13
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 35
+        width: 26
+        height: 32
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_A_14
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 46
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_A_15
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 46
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_A_16
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 46
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_B_01
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 38
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_B_02
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 101
+        width: 31
+        height: 30
+      alignment: 9
+      pivot: {x: 0.516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_B_03
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 101
+        width: 31
+        height: 30
+      alignment: 9
+      pivot: {x: 0.516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_B_04
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 26
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_B_05
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 26
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_B_06
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 222
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4848485, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 32}
+        - {x: -16, y: 27}
+        - {x: -16, y: 2}
+        - {x: -10, y: 0}
+        - {x: 16, y: 0}
+        - {x: 17, y: 1}
+        - {x: 17, y: 28}
+        - {x: 10, y: 32}
+    - name: Ted_Attack_B_07
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 222
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4848485, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 32}
+        - {x: -16, y: 27}
+        - {x: -16, y: 2}
+        - {x: -10, y: 0}
+        - {x: 16, y: 0}
+        - {x: 17, y: 1}
+        - {x: 17, y: 28}
+        - {x: 10, y: 32}
+    - name: Ted_Attack_B_08
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 155
+        width: 31
+        height: 33
+      alignment: 9
+      pivot: {x: 0.41935483, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_B_09
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 155
+        width: 31
+        height: 33
+      alignment: 9
+      pivot: {x: 0.41935483, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_B_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 219
+        width: 45
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5777778, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.999998, y: 35}
+        - {x: -17.000002, y: 35}
+        - {x: -26.000002, y: 20}
+        - {x: -26.000002, y: 0}
+        - {x: 16.999998, y: 0}
+        - {x: 18.999998, y: 3}
+        - {x: 18.999998, y: 16}
+        - {x: 14.999998, y: 34}
+    - name: Ted_Attack_B_11
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 219
+        width: 45
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5777778, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.999998, y: 35}
+        - {x: -17.000002, y: 35}
+        - {x: -26.000002, y: 20}
+        - {x: -26.000002, y: 0}
+        - {x: 16.999998, y: 0}
+        - {x: 18.999998, y: 3}
+        - {x: 18.999998, y: 16}
+        - {x: 14.999998, y: 34}
+    - name: Ted_Attack_B_12
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 215
+        width: 41
+        height: 39
+      alignment: 9
+      pivot: {x: 0.68292683, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 39}
+        - {x: -16, y: 33}
+        - {x: -14, y: 30}
+        - {x: -28, y: 13}
+        - {x: -28, y: 0}
+        - {x: 10, y: 0}
+        - {x: 13, y: 17}
+        - {x: 13, y: 36}
+        - {x: 9, y: 39}
+    - name: Ted_Attack_B_13
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 215
+        width: 41
+        height: 39
+      alignment: 9
+      pivot: {x: 0.68292683, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 39}
+        - {x: -16, y: 33}
+        - {x: -14, y: 30}
+        - {x: -28, y: 13}
+        - {x: -28, y: 0}
+        - {x: 10, y: 0}
+        - {x: 13, y: 17}
+        - {x: 13, y: 36}
+        - {x: 9, y: 39}
+    - name: Ted_Attack_B_14
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 216
+        width: 43
+        height: 38
+      alignment: 9
+      pivot: {x: 0.55813956, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 28}
+        - {x: -24, y: 14}
+        - {x: -24, y: 0}
+        - {x: 15, y: 0}
+        - {x: 19, y: 1}
+        - {x: 19, y: 28}
+      - - {x: -8, y: 38}
+        - {x: -15, y: 32}
+        - {x: -15, y: 31}
+        - {x: -12, y: 28}
+        - {x: 12, y: 28}
+        - {x: 15, y: 29}
+        - {x: 15, y: 33}
+        - {x: 10, y: 38}
+    - name: Ted_Attack_B_15
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 216
+        width: 43
+        height: 38
+      alignment: 9
+      pivot: {x: 0.55813956, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 28}
+        - {x: -24, y: 14}
+        - {x: -24, y: 0}
+        - {x: 15, y: 0}
+        - {x: 19, y: 1}
+        - {x: 19, y: 28}
+      - - {x: -8, y: 38}
+        - {x: -15, y: 32}
+        - {x: -15, y: 31}
+        - {x: -12, y: 28}
+        - {x: 12, y: 28}
+        - {x: 15, y: 29}
+        - {x: 15, y: 33}
+        - {x: 10, y: 38}
+    - name: Ted_Attack_B_16
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 136
+        width: 31
+        height: 33
+      alignment: 9
+      pivot: {x: 0.41935483, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_B_17
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 136
+        width: 31
+        height: 33
+      alignment: 9
+      pivot: {x: 0.41935483, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_B_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 188
+        width: 42
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5952381, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_B_19
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 188
+        width: 42
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5952381, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_B_20
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 190
+        width: 33
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6060606, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Attack_B_21
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 189
+        width: 32
+        height: 30
+      alignment: 9
+      pivot: {x: 0.59375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Blink_01
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 183
+        width: 15
+        height: 5
+      alignment: 9
+      pivot: {x: 0.46666667, y: -3.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_01
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 38
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_02
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 224
+        width: 40
+        height: 30
+      alignment: 9
+      pivot: {x: 0.7, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_03
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 192
+        width: 40
+        height: 30
+      alignment: 9
+      pivot: {x: 0.725, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_04
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 154
+        width: 41
+        height: 32
+      alignment: 9
+      pivot: {x: 0.73170733, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 32}
+        - {x: -30, y: 17}
+        - {x: -30, y: 0}
+        - {x: 9, y: 0}
+        - {x: 11, y: 4}
+        - {x: 11, y: 26}
+        - {x: 4, y: 32}
+    - name: Ted_Death_A_05
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 181
+        width: 41
+        height: 33
+      alignment: 9
+      pivot: {x: 0.73170733, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 3}
+        - {x: -30, y: 0}
+        - {x: -20, y: 0}
+        - {x: -20, y: 3}
+        - {x: -21, y: 5}
+        - {x: -25, y: 6}
+      - - {x: -16, y: 33}
+        - {x: -20, y: 28}
+        - {x: -22, y: 10}
+        - {x: -22, y: 2}
+        - {x: -16, y: 0}
+        - {x: 11, y: 0}
+        - {x: 11, y: 32}
+        - {x: 6, y: 33}
+    - name: Ted_Death_A_06
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 221
+        width: 40
+        height: 33
+      alignment: 9
+      pivot: {x: 0.725, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 0}
+        - {x: -23, y: 0}
+        - {x: -23, y: 2}
+        - {x: -25, y: 4}
+        - {x: -29, y: 3}
+      - - {x: -16, y: 33}
+        - {x: -19, y: 28}
+        - {x: -22, y: 10}
+        - {x: -22, y: 2}
+        - {x: -15, y: 0}
+        - {x: 11, y: 0}
+        - {x: 11, y: 32}
+        - {x: 6, y: 33}
+    - name: Ted_Death_A_07
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 133
+        width: 31
+        height: 33
+      alignment: 9
+      pivot: {x: 0.6451613, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_08
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 117
+        width: 31
+        height: 33
+      alignment: 9
+      pivot: {x: 0.6451613, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_09
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 104
+        width: 31
+        height: 33
+      alignment: 9
+      pivot: {x: 0.6451613, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_10
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 104
+        width: 31
+        height: 33
+      alignment: 9
+      pivot: {x: 0.6451613, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_11
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 104
+        width: 31
+        height: 33
+      alignment: 9
+      pivot: {x: 0.6451613, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_12
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 49
+        width: 26
+        height: 28
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_13
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 49
+        width: 26
+        height: 28
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_14
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 194
+        width: 32
+        height: 19
+      alignment: 9
+      pivot: {x: 0.4375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_15
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 194
+        width: 32
+        height: 19
+      alignment: 9
+      pivot: {x: 0.4375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_16
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 173
+        width: 32
+        height: 19
+      alignment: 9
+      pivot: {x: 0.4375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_17
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 160
+        width: 32
+        height: 19
+      alignment: 9
+      pivot: {x: 0.4375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_18
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 171
+        width: 32
+        height: 19
+      alignment: 9
+      pivot: {x: 0.4375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_19
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 168
+        width: 32
+        height: 19
+      alignment: 9
+      pivot: {x: 0.4375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_20
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 152
+        width: 32
+        height: 19
+      alignment: 9
+      pivot: {x: 0.4375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_21
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 139
+        width: 32
+        height: 19
+      alignment: 9
+      pivot: {x: 0.4375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_22
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 133
+        width: 32
+        height: 19
+      alignment: 9
+      pivot: {x: 0.4375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Death_A_23
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 79
+        width: 22
+        height: 13
+      alignment: 9
+      pivot: {x: 0.4090909, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Idol_01
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 38
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Walk_01
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 38
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Walk_02
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 38
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Walk_03
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 38
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Walk_04
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 36
+        width: 26
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Walk_05
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 36
+        width: 26
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Walk_06
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 36
+        width: 26
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Walk_07
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 14
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Walk_08
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 14
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Walk_09
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 14
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Walk_10
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 3
+        width: 26
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Walk_11
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 3
+        width: 26
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ted_Walk_12
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 3
+        width: 26
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

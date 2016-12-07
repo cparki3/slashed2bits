@@ -1,0 +1,440 @@
+fileFormatVersion: 2
+guid: 980b5b4d178832d4ab952fdf6e212626
+timeCreated: 1480125043
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Interior_House_Armoire_01
+    21300002: Interior_House_Armoire_Open_01
+    21300004: Interior_House_Attic_Brace_01
+    21300006: Interior_House_Attic_Frame_01
+    21300008: Interior_House_Attic_Tile_01
+    21300010: Interior_House_Bed_01
+    21300012: Interior_House_Bed_Hide_01
+    21300014: Interior_House_Ceiling_Tile_01
+    21300016: Interior_House_Closet_01
+    21300018: Interior_House_Closet_Open_01
+    21300020: Interior_House_Floor_Frame_01
+    21300022: Interior_House_Floor_Tile_01
+    21300024: Interior_House_Front_Door_01
+    21300026: Interior_House_Ladder_01
+    21300028: Interior_House_Lamp_01
+    21300030: Interior_House_Outdoor_Bush_01
+    21300032: Interior_House_Phone_Reciever_01
+    21300034: Interior_House_Phone_Table_01
+    21300036: Interior_House_Pictures_01
+    21300038: Interior_House_Stairs_01
+    21300040: Interior_House_Vent_01
+    21300042: Interior_House_Vent_Open_01
+    21300044: Interior_House_Wall_Back_01
+    21300046: Interior_House_Wall_Door_01
+    21300048: Interior_House_Wall_Door_Open_01
+    21300050: Interior_House_Wall_Front_01
+    21300052: Interior_House_Wall_Tile_01
+    21300054: Interior_House_Window_01
+    21300056: roof_section
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 1
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 1
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -2
+  maxTextureSize: 256
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 0
+  textureType: 5
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Interior_House_Armoire_01
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 140
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 27}
+        - {x: -16.5, y: 26}
+        - {x: -16.5, y: -27}
+        - {x: 16.5, y: -27}
+        - {x: 16.5, y: 26}
+        - {x: 11.5, y: 27}
+    - name: Interior_House_Armoire_Open_01
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 140
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 27}
+        - {x: -16.5, y: 26}
+        - {x: -16.5, y: -27}
+        - {x: 16.5, y: -27}
+        - {x: 16.5, y: 26}
+        - {x: 11.5, y: 27}
+    - name: Interior_House_Attic_Brace_01
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 101
+        width: 20
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Attic_Frame_01
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 192
+        width: 87
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.5, y: 31}
+        - {x: -43.5, y: 25}
+        - {x: -43.5, y: -31}
+        - {x: 7.5, y: -31}
+        - {x: 43.5, y: 20}
+        - {x: 43.5, y: 31}
+    - name: Interior_House_Attic_Tile_01
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 189
+        width: 16
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Bed_01
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 223
+        width: 46
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Bed_Hide_01
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 223
+        width: 46
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Ceiling_Tile_01
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 135
+        width: 32
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Closet_01
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 92
+        width: 29
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Closet_Open_01
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 54
+        width: 29
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Floor_Frame_01
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 130
+        width: 11
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Floor_Tile_01
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 130
+        width: 32
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Front_Door_01
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 196
+        width: 46
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 29}
+        - {x: -11, y: 18}
+        - {x: -13, y: 14}
+        - {x: -14, y: 29}
+        - {x: -23, y: 29}
+        - {x: -23, y: -29}
+        - {x: 23, y: -29}
+        - {x: 23, y: 29}
+    - name: Interior_House_Ladder_01
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 60
+        width: 26
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Lamp_01
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 183
+        width: 9
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Outdoor_Bush_01
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 205
+        width: 43
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Phone_Reciever_01
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 248
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Phone_Table_01
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 38
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Pictures_01
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 162
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Stairs_01
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 145
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 29}
+        - {x: -17, y: -29}
+        - {x: 17, y: -29}
+        - {x: 17, y: 3}
+        - {x: 11, y: 29}
+    - name: Interior_House_Vent_01
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 70
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Vent_Open_01
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 81
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Wall_Back_01
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 10
+        width: 12
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Wall_Door_01
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 163
+        width: 7
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Wall_Door_Open_01
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 13
+        width: 12
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Wall_Front_01
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 120
+        width: 12
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Interior_House_Wall_Tile_01
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 85
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 29}
+        - {x: -16, y: -29}
+        - {x: 16, y: -29}
+        - {x: 16, y: 29}
+    - name: Interior_House_Window_01
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 196
+        width: 38
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: roof_section
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 179
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

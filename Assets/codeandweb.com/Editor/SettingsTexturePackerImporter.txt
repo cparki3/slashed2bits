@@ -1,0 +1,26 @@
+version: 2
+importPivots: 1
+tpsheetFileNames:
+- Assets/SpriteSheets/slasher_test.tpsheet
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+- Assets/_sprites/spritesheets/warp.tpsheet
+- Assets/_sprites/spritesheets/TED.tpsheet
+- Assets/sprites/spritesheets/warp.tpsheet
+- Assets/_sprites/spritesheets/street_start.tpsheet
+- Assets/_sprites/spritesheets/house_interior.tpsheet
+textureFileNames:
+- Assets/SpriteSheets/slasher_test.png
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+- Assets/_sprites/spritesheets/warp.png
+- Assets/_sprites/spritesheets/TED.png
+- Assets/sprites/spritesheets/warp.png
+- Assets/_sprites/spritesheets/street_start.png
+- Assets/_sprites/spritesheets/house_interior.png
+normalmapFileNames:
+- 
+- Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
+- 
+- 
+- 

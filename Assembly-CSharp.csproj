@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{5ADF9FA1-5B53-EB25-8A5B-55B90C7D6D9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_0;UNITY_5_5;UNITY_5;UNITY_PURCHASING;UNITY_ANALYTICS;UNITY_ADS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VIDEO;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;CROSS_PLATFORM_INPUT;MOBILE_INPUT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\2DDL\2DLight\AssetUtility\AssetUtility.cs" />
+     <Compile Include="Assets\2DDL\2DLight\CheckUpdate\CheckUpdateAsset.cs" />
+     <Compile Include="Assets\2DDL\2DLight\CheckUpdate\CheckUpdateBuilder.cs" />
+     <Compile Include="Assets\2DDL\2DLight\CheckUpdate\CheckUpdateWindow.cs" />
+     <Compile Include="Assets\2DDL\2DLight\Core\CasterCollider.cs" />
+     <Compile Include="Assets\2DDL\2DLight\Core\DynamicLight.cs" />
+     <Compile Include="Assets\2DDL\2DLight\Settings\DynamicLightSetting.cs" />
+     <Compile Include="Assets\2DDL\2DLight\Settings\SettingsManager.cs" />
+     <Compile Include="Assets\2DDL\2DLight\Settings\SettingsWindow.cs" />
+     <Compile Include="Assets\2DDL\2DLight\Settings\TagLayerClass.cs" />
+     <Compile Include="Assets\2DDL\Scripts\Helpers\CoroutineExt\CoroutineExtentions.cs" />
+     <Compile Include="Assets\2DDL\Scripts\Helpers\ExtendsMe.cs" />
+     <Compile Include="Assets\2DDL\Scripts\Helpers\GLDebug.cs" />
+     <Compile Include="Assets\2DDL\Scripts\Helpers\SmoothFollow.cs" />
+     <Compile Include="Assets\2DDL\Scripts\Helpers\TablaSenoCoseno.cs" />
+     <Compile Include="Assets\2DDL\Scripts\Helpers\TimerClass.cs" />
+     <Compile Include="Assets\2DDL\Scripts\Helpers\interface_touch.cs" />
+     <Compile Include="Assets\2DDL\Scripts\SetRenderQueue.cs" />
+     <Compile Include="Assets\2DDL\Scripts\restoreStone.cs" />
+     <Compile Include="Assets\2DDL\Scripts\rotate.cs" />
+     <Compile Include="Assets\CopController.cs" />
+     <Compile Include="Assets\GameManager.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX2_Demo.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX3_Demo.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\UI\CFX_Demo_GTButton.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\UI\CFX_Demo_GTToggle.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX2_AutoRotate.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutodestructWhenNoChildren.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_InspectorHelp.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_ShurikenThreadFix.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Spawn System\CFX_SpawnSystem.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralAdvancedTechniques.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasicCS.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasics2dCS.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralCameraShake.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEasingTypes.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEventsListenersCS.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSimpleUiCS.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralUISpaceCS.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\LogoCinematic.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\OldGUIExamplesCS.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline2d.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineEndlessCS.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplinePerformanceCS.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineTrackCS.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplines.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplinesBezier.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingAllCS.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingEverything.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingPunch.cs" />
+     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingRigidbodyCS.cs" />
+     <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DAddCameraTargetAction.cs" />
+     <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DAdjustCameraTargetInfluenceAction.cs" />
+     <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DApplyInfluenceAction.cs" />
+     <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DApplyInfluencesTimedAction.cs" />
+     <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DCinematicsToggleAction.cs" />
+     <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DMoveCameraInstantlyToPositionAction.cs" />
+     <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DRemoveCameraTargetAction.cs" />
+     <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DShakeAction.cs" />
+     <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DShakeWithPresetAction.cs" />
+     <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DShakeWithValuesAction.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\BasePC2D.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\BaseTrigger.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\BoundariesAnimator.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\CameraTarget.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\EnumMovementAxis.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\EnumUpdateType.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\IPositionDeltaChanger.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\IPositionOverrider.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\IPostMover.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\IPreMover.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\ISizeDeltaChanger.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\ISizeOverrider.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\KDTree.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\MoveInColliderBoundaries.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\Utils\EditorPrefsX.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\Utils\PrefsData.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Core\Utils\Utils.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DCameraWindow.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DCinematics.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DForwardFocus.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DGeometryBoundaries.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DLimitDistance.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DLimitSpeed.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DNumericBoundaries.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DPanAndZoom.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DParallax.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DPixelPerfect.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DPointerInfluence.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DRails.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DRepeater.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DRooms.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DShake.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DSpeedBasedZoom.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DTransitionsFX.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DZoomToFitTargets.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Helpers\Letterbox\ProCamera2DLetterbox.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Helpers\Parallax\ProCamera2DParallaxObject.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Helpers\Pixel Perfect\ProCamera2DPixelPerfectSprite.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\BasicBlit.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Triggers\ProCamera2DTriggerBoundaries.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Triggers\ProCamera2DTriggerInfluence.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Triggers\ProCamera2DTriggerRails.cs" />
+     <Compile Include="Assets\ProCamera2D\Code\Triggers\ProCamera2DTriggerZoom.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\Platformer\Scripts\Player\PlayerController.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\Platformer\Scripts\Player\PlayerInput.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\Platformer\Scripts\Player\PlayerInputBot.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\Platformer\Scripts\ToggleCinematics.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\Platformer\Scripts\ToggleTransitionsFX.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Bullet.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Door.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\DoorKey.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Enemy\EnemyAttack.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Enemy\EnemyFSM.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Enemy\EnemyPatrol.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Enemy\EnemySight.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Enemy\EnemyWander.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Enemy\PatrolWaypoint.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\GameOver.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Goal.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\ObjectMove.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\ObjectRotate.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Player\PlayerFire.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Player\PlayerInput.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Pool\Pool.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Pool\PoolMember.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\RotateTowardsMouse.cs" />
+     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\SwitchCameraProjection.cs" />
+     <Compile Include="Assets\ProCamera2D\ProCamera2D.cs" />
+     <Compile Include="Assets\Rewired\Examples\ControlRemapping1\Scripts\ControlRemappingDemo1.cs" />
+     <Compile Include="Assets\Rewired\Examples\CustomControllersTilt\Scripts\CustomControllersTiltDemo.cs" />
+     <Compile Include="Assets\Rewired\Examples\CustomControllersTouch\Scripts\CustomControllerDemo.cs" />
+     <Compile Include="Assets\Rewired\Examples\CustomControllersTouch\Scripts\CustomControllerDemo_Player.cs" />
+     <Compile Include="Assets\Rewired\Examples\CustomControllersTouch\Scripts\TouchButtonExample.cs" />
+     <Compile Include="Assets\Rewired\Examples\CustomControllersTouch\Scripts\TouchControllerExample.cs" />
+     <Compile Include="Assets\Rewired\Examples\CustomControllersTouch\Scripts\TouchJoystickExample.cs" />
+     <Compile Include="Assets\Rewired\Examples\EightPlayers\Scripts\EightPlayersExample_Player.cs" />
+     <Compile Include="Assets\Rewired\Examples\FallbackJoystickIdentification\Scripts\FallbackJoystickIdentificationDemo.cs" />
+     <Compile Include="Assets\Rewired\Examples\Shared\Scripts\Bullet.cs" />
+     <Compile Include="Assets\Rewired\Internal\Scripts\DataStorage\UserDataStore_PlayerPrefs.cs" />
+     <Compile Include="Assets\Rewired\Internal\Scripts\InputManager.cs" />
+     <Compile Include="Assets\Rewired\Internal\Scripts\Misc\ExternalTools.cs" />
+     <Compile Include="Assets\Rewired\Internal\Scripts\Platforms\Ouya\OuyaInputSource.cs" />
+     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+     <Compile Include="Assets\Scripts\CharacterPanel.cs" />
+     <Compile Include="Assets\Scripts\CharacterSelect.cs" />
+     <Compile Include="Assets\Scripts\DemoScene.cs" />
+     <Compile Include="Assets\Scripts\LetterSpacing.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PlayerSelectController.cs" />
+     <Compile Include="Assets\Scripts\ScreenWrap.cs" />
+     <Compile Include="Assets\Scripts\ScrollRectEnsureVisible.cs" />
+     <Compile Include="Assets\Scripts\SpriteOutline.cs" />
+     <Compile Include="Assets\Scripts\VersusModeManager.cs" />
+     <Compile Include="Assets\Scripts\VictimController.cs" />
+     <Compile Include="Assets\Scripts\assignColor.cs" />
+     <Compile Include="Assets\Scripts\charData.cs" />
+     <Compile Include="Assets\Scripts\characterInfo.cs" />
+     <Compile Include="Assets\Scripts\fuseBox.cs" />
+     <Compile Include="Assets\Scripts\highLightToggle.cs" />
+     <Compile Include="Assets\Scripts\ladder.cs" />
+     <Compile Include="Assets\Scripts\lightScript.cs" />
+     <Compile Include="Assets\Scripts\lockerScript.cs" />
+     <Compile Include="Assets\Scripts\particleLauncher.cs" />
+     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample05.cs" />
+     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample06.cs" />
+     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample06Rotator.cs" />
+     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample06Scaller.cs" />
+     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample06Translator.cs" />
+     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample07BloodController.cs" />
+     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample07DestroyBlood.cs" />
+     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample11BitesController.cs" />
+     <Compile Include="Assets\SpriteMask\Scripts\ClearStencilBufferComponent.cs" />
+     <Compile Include="Assets\SpriteMask\Scripts\SkipMasking.cs" />
+     <Compile Include="Assets\SpriteMask\Scripts\SpriteMask.cs" />
+     <Compile Include="Assets\SpriteMask\Scripts\SpriteMaskingComponent.cs" />
+     <Compile Include="Assets\SpriteMask\Scripts\SpriteMaskingPart.cs" />
+     <Compile Include="Assets\blinkScript.cs" />
+     <Compile Include="Assets\bloodScript.cs" />
+     <Compile Include="Assets\camerSetupScript.cs" />
+     <Compile Include="Assets\cameraAdjusterY.cs" />
+     <Compile Include="Assets\charAnimationSelect.cs" />
+     <Compile Include="Assets\exitController.cs" />
+     <Compile Include="Assets\homeButton.cs" />
+     <Compile Include="Assets\houseButton.cs" />
+     <Compile Include="Assets\leftButtonController.cs" />
+     <Compile Include="Assets\levelButton.cs" />
+     <Compile Include="Assets\levelManagerScript.cs" />
+     <Compile Include="Assets\losePanel.cs" />
+     <Compile Include="Assets\losePanelManager.cs" />
+     <Compile Include="Assets\lose_animation_controller.cs" />
+     <Compile Include="Assets\ootii\Framework_v1\Code\Collections\ObjectPool.cs" />
+     <Compile Include="Assets\ootii\Framework_v1\Code\Helpers\EditorHelper.cs" />
+     <Compile Include="Assets\ootii\Framework_v1\Code\Helpers\InterfaceHelper.cs" />
+     <Compile Include="Assets\ootii\Framework_v1\Code\Utilities\Debug\Log.cs" />
+     <Compile Include="Assets\ootii\Framework_v1\Code\Utilities\Debug\LogText.cs" />
+     <Compile Include="Assets\ootii\Framework_v1\Code\Utilities\Profiler.cs" />
+     <Compile Include="Assets\ootii\MessageDispatcher\Code\Messages\DelegateMessageHandler.cs" />
+     <Compile Include="Assets\ootii\MessageDispatcher\Code\Messages\EnumMessageDelay.cs" />
+     <Compile Include="Assets\ootii\MessageDispatcher\Code\Messages\EnumMessageRecipientType.cs" />
+     <Compile Include="Assets\ootii\MessageDispatcher\Code\Messages\IMessage.cs" />
+     <Compile Include="Assets\ootii\MessageDispatcher\Code\Messages\Message.cs" />
+     <Compile Include="Assets\ootii\MessageDispatcher\Code\Messages\MessageDispatcher.cs" />
+     <Compile Include="Assets\ootii\MessageDispatcher\Code\Messages\MessageListenerDefinition.cs" />
+     <Compile Include="Assets\ootii\MessageDispatcher\Demos\Scenes\MyCustomMessage.cs" />
+     <Compile Include="Assets\ootii\MessageDispatcher\Demos\Scenes\ObjectEx.cs" />
+     <Compile Include="Assets\ootii\MessageDispatcher\Demos\Scenes\Sample.cs" />
+     <Compile Include="Assets\ootii\MessageDispatcher\Demos\Scenes\UI.cs" />
+     <Compile Include="Assets\rightButtonController.cs" />
+     <Compile Include="Assets\sceneData.cs" />
+     <Compile Include="Assets\shootScript.cs" />
+     <Compile Include="Assets\slasher_touch_controls.cs" />
+     <Compile Include="Assets\startScreenScript.cs" />
+     <Compile Include="Assets\streetViewManager.cs" />
+     <Compile Include="Assets\videoButton.cs" />
+     <Compile Include="Assets\warp_exit.cs" />
+     <Compile Include="Assets\winPanelManager.cs" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_buttonbar_button.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_slimprogressbar.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_microphone_editor.xml" />
+     <None Include="Assets\2DDL\Shaders\StencilObject.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_editor_trimmer.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_editor_trimmer_current_time_track.xml" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
+     <None Include="Assets\2DDL\Shaders\DefaultTexturized.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_topbar_menubutton.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_theme_distinct_button_background.xml" />
+     <None Include="Assets\Anime Speed Lines\Readme.txt" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_levels.xml" />
+     <None Include="Assets\2DDL\Bugs\READ FIRST.txt" />
+     <None Include="Assets\Plugins\Android\everyplay\res\values\everyplay_strings.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_timeline_current_time_track.xml" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_editor_trimmer_tracker_button_pressed.xml" />
+     <None Include="Assets\ootii\MessageDispatcher\Version.txt" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_editor_playback_control.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_browser_button_back.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_sidemenu_button.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_trashcan_background.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_theme_button_background.xml" />
+     <None Include="Assets\codeandweb.com\Editor\SettingsTexturePackerImporter.txt" />
+     <None Include="Assets\LeanTween\Examples\Shader\2dUnlitWithFade.shader" />
+     <None Include="Assets\ootii\DMReadMe.txt" />
+     <None Include="Assets\SpriteMask\Readme.txt" />
+     <None Include="Assets\2DDL\Shaders\RadialGradientAlphaBlend.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_timeline_tracker_button_pressed.xml" />
+     <None Include="Assets\JMO Assets\Cartoon FX\CartoonFX3 Readme.txt" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_editor_button_background.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_topbar_notification.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_editor_buttons.xml" />
+     <None Include="Assets\2DDL\Shaders\DepthMask.shader" />
+     <None Include="Assets\Shaders\Sprites-Outline.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_text_input.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_sidemenu_button.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_editor_trimmer_handle_pressed.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\values\everyplay_styles.xml" />
+     <None Include="Assets\2DDL\Shaders\CGTexturizing.shader" />
+     <None Include="Assets\Rewired\Documentation\licences.txt" />
+     <None Include="Assets\LeanTween\ReadMe.txt" />
+     <None Include="Assets\Movinarc\PackageUninstaller\README.txt" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_endscreen_install_button.xml" />
+     <None Include="Assets\Rewired\Documentation\ReadMe.txt" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_facecam_timeline.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_action_list_option.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_endscreen_video.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_button_bar.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_editor_processing_bg.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_theme_sidemenu_background.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_topbar_background.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_text_input_background.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_editor_trimmer_tracker_button.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_trashcan.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_action_list_button.xml" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Invert.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_sidemenu_grouplabel.xml" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX2 Particle Alpha Blend Add.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_facecam_player.xml" />
+     <None Include="Assets\2DDL\Shaders\OffsetShader.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_timeline_stream_progress_track.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_social_topbar.xml" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
+     <None Include="Assets\SpriteMask\Resources\ClearStencil.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_endscreen.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_action_list.xml" />
+     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Circle.shader" />
+     <None Include="Assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
+     <None Include="Assets\Plugins\Android\res\values\strings.xml" />
+     <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
+     <None Include="Assets\SpriteMask\Resources\SpriteMask.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_microphone_bg.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_browser_button_share.xml" />
+     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Wipe.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_sidemenu.xml" />
+     <None Include="Assets\JMO Assets\!JMO Assets Readme.txt" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_error.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\values-ko\everyplay_strings.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\AndroidManifest.xml" />
+     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Texture.shader" />
+     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_splashscreen.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_control_button.xml" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Blinds.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_editor_trimmer_handle.xml" />
+     <None Include="Assets\2DDL\Shaders\StencilMask.shader" />
+     <None Include="Assets\ProCamera2D\Code\Helpers\Letterbox\Resources\Letterbox.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\values-zh-rCN\everyplay_strings.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_facecam_countdown.xml" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_WaterWiggle.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_button_shape.xml" />
+     <None Include="Assets\2DDL\Shaders\VertexColor.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\build.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_editor_microphone.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_control_buttons.xml" />
+     <None Include="Assets\ProCamera2D\README.txt" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_oval_button.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_editor_vumeters.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_browser_button_refresh.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_header.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_action_list_destructive.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\values-ja\everyplay_strings.xml" />
+     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Shutters.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\values\everyplay_colors.xml" />
+     <None Include="Assets\ProCamera2D\TransitionFX Textures\README.txt" />
+     <None Include="Assets\2DDL\Shaders\Gradient-ZFighting.shader" />
+     <None Include="Assets\Rewired\Documentation\ReleaseNotes.txt" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_timeline_tracker_button.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_theme_sidemenu_button.xml" />
+     <None Include="Assets\LeanTween\License.txt" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_editor_processing.xml" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX2 Particle Alpha Blend Tint.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_progressbar_horizontal.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_trashcan_background_active.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_editor_trimmer_background_track.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_action_list_cancel.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_browser_bottombar.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_facecam.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_timeline.xml" />
+     <None Include="Assets\SpriteMask\Resources\SpriteDefault.shader" />
+     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
+     <None Include="Assets\Plugins\Android\everyplay\res\values\everyplay_attrs.xml" />
+     <None Include="Assets\JMO Assets\Cartoon FX\CartoonFX2 Readme.txt" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_facecam_bg.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\values\everyplay_themes.xml" />
+     <None Include="Assets\SpriteMask\Resources\SpriteDiffuse.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_header_install_button.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_topbar_closebutton.xml" />
+     <None Include="Assets\Plugins\Everyplay\Helpers\Shaders\EveryplayCrossfade.shader" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_button_blue.xml" />
+     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Fade.shader" />
+     <None Include="Assets\Plugins\Android\everyplay\proguard-project.txt" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_browser_layout.xml" />
+     <None Include="Assets\codeandweb.com\Readme.txt" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_round_button.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_social_layout.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_microphone.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_facecam_editor.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_browser_button_forward.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_button_green.xml" />
+     <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_auth_layout.xml" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PlaymodeTestsRunner">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="Rewired_Core">
+ <HintPath>C:/Users/cparki3/Desktop/SlashedToBits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Core.dll</HintPath>
+ </Reference>
+ <Reference Include="Rewired_Windows_Lib">
+ <HintPath>C:/Users/cparki3/Desktop/SlashedToBits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Windows_Lib.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{23322534-2FC4-3D5E-6EE6-DB2E8A0A9B5E}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

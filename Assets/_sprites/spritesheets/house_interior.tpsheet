@@ -1,0 +1,39 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: house_interior.png (256 x 256)
+# $TexturePacker:SmartUpdate:3222c72df6806728ba8f79ec01a9e18c:4e3342b6b9c0c76176cebef4d2949156:dd0ec980ca8241e3789d0c8eefa4ab94$
+#
+
+Interior_House_Armoire_01;184;140;33;54;0.5;0.5
+Interior_House_Armoire_Open_01;91;140;33;54;0.5;0.5
+Interior_House_Attic_Brace_01;233;101;20;59;0.5;0.5
+Interior_House_Attic_Frame_01;2;192;87;62;0.5;0.5
+Interior_House_Attic_Tile_01;235;189;16;57;0.5;0.5
+Interior_House_Bed_01;139;223;46;31;0.5;0.5
+Interior_House_Bed_Hide_01;187;223;46;31;0.5;0.5
+Interior_House_Ceiling_Tile_01;173;135;32;3;0.5;0.5
+Interior_House_Closet_01;173;92;29;36;0.5;0.5
+Interior_House_Closet_Open_01;173;54;29;36;0.5;0.5
+Interior_House_Floor_Frame_01;126;130;11;64;0.5;0.5
+Interior_House_Floor_Tile_01;173;130;32;3;0.5;0.5
+Interior_House_Front_Door_01;91;196;46;58;0.5;0.5
+Interior_House_Ladder_01;204;60;26;58;0.5;0.5
+Interior_House_Lamp_01;224;183;9;38;0.5;0.5
+Interior_House_Outdoor_Bush_01;139;205;43;16;0.5;0.5
+Interior_House_Phone_Reciever_01;235;248;17;6;0.5;0.5
+Interior_House_Phone_Table_01;204;38;26;20;0.5;0.5
+Interior_House_Pictures_01;233;162;21;15;0.5;0.5
+Interior_House_Stairs_01;139;145;34;58;0.5;0.5
+Interior_House_Vent_01;232;70;15;9;0.5;0.5
+Interior_House_Vent_Open_01;232;81;15;18;0.5;0.5
+Interior_House_Wall_Back_01;232;10;12;58;0.5;0.5
+Interior_House_Wall_Door_01;175;163;7;40;0.5;0.5
+Interior_House_Wall_Door_Open_01;2;13;12;39;0.5;0.5
+Interior_House_Wall_Front_01;219;120;12;61;0.5;0.5
+Interior_House_Wall_Tile_01;139;85;32;58;0.5;0.5
+Interior_House_Window_01;184;196;38;25;0.5;0.5
+roof_section;235;179;16;8;0.5;0.5

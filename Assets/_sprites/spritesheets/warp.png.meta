@@ -1,0 +1,800 @@
+fileFormatVersion: 2
+guid: 84000387a91c9b34099231c1ccce6199
+timeCreated: 1480883435
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Warp_01
+    21300002: Warp_02
+    21300004: Warp_03
+    21300006: Warp_04
+    21300008: Warp_05
+    21300010: Warp_06
+    21300012: Warp_07
+    21300014: Warp_08
+    21300016: Warp_09
+    21300018: Warp_10
+    21300020: Warp_11
+    21300022: Warp_12
+    21300024: Warp_13
+    21300026: Warp_14
+    21300028: Warp_15
+    21300030: Warp_16
+    21300032: Warp_17
+    21300034: Warp_18
+    21300036: Warp_19
+    21300038: Warp_20
+    21300040: Warp_21
+    21300042: Warp_22
+    21300044: Warp_23
+    21300046: Warp_24
+    21300048: Warp_25
+    21300050: Warp_26
+    21300052: Warp_27
+    21300054: Warp_28
+    21300056: Warp_29
+    21300058: Warp_30
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -2
+  maxTextureSize: 256
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Warp_01
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 17
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.5, y: 11}
+        - {x: -14.5, y: 11}
+        - {x: -17.5, y: 7}
+        - {x: -19.5, y: 1}
+        - {x: -19.5, y: -21}
+        - {x: -14.5, y: -29}
+        - {x: 13.5, y: -29}
+        - {x: 18.5, y: -23}
+        - {x: 20.5, y: -19}
+        - {x: 20.5, y: 2}
+    - name: Warp_02
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 17
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.5, y: 11}
+        - {x: -14.5, y: 11}
+        - {x: -17.5, y: 7}
+        - {x: -19.5, y: 1}
+        - {x: -19.5, y: -21}
+        - {x: -14.5, y: -29}
+        - {x: 13.5, y: -29}
+        - {x: 18.5, y: -23}
+        - {x: 20.5, y: -19}
+        - {x: 20.5, y: 2}
+    - name: Warp_03
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 60
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.5, y: 11}
+        - {x: -14.5, y: 11}
+        - {x: -17.5, y: 7}
+        - {x: -19.5, y: 1}
+        - {x: -19.5, y: -21}
+        - {x: -14.5, y: -29}
+        - {x: 13.5, y: -29}
+        - {x: 18.5, y: -23}
+        - {x: 20.5, y: -19}
+        - {x: 20.5, y: 2}
+    - name: Warp_04
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 58
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.5, y: 11}
+        - {x: -14.5, y: 11}
+        - {x: -17.5, y: 7}
+        - {x: -19.5, y: 1}
+        - {x: -19.5, y: -21}
+        - {x: -14.5, y: -29}
+        - {x: 13.5, y: -29}
+        - {x: 18.5, y: -23}
+        - {x: 20.5, y: -19}
+        - {x: 20.5, y: 2}
+    - name: Warp_05
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 18
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.5, y: 11}
+        - {x: -19.5, y: 3}
+        - {x: -19.5, y: -22}
+        - {x: -14.5, y: -29}
+        - {x: 20.5, y: -29}
+        - {x: 20.5, y: 8}
+        - {x: 19.5, y: 11}
+    - name: Warp_06
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 15
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.5, y: 11}
+        - {x: -19.5, y: 10}
+        - {x: -19.5, y: -23}
+        - {x: -17.5, y: -29}
+        - {x: 20.5, y: -29}
+        - {x: 20.5, y: 7}
+        - {x: 12.5, y: 11}
+    - name: Warp_07
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 57
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 11}
+        - {x: -19.5, y: 2}
+        - {x: -19.5, y: -25}
+        - {x: -16.5, y: -29}
+        - {x: 18.5, y: -29}
+        - {x: 20.5, y: -28}
+        - {x: 20.5, y: 8}
+        - {x: 19.5, y: 11}
+    - name: Warp_08
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 59
+        width: 40
+        height: 41
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.70731705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.5, y: 12}
+        - {x: -19.5, y: 4}
+        - {x: -19.5, y: -20}
+        - {x: -13.5, y: -29}
+        - {x: 13.5, y: -29}
+        - {x: 20.5, y: -25}
+        - {x: 20.5, y: 6}
+        - {x: 8.5, y: 12}
+      - - {x: -8.5, y: 10}
+        - {x: -8.5, y: 12}
+        - {x: -13.5, y: 12}
+        - {x: -11.5, y: 9}
+    - name: Warp_09
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 103
+        width: 40
+        height: 44
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.65909094}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.5, y: 13}
+        - {x: -11.5, y: 11}
+        - {x: -19.5, y: 2}
+        - {x: -19.5, y: -22}
+        - {x: -8.5, y: -29}
+        - {x: 18.5, y: -29}
+        - {x: 20.5, y: -25}
+        - {x: 20.5, y: 6}
+        - {x: 10.5, y: 13}
+      - - {x: -8.5, y: 13}
+        - {x: -8.5, y: 15}
+        - {x: -13.5, y: 15}
+        - {x: -11.5, y: 12}
+    - name: Warp_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 151
+        width: 40
+        height: 47
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.61702126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 15}
+        - {x: -19.5, y: 4}
+        - {x: -19.5, y: -20}
+        - {x: -18.5, y: -22}
+        - {x: -8.5, y: -29}
+        - {x: 14.5, y: -29}
+        - {x: 20.5, y: -18}
+        - {x: 20.5, y: 5}
+        - {x: 7.5, y: 15}
+      - - {x: -8.5, y: 16}
+        - {x: -8.5, y: 18}
+        - {x: -13.5, y: 18}
+        - {x: -11.5, y: 15}
+    - name: Warp_11
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 102
+        width: 40
+        height: 45
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.64444447}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6.5, y: 16}
+        - {x: -5.5, y: 16}
+        - {x: -12.5, y: 13}
+        - {x: -19.5, y: 7}
+        - {x: -19.5, y: -22}
+        - {x: -14.5, y: -29}
+        - {x: 18.5, y: -29}
+        - {x: 20.5, y: -21}
+        - {x: 20.5, y: 4}
+        - {x: 17.5, y: 7}
+    - name: Warp_12
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 16
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 11}
+        - {x: -19.5, y: 6}
+        - {x: -19.5, y: -23}
+        - {x: -8.5, y: -29}
+        - {x: 17.5, y: -29}
+        - {x: 20.5, y: -20}
+        - {x: 20.5, y: 5}
+        - {x: 15.5, y: 11}
+    - name: Warp_13
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 57
+        width: 40
+        height: 44
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.65909094}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.5, y: 15}
+        - {x: -19.5, y: 2}
+        - {x: -19.5, y: -29}
+        - {x: 16.5, y: -29}
+        - {x: 20.5, y: -20}
+        - {x: 20.5, y: 4}
+        - {x: 6.5, y: 15}
+    - name: Warp_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 102
+        width: 40
+        height: 47
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.61702126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.5, y: 18}
+        - {x: -19.5, y: 1}
+        - {x: -19.5, y: -22}
+        - {x: -11.5, y: -29}
+        - {x: 20.5, y: -29}
+        - {x: 20.5, y: 11}
+        - {x: 8.5, y: 18}
+    - name: Warp_15
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 149
+        width: 40
+        height: 50
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.58}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.5, y: 19}
+        - {x: -19.5, y: 13}
+        - {x: -19.5, y: -29}
+        - {x: 20.5, y: -29}
+        - {x: 20.5, y: 11}
+        - {x: 15.5, y: 19}
+      - - {x: -2.5, y: 19}
+        - {x: -2.5, y: 21}
+        - {x: -7.5, y: 21}
+        - {x: -5.5, y: 18}
+    - name: Warp_16
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 201
+        width: 40
+        height: 53
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.5471698}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.5, y: 12}
+        - {x: -14.5, y: 12}
+        - {x: -17.5, y: 7}
+        - {x: -19.5, y: 1}
+        - {x: -19.5, y: -21}
+        - {x: -14.5, y: -29}
+        - {x: 13.5, y: -29}
+        - {x: 18.5, y: -23}
+        - {x: 20.5, y: -19}
+        - {x: 20.5, y: 2}
+      - - {x: 2.5, y: 15}
+        - {x: 4.5, y: 13}
+        - {x: 7.5, y: 14}
+        - {x: 7.5, y: 20}
+        - {x: 5.5, y: 22}
+        - {x: 2.5, y: 21}
+      - - {x: -6.5, y: 16}
+        - {x: -3.5, y: 17}
+        - {x: -3.5, y: 20}
+        - {x: -6.5, y: 21}
+        - {x: -8.5, y: 19}
+      - - {x: -2.5, y: 22}
+        - {x: -2.5, y: 24}
+        - {x: -7.5, y: 24}
+        - {x: -5.5, y: 21}
+    - name: Warp_17
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 80
+        width: 40
+        height: 56
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.51785713}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: -21}
+        - {x: -14.5, y: -29}
+        - {x: 15.5, y: -29}
+        - {x: 20.5, y: -24}
+        - {x: 20.5, y: 14}
+        - {x: -9.5, y: 14}
+        - {x: -19.5, y: 12}
+      - - {x: 2.5, y: 17}
+        - {x: 4.5, y: 15}
+        - {x: 7.5, y: 16}
+        - {x: 7.5, y: 22}
+        - {x: 5.5, y: 24}
+        - {x: 2.5, y: 23}
+      - - {x: -2.5, y: 25}
+        - {x: -2.5, y: 27}
+        - {x: -7.5, y: 27}
+        - {x: -5.5, y: 24}
+    - name: Warp_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 24
+        width: 40
+        height: 54
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.537037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: 13}
+        - {x: -19.5, y: 9}
+        - {x: -19.5, y: -25}
+        - {x: -13.5, y: -29}
+        - {x: 12.5, y: -29}
+        - {x: 20.5, y: -23}
+        - {x: 20.5, y: 10}
+        - {x: 16.5, y: 13}
+      - - {x: -0.5, y: 12}
+        - {x: 2.5, y: 13}
+        - {x: 2.5, y: 16}
+        - {x: -0.5, y: 17}
+        - {x: -2.5, y: 15}
+      - - {x: 4.5, y: 18}
+        - {x: 7.5, y: 19}
+        - {x: 7.5, y: 25}
+        - {x: 2.5, y: 25}
+        - {x: 2.5, y: 20}
+    - name: Warp_19
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 100
+        width: 40
+        height: 47
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.61702126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 14}
+        - {x: -19.5, y: 2}
+        - {x: -19.5, y: -23}
+        - {x: -12.5, y: -29}
+        - {x: 12.5, y: -29}
+        - {x: 20.5, y: -24}
+        - {x: 20.5, y: 13}
+        - {x: 19.5, y: 14}
+      - - {x: 13.5, y: 12}
+        - {x: 16.5, y: 13}
+        - {x: 16.5, y: 16}
+        - {x: 13.5, y: 17}
+        - {x: 11.5, y: 15}
+      - - {x: 2.5, y: 16}
+        - {x: 2.5, y: 18}
+        - {x: -2.5, y: 18}
+        - {x: -0.5, y: 15}
+    - name: Warp_20
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 149
+        width: 40
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.59183675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 16}
+        - {x: -19.5, y: 14}
+        - {x: -19.5, y: -26}
+        - {x: -15.5, y: -29}
+        - {x: 15.5, y: -29}
+        - {x: 20.5, y: -25}
+        - {x: 20.5, y: 16}
+      - - {x: 13.5, y: 15}
+        - {x: 16.5, y: 16}
+        - {x: 16.5, y: 19}
+        - {x: 13.5, y: 20}
+        - {x: 11.5, y: 18}
+      - - {x: 2.5, y: 18}
+        - {x: 2.5, y: 20}
+        - {x: -2.5, y: 20}
+        - {x: -0.5, y: 17}
+    - name: Warp_21
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 202
+        width: 40
+        height: 52
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.5576923}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.5, y: 19}
+        - {x: -19.5, y: 10}
+        - {x: -19.5, y: -24}
+        - {x: -17.5, y: -29}
+        - {x: 20.5, y: -29}
+        - {x: 20.5, y: 6}
+        - {x: 8.5, y: 19}
+      - - {x: 13.5, y: 10}
+        - {x: 15.5, y: 8}
+        - {x: 18.5, y: 9}
+        - {x: 18.5, y: 15}
+        - {x: 16.5, y: 17}
+        - {x: 13.5, y: 16}
+      - - {x: 13.5, y: 18}
+        - {x: 16.5, y: 19}
+        - {x: 16.5, y: 22}
+        - {x: 13.5, y: 23}
+        - {x: 11.5, y: 21}
+      - - {x: 2.5, y: 21}
+        - {x: 2.5, y: 23}
+        - {x: -2.5, y: 23}
+        - {x: -0.5, y: 20}
+    - name: Warp_22
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 200
+        width: 40
+        height: 54
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.537037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.5, y: 12}
+        - {x: -17.5, y: 9}
+        - {x: -19.5, y: 1}
+        - {x: -19.5, y: -23}
+        - {x: -10.5, y: -29}
+        - {x: 17.5, y: -29}
+        - {x: 20.5, y: -22}
+        - {x: 20.5, y: 1}
+        - {x: 13.5, y: 12}
+      - - {x: 1.5, y: 15}
+        - {x: 3.5, y: 13}
+        - {x: 6.5, y: 14}
+        - {x: 6.5, y: 20}
+        - {x: 4.5, y: 22}
+        - {x: 1.5, y: 21}
+      - - {x: 13.5, y: 21}
+        - {x: 16.5, y: 22}
+        - {x: 16.5, y: 25}
+        - {x: 12.5, y: 25}
+        - {x: 11.5, y: 24}
+      - - {x: 2.5, y: 23}
+        - {x: 2.5, y: 25}
+        - {x: -2.5, y: 25}
+        - {x: -0.5, y: 22}
+    - name: Warp_23
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 197
+        width: 40
+        height: 57
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.50877196}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.5, y: 14}
+        - {x: -8.5, y: 12}
+        - {x: -19.5, y: 8}
+        - {x: -19.5, y: -23}
+        - {x: -17.5, y: -29}
+        - {x: 19.5, y: -29}
+        - {x: 20.5, y: -26}
+        - {x: 20.5, y: 1}
+        - {x: 13.5, y: 14}
+      - - {x: 1.5, y: 17}
+        - {x: 3.5, y: 15}
+        - {x: 6.5, y: 16}
+        - {x: 6.5, y: 22}
+        - {x: 4.5, y: 24}
+        - {x: 1.5, y: 23}
+      - - {x: 13.5, y: 24}
+        - {x: 16.5, y: 25}
+        - {x: 16.5, y: 28}
+        - {x: 12.5, y: 28}
+        - {x: 11.5, y: 27}
+      - - {x: 2.5, y: 26}
+        - {x: 2.5, y: 28}
+        - {x: -2.5, y: 28}
+        - {x: -0.5, y: 25}
+    - name: Warp_24
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 200
+        width: 40
+        height: 54
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.537037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 12}
+        - {x: -19.5, y: 6}
+        - {x: -19.5, y: -29}
+        - {x: 20.5, y: -29}
+        - {x: 20.5, y: 4}
+        - {x: 18.5, y: 12}
+      - - {x: 8.5, y: 12}
+        - {x: 11.5, y: 13}
+        - {x: 11.5, y: 16}
+        - {x: 8.5, y: 17}
+        - {x: 6.5, y: 15}
+      - - {x: 3.5, y: 18}
+        - {x: 6.5, y: 19}
+        - {x: 6.5, y: 25}
+        - {x: 1.5, y: 25}
+        - {x: 1.5, y: 20}
+    - name: Warp_25
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 99
+        width: 40
+        height: 47
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.61702126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 12}
+        - {x: -19.5, y: 6}
+        - {x: -19.5, y: -29}
+        - {x: 20.5, y: -29}
+        - {x: 20.5, y: 4}
+        - {x: 18.5, y: 12}
+      - - {x: 11.5, y: 16}
+        - {x: 11.5, y: 18}
+        - {x: 6.5, y: 18}
+        - {x: 8.5, y: 15}
+    - name: Warp_26
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 149
+        width: 40
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.59183675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 12}
+        - {x: -19.5, y: 6}
+        - {x: -19.5, y: -29}
+        - {x: 20.5, y: -29}
+        - {x: 20.5, y: 4}
+        - {x: 18.5, y: 12}
+      - - {x: 11.5, y: 18}
+        - {x: 11.5, y: 20}
+        - {x: 6.5, y: 20}
+        - {x: 8.5, y: 17}
+    - name: Warp_27
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 148
+        width: 40
+        height: 52
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.5576923}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 12}
+        - {x: -19.5, y: 6}
+        - {x: -19.5, y: -29}
+        - {x: 20.5, y: -29}
+        - {x: 20.5, y: 4}
+        - {x: 18.5, y: 12}
+      - - {x: 11.5, y: 21}
+        - {x: 11.5, y: 23}
+        - {x: 6.5, y: 23}
+        - {x: 8.5, y: 20}
+    - name: Warp_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 200
+        width: 40
+        height: 54
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.537037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 12}
+        - {x: -19.5, y: 3}
+        - {x: -19.5, y: -22}
+        - {x: -11.5, y: -29}
+        - {x: 18.5, y: -29}
+        - {x: 20.5, y: -24}
+        - {x: 20.5, y: 9}
+        - {x: 12.5, y: 12}
+      - - {x: 11.5, y: 23}
+        - {x: 11.5, y: 25}
+        - {x: 6.5, y: 25}
+        - {x: 8.5, y: 22}
+    - name: Warp_29
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 138
+        width: 40
+        height: 57
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.50877196}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 12}
+        - {x: -19.5, y: 3}
+        - {x: -19.5, y: -22}
+        - {x: -11.5, y: -29}
+        - {x: 18.5, y: -29}
+        - {x: 20.5, y: -24}
+        - {x: 20.5, y: 9}
+        - {x: 12.5, y: 12}
+      - - {x: 11.5, y: 26}
+        - {x: 11.5, y: 28}
+        - {x: 6.5, y: 28}
+        - {x: 8.5, y: 25}
+    - name: Warp_30
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 15
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.4875, y: 0.725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 11}
+        - {x: -19.5, y: 3}
+        - {x: -19.5, y: -22}
+        - {x: -11.5, y: -29}
+        - {x: 18.5, y: -29}
+        - {x: 20.5, y: -24}
+        - {x: 20.5, y: 9}
+        - {x: 14.5, y: 11}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

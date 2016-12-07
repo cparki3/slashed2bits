@@ -1,0 +1,66 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: street_start.png (512 x 512)
+# $TexturePacker:SmartUpdate:4021bf839cb42a4ad5715b415ce73fbc:69ae8cd4629eea758fc48e25f06a8176:87d05c1ec0603d2f6c137fb18069bf24$
+#
+
+Logo_01;424;310;61;46;0.5;0
+Street_Scene_Arrow_01;403;195;19;24;0.5;0
+Street_Scene_BG_Bush_01;369;263;83;38;0.5;0
+Street_Scene_BG_Moon_01;369;303;53;53;0.5;0
+Street_Scene_BG_Sky_01;2;318;160;192;0.5;0
+Street_Scene_BG_Trees_01;2;162;205;154;0.5;0
+Street_Scene_BG_Trees_02;367;5;68;179;0.5;0
+Street_Scene_Button_Bar_01;164;426;160;16;0.5;0
+Street_Scene_Button_Down_01;369;242;48;19;0.5;0
+Street_Scene_Button_Up_01;419;242;48;19;0.5;0
+Street_Scene_Cabin_01;209;186;158;152;0.5;0
+Street_Scene_Cabin_Window_Anim_01;323;362;1;1;19;-31
+Street_Scene_Cabin_Window_Anim_02;318;379;4;12;-2.25;-0.5
+Street_Scene_Cabin_Window_Anim_03;318;393;5;14;-1.6;-0.4285714285714286
+Street_Scene_Cabin_Window_Anim_04;160;65;7;17;-0.8571428571428571;-0.2941176470588236
+Street_Scene_Cabin_Window_Anim_05;498;430;8;17;-0.625;-0.2941176470588236
+Street_Scene_Cabin_Window_Anim_06;487;332;10;20;-0.3;-0.1499999999999999
+Street_Scene_Cabin_Window_Anim_07;391;188;10;21;-0.3;-0.1428571428571428
+Street_Scene_Cabin_Window_Anim_08;486;489;10;21;-0.3;-0.1428571428571428
+Street_Scene_Cabin_Window_Anim_09;486;466;10;21;-0.3;-0.1428571428571428
+Street_Scene_Cabin_Window_Anim_10;499;332;10;20;-0.3;-0.1499999999999999
+Street_Scene_Cabin_Window_Anim_11;487;354;17;20;0.23529411764705882;-0.1499999999999999
+Street_Scene_Cabin_Window_Anim_12;424;198;19;20;0.3157894736842105;-0.1499999999999999
+Street_Scene_Cabin_Window_Anim_13;187;318;20;20;0.35;-0.1499999999999999
+Street_Scene_Cabin_Window_Anim_14;164;319;21;19;0.42857142857142855;-0.1578947368421053
+Street_Scene_Cabin_Window_Anim_15;403;221;21;19;0.47619047619047616;-0.1578947368421053
+Street_Scene_Cabin_Window_Anim_16;369;190;20;19;0.55;-0.1578947368421053
+Street_Scene_Cabin_Window_Anim_17;426;220;20;20;0.6;-0.1499999999999999
+Street_Scene_Cabin_Window_Anim_18;486;398;19;20;0.6842105263157895;-0.1499999999999999
+Street_Scene_Cabin_Window_Anim_19;486;376;18;20;0.7222222222222222;-0.1499999999999999
+Street_Scene_Cabin_Window_Anim_20;498;490;10;20;1.3;-0.1499999999999999
+Street_Scene_Cabin_Window_Anim_21;486;443;10;21;1.3;-0.1428571428571428
+Street_Scene_Cabin_Window_Anim_22;486;420;10;21;1.3;-0.1428571428571428
+Street_Scene_Cabin_Window_Anim_23;498;468;10;20;1.3;-0.1499999999999999
+Street_Scene_Cabin_Window_Anim_24;498;449;10;17;1.3;-0.2941176470588236
+Street_Scene_Cabin_Window_Anim_25;354;340;8;16;1.625;-0.3125
+Street_Scene_Cabin_Window_Anim_26;318;409;6;15;2.1666666666666665;-0.33333333333333326
+Street_Scene_Cabin_Window_Anim_27;318;365;4;12;3.25;-0.5
+Street_Scene_Cabin_Window_Anim_28;318;355;3;8;4.333333333333333;-0.75
+Street_Scene_Cabin_Window_Anim_29;323;362;1;1;19;-31
+Street_Scene_Cabin_Window_Anim_30;323;362;1;1;19;-31
+Street_Scene_Character_Select_Frame_01;164;473;160;37;0.5;0
+Street_Scene_Coming_Soon_01;164;340;152;84;0.5;0
+Street_Scene_Head_Frame_Locked_01;454;279;32;29;0.5;0
+Street_Scene_Head_Frame_UnLocked_01;369;211;32;29;0.5;0
+Street_Scene_House_01;209;50;156;134;0.5;0
+Street_Scene_Icon_Achievements_01;160;122;15;17;0.5;0
+Street_Scene_Icon_Home_01;160;103;15;17;0.5;0
+Street_Scene_Icon_Video_01;160;84;15;17;0.5;0
+Street_Scene_Level_Locked_01;487;311;17;19;0.5;0
+Street_Scene_Level_UnLocked_01;160;141;17;19;0.5;0
+Street_Scene_Overlay_Cabin_01;326;358;158;152;0.5;0
+Street_Scene_Overlay_House_01;2;26;156;134;0.5;0
+Street_Scene_Select_Check_Mark_01;341;346;11;10;0.5;0
+Street_Scene_Street_01;164;444;160;27;0.5;0
+Street_Scene_Swipe_Arrow_01;323;344;16;12;0.5;0
