@@ -12,6 +12,7 @@ public class SettingsWindow : EditorWindow {
 	int selectableLayerMask;
 
 	GUIStyle style1;
+	GUIStyle style0;
 
 
 	[MenuItem("2DDL/Settings")]
@@ -39,19 +40,34 @@ public class SettingsWindow : EditorWindow {
 		style1.fontStyle = FontStyle.Bold;
 		style1.alignment = TextAnchor.MiddleLeft;
 
+		style0 = new GUIStyle(GUI.skin.label);
+		style0.fontSize = 10;
+		style0.fontStyle = FontStyle.Italic;
+		style0.alignment = TextAnchor.UpperLeft;
+		style0.fixedHeight = 40f;
+				style0.normal.textColor = Color.cyan;
+		
+
 	
 		EditorGUILayout.Separator ();
 
 		EditorGUILayout.LabelField ("2DDL Settings", style1);
 
 		EditorGUILayout.Separator ();
+		EditorGUILayout.Separator ();
 
-		EditorGUILayout.LabelField ("Layer of Caster by Default");
+		EditorGUILayout.LabelField ("Note: This values are setting up on every new \n 2DLight or Caster creation.", style0);
+
+		EditorGUILayout.Separator ();
+		EditorGUILayout.Separator ();
+		EditorGUILayout.Separator ();
+
+		EditorGUILayout.LabelField ("CASTERS: Layer by Default");
 		selectableLayerField = EditorGUILayout.LayerField ("", selectableLayerField);
 
 		EditorGUILayout.Separator ();
 
-		EditorGUILayout.LabelField ("LayerMask of 2DLight Object by Default");
+		EditorGUILayout.LabelField ("2D LIGHT: LayerMask by Default");
 		selectableLayerMask = LayerMaskField("", selectableLayerMask);
 
 		AssetUtility.SaveProperty ("layerCaster",selectableLayerField, settingProfileAsset);

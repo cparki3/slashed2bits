@@ -1,36 +1,12 @@
 fileFormatVersion: 2
-guid: 5bee098c3263045c8be7b93fc3248bc3
-labels:
-- light
-- 2dLight
-- martin
-- ysa
-- 2d
-- 2dsystem
-- system
-- shadow
-- 2dshadow
-- shadows
-- realtime
-- dynamic
-- free
-- gpu
-- lighting
-- tool
-- kit
-- smooth
-- shine
-- dark
-- umbra
-- penumbra
-- volumetric
-- draganddrop
-- drag
-- and
-- drop
+guid: 480984c1d06112e4abd7e1affd095b46
+timeCreated: 1477331961
+licenseType: Pro
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -12,7 +12,6 @@ public class MeshRendererSortingLayersEditor : Editor
 	string[] sortingLayerNames;
 	int selectedOption;
 
-
 	void OnEnable()
 	{
 		sortingLayerNames = GetSortingLayerNames();

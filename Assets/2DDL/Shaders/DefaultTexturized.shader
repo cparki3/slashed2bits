@@ -5,11 +5,12 @@ Shader "2D Dynamic Lights/Texturized/DefaultTexturized" {
     }
     
     Category {
-	
+	ZTest always
        Lighting Off
        ZWrite Off
        Fog { Mode Off }
        Blend One One
+       Offset -1, -1
 
        
        
@@ -21,9 +22,12 @@ Shader "2D Dynamic Lights/Texturized/DefaultTexturized" {
        
 	   SubShader 
 	   {
+	 
             Pass 
 			{
 				
+				  
+				  
                SetTexture [_MainTex] 
 			   {
 			     Combine texture * primary

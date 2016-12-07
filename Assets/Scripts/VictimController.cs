@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using com.ootii.Utilities.Debug;
 using System;
 using Rewired;
+using DynamicLight2D;
 
 public class VictimController : MonoBehaviour {
 

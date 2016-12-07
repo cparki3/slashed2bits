@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\2DDL\2DLight\Editor\DynamicLightEditor.cs" />
      <Compile Include="Assets\2DDL\2DLight\Editor\DynamicLightMenu.cs" />
+     <Compile Include="Assets\2DDL\2DLight\Editor\EditorUtils.cs" />
      <Compile Include="Assets\2DDL\2DLight\Editor\SortingMethod.cs" />
      <Compile Include="Assets\Editor\Everyplay\Scripts\EveryplayImport.cs" />
      <Compile Include="Assets\Editor\Everyplay\Scripts\EveryplayLegacyCleanup.cs" />
@@ -128,7 +129,6 @@
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_theme_distinct_button_background.xml" />
      <None Include="Assets\Anime Speed Lines\Readme.txt" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_levels.xml" />
-     <None Include="Assets\2DDL\Bugs\READ FIRST.txt" />
      <None Include="Assets\Plugins\Android\everyplay\res\values\everyplay_strings.xml" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_timeline_current_time_track.xml" />
      <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
