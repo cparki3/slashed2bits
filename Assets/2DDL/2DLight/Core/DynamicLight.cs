@@ -740,7 +740,7 @@
 			}
 			renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 			renderer.receiveShadows = false;
-			renderer.lightProbeUsage = UnityEngine.Rendering.LightProbeUsage.Off;  
+			//renderer.lightProbeUsage = UnityEngine.Rendering.LightProbeUsage.Off;  
 			//renderer.sortingLayerName = "Default";
 			
 			//--mesh filter--//
