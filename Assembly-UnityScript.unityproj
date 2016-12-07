@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B71DA772-F6D5-0094-74DB-486091443F63}</ProjectGuid>
+    <ProjectGuid>{B7BDD0E3-71A8-638F-3866-F61767595D3F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-UnityScript</AssemblyName>
@@ -47,15 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\2DDL\Scripts\Helpers\fpsClass.js" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasicJS.js" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasics2dJS.js" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasicsJS.js" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEventsListenersJS.js" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSimpleUiJS.js" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\OldGUIExamplesJS.js" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\OldGUISlideImageIn.js" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathLocalCurveJS.js" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingAllJS.js" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_video_buttonbar_button.xml" />
      <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_slimprogressbar.xml" />
      <None Include="Assets\Plugins\Android\everyplay\res\layout\everyplay_video_microphone_editor.xml" />
@@ -80,7 +71,6 @@
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_trashcan_background.xml" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_theme_button_background.xml" />
      <None Include="Assets\codeandweb.com\Editor\SettingsTexturePackerImporter.txt" />
-     <None Include="Assets\LeanTween\Examples\Shader\2dUnlitWithFade.shader" />
      <None Include="Assets\ootii\DMReadMe.txt" />
      <None Include="Assets\SpriteMask\Readme.txt" />
      <None Include="Assets\2DDL\Shaders\RadialGradientAlphaBlend.shader" />
@@ -225,10 +215,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Rewired_Core">
- <HintPath>C:/Users/cparki3/Desktop/SlashedToBits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Core.dll</HintPath>
+ <HintPath>C:/Users/cparki3/workspaces/slashed2bits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Core.dll</HintPath>
  </Reference>
  <Reference Include="Rewired_Windows_Lib">
- <HintPath>C:/Users/cparki3/Desktop/SlashedToBits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Windows_Lib.dll</HintPath>
+ <HintPath>C:/Users/cparki3/workspaces/slashed2bits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Windows_Lib.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -239,7 +229,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{23322534-2FC4-3D5E-6EE6-DB2E8A0A9B5E}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{46074F95-47AD-C4C8-83C9-2922EC876443}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{BEEC766E-7AC3-B795-AF28-0F52F0745947}</ProjectGuid>
+    <ProjectGuid>{01DCCEAF-1B3E-6A78-4F09-FDEB4FED6836}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -140,7 +140,6 @@
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_trashcan_background.xml" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_theme_button_background.xml" />
      <None Include="Assets\codeandweb.com\Editor\SettingsTexturePackerImporter.txt" />
-     <None Include="Assets\LeanTween\Examples\Shader\2dUnlitWithFade.shader" />
      <None Include="Assets\ootii\DMReadMe.txt" />
      <None Include="Assets\SpriteMask\Readme.txt" />
      <None Include="Assets\2DDL\Shaders\RadialGradientAlphaBlend.shader" />
@@ -315,19 +314,19 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="JMOAssets">
- <HintPath>C:/Users/cparki3/Desktop/SlashedToBits/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>
+ <HintPath>C:/Users/cparki3/workspaces/slashed2bits/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>
  </Reference>
  <Reference Include="SharpCompress.3.5">
- <HintPath>C:/Users/cparki3/Desktop/SlashedToBits/Assets/Movinarc/PackageUninstaller/Editor/SharpCompress.3.5.dll</HintPath>
+ <HintPath>C:/Users/cparki3/workspaces/slashed2bits/Assets/Movinarc/PackageUninstaller/Editor/SharpCompress.3.5.dll</HintPath>
  </Reference>
  <Reference Include="Rewired_Editor">
- <HintPath>C:/Users/cparki3/Desktop/SlashedToBits/Assets/Rewired/Internal/Libraries/Editor/Rewired_Editor.dll</HintPath>
+ <HintPath>C:/Users/cparki3/workspaces/slashed2bits/Assets/Rewired/Internal/Libraries/Editor/Rewired_Editor.dll</HintPath>
  </Reference>
  <Reference Include="Rewired_Core">
- <HintPath>C:/Users/cparki3/Desktop/SlashedToBits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Core.dll</HintPath>
+ <HintPath>C:/Users/cparki3/workspaces/slashed2bits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Core.dll</HintPath>
  </Reference>
  <Reference Include="Rewired_Windows_Lib">
- <HintPath>C:/Users/cparki3/Desktop/SlashedToBits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Windows_Lib.dll</HintPath>
+ <HintPath>C:/Users/cparki3/workspaces/slashed2bits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Windows_Lib.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -359,11 +358,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{23322534-2FC4-3D5E-6EE6-DB2E8A0A9B5E}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{46074F95-47AD-C4C8-83C9-2922EC876443}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{5ADF9FA1-5B53-EB25-8A5B-55B90C7D6D9E}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{63373000-10D5-D361-D3BB-83D43E980928}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript.unityproj">
-      <Project>{B71DA772-F6D5-0094-74DB-486091443F63}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
+      <Project>{B7BDD0E3-71A8-638F-3866-F61767595D3F}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

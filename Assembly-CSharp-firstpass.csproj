@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{23322534-2FC4-3D5E-6EE6-DB2E8A0A9B5E}</ProjectGuid>
+    <ProjectGuid>{46074F95-47AD-C4C8-83C9-2922EC876443}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -166,7 +166,6 @@
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_trashcan_background.xml" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_theme_button_background.xml" />
      <None Include="Assets\codeandweb.com\Editor\SettingsTexturePackerImporter.txt" />
-     <None Include="Assets\LeanTween\Examples\Shader\2dUnlitWithFade.shader" />
      <None Include="Assets\ootii\DMReadMe.txt" />
      <None Include="Assets\SpriteMask\Readme.txt" />
      <None Include="Assets\2DDL\Shaders\RadialGradientAlphaBlend.shader" />
@@ -311,10 +310,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Rewired_Core">
- <HintPath>C:/Users/cparki3/Desktop/SlashedToBits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Core.dll</HintPath>
+ <HintPath>C:/Users/cparki3/workspaces/slashed2bits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Core.dll</HintPath>
  </Reference>
  <Reference Include="Rewired_Windows_Lib">
- <HintPath>C:/Users/cparki3/Desktop/SlashedToBits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Windows_Lib.dll</HintPath>
+ <HintPath>C:/Users/cparki3/workspaces/slashed2bits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Windows_Lib.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

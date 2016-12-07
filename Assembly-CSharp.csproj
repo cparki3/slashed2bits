@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5ADF9FA1-5B53-EB25-8A5B-55B90C7D6D9E}</ProjectGuid>
+    <ProjectGuid>{63373000-10D5-D361-D3BB-83D43E980928}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -84,27 +84,6 @@
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_ShurikenThreadFix.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Spawn System\CFX_SpawnSystem.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralAdvancedTechniques.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasicCS.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasics2dCS.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralCameraShake.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEasingTypes.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEventsListenersCS.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSimpleUiCS.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralUISpaceCS.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\LogoCinematic.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\OldGUIExamplesCS.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline2d.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineEndlessCS.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplinePerformanceCS.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineTrackCS.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplines.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplinesBezier.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingAllCS.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingEverything.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingPunch.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingRigidbodyCS.cs" />
      <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DAddCameraTargetAction.cs" />
      <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DAdjustCameraTargetInfluenceAction.cs" />
      <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DApplyInfluenceAction.cs" />
@@ -158,31 +137,6 @@
      <Compile Include="Assets\ProCamera2D\Code\Triggers\ProCamera2DTriggerInfluence.cs" />
      <Compile Include="Assets\ProCamera2D\Code\Triggers\ProCamera2DTriggerRails.cs" />
      <Compile Include="Assets\ProCamera2D\Code\Triggers\ProCamera2DTriggerZoom.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\Platformer\Scripts\Player\PlayerController.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\Platformer\Scripts\Player\PlayerInput.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\Platformer\Scripts\Player\PlayerInputBot.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\Platformer\Scripts\ToggleCinematics.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\Platformer\Scripts\ToggleTransitionsFX.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Bullet.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Door.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\DoorKey.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Enemy\EnemyAttack.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Enemy\EnemyFSM.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Enemy\EnemyPatrol.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Enemy\EnemySight.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Enemy\EnemyWander.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Enemy\PatrolWaypoint.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\GameOver.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Goal.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\ObjectMove.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\ObjectRotate.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Player\PlayerFire.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Player\PlayerHealth.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Player\PlayerInput.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Pool\Pool.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\Pool\PoolMember.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\RotateTowardsMouse.cs" />
-     <Compile Include="Assets\ProCamera2D\Examples\TopDownShooter\Scripts\SwitchCameraProjection.cs" />
      <Compile Include="Assets\ProCamera2D\ProCamera2D.cs" />
      <Compile Include="Assets\Rewired\Examples\ControlRemapping1\Scripts\ControlRemappingDemo1.cs" />
      <Compile Include="Assets\Rewired\Examples\CustomControllersTilt\Scripts\CustomControllersTiltDemo.cs" />
@@ -219,14 +173,6 @@
      <Compile Include="Assets\Scripts\lightScript.cs" />
      <Compile Include="Assets\Scripts\lockerScript.cs" />
      <Compile Include="Assets\Scripts\particleLauncher.cs" />
-     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample05.cs" />
-     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample06.cs" />
-     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample06Rotator.cs" />
-     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample06Scaller.cs" />
-     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample06Translator.cs" />
-     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample07BloodController.cs" />
-     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample07DestroyBlood.cs" />
-     <Compile Include="Assets\SpriteMask\Examples\Scripts\SpriteMaskExample11BitesController.cs" />
      <Compile Include="Assets\SpriteMask\Scripts\ClearStencilBufferComponent.cs" />
      <Compile Include="Assets\SpriteMask\Scripts\SkipMasking.cs" />
      <Compile Include="Assets\SpriteMask\Scripts\SpriteMask.cs" />
@@ -296,7 +242,6 @@
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_trashcan_background.xml" />
      <None Include="Assets\Plugins\Android\everyplay\res\drawable\everyplay_theme_button_background.xml" />
      <None Include="Assets\codeandweb.com\Editor\SettingsTexturePackerImporter.txt" />
-     <None Include="Assets\LeanTween\Examples\Shader\2dUnlitWithFade.shader" />
      <None Include="Assets\ootii\DMReadMe.txt" />
      <None Include="Assets\SpriteMask\Readme.txt" />
      <None Include="Assets\2DDL\Shaders\RadialGradientAlphaBlend.shader" />
@@ -441,10 +386,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Rewired_Core">
- <HintPath>C:/Users/cparki3/Desktop/SlashedToBits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Core.dll</HintPath>
+ <HintPath>C:/Users/cparki3/workspaces/slashed2bits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Core.dll</HintPath>
  </Reference>
  <Reference Include="Rewired_Windows_Lib">
- <HintPath>C:/Users/cparki3/Desktop/SlashedToBits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Windows_Lib.dll</HintPath>
+ <HintPath>C:/Users/cparki3/workspaces/slashed2bits/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Windows_Lib.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -455,7 +400,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{23322534-2FC4-3D5E-6EE6-DB2E8A0A9B5E}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{46074F95-47AD-C4C8-83C9-2922EC876443}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

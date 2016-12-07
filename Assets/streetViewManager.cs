@@ -2,7 +2,6 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using Com.LuisPedroFonseca.ProCamera2D.TopDownShooter;
 using UnityEngine.SceneManagement;
 using System;
 using System.Net.Mime;
