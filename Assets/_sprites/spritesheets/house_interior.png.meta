@@ -33,12 +33,12 @@ TextureImporter:
     21300052: Interior_House_Wall_Tile_01
     21300054: Interior_House_Window_01
     21300056: roof_section
-  serializedVersion: 2
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 1
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 1
     mipMapFadeDistanceStart: 1
@@ -50,10 +50,8 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -2
   maxTextureSize: 256
@@ -64,9 +62,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -74,12 +70,60 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 32
-  alphaIsTransparency: 0
-  textureType: 5
-  buildTargetSettings: []
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 256
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 256
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 256
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 256
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 256
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: Interior_House_Armoire_01
+    - serializedVersion: 2
+      name: Interior_House_Armoire_01
       rect:
         serializedVersion: 2
         x: 184
@@ -89,14 +133,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14.5, y: 27}
-        - {x: -16.5, y: 26}
-        - {x: -16.5, y: -27}
-        - {x: 16.5, y: -27}
-        - {x: 16.5, y: 26}
-        - {x: 11.5, y: 27}
-    - name: Interior_House_Armoire_Open_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Armoire_Open_01
       rect:
         serializedVersion: 2
         x: 91
@@ -106,14 +146,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14.5, y: 27}
-        - {x: -16.5, y: 26}
-        - {x: -16.5, y: -27}
-        - {x: 16.5, y: -27}
-        - {x: 16.5, y: 26}
-        - {x: 11.5, y: 27}
-    - name: Interior_House_Attic_Brace_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Attic_Brace_01
       rect:
         serializedVersion: 2
         x: 233
@@ -124,7 +160,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Attic_Frame_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Attic_Frame_01
       rect:
         serializedVersion: 2
         x: 2
@@ -134,14 +172,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -35.5, y: 31}
-        - {x: -43.5, y: 25}
-        - {x: -43.5, y: -31}
-        - {x: 7.5, y: -31}
-        - {x: 43.5, y: 20}
-        - {x: 43.5, y: 31}
-    - name: Interior_House_Attic_Tile_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Attic_Tile_01
       rect:
         serializedVersion: 2
         x: 235
@@ -152,7 +186,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Bed_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Bed_01
       rect:
         serializedVersion: 2
         x: 139
@@ -163,7 +199,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Bed_Hide_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Bed_Hide_01
       rect:
         serializedVersion: 2
         x: 187
@@ -174,7 +212,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Ceiling_Tile_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Ceiling_Tile_01
       rect:
         serializedVersion: 2
         x: 173
@@ -185,7 +225,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Closet_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Closet_01
       rect:
         serializedVersion: 2
         x: 173
@@ -196,7 +238,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Closet_Open_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Closet_Open_01
       rect:
         serializedVersion: 2
         x: 173
@@ -207,7 +251,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Floor_Frame_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Floor_Frame_01
       rect:
         serializedVersion: 2
         x: 126
@@ -218,7 +264,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Floor_Tile_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Floor_Tile_01
       rect:
         serializedVersion: 2
         x: 173
@@ -229,7 +277,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Front_Door_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Front_Door_01
       rect:
         serializedVersion: 2
         x: 91
@@ -239,16 +289,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 11, y: 29}
-        - {x: -11, y: 18}
-        - {x: -13, y: 14}
-        - {x: -14, y: 29}
-        - {x: -23, y: 29}
-        - {x: -23, y: -29}
-        - {x: 23, y: -29}
-        - {x: 23, y: 29}
-    - name: Interior_House_Ladder_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Ladder_01
       rect:
         serializedVersion: 2
         x: 204
@@ -259,7 +303,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Lamp_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Lamp_01
       rect:
         serializedVersion: 2
         x: 224
@@ -270,7 +316,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Outdoor_Bush_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Outdoor_Bush_01
       rect:
         serializedVersion: 2
         x: 139
@@ -281,7 +329,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Phone_Reciever_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Phone_Reciever_01
       rect:
         serializedVersion: 2
         x: 235
@@ -292,7 +342,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Phone_Table_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Phone_Table_01
       rect:
         serializedVersion: 2
         x: 204
@@ -303,7 +355,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Pictures_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Pictures_01
       rect:
         serializedVersion: 2
         x: 233
@@ -314,7 +368,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Stairs_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Stairs_01
       rect:
         serializedVersion: 2
         x: 139
@@ -324,13 +380,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -17, y: 29}
-        - {x: -17, y: -29}
-        - {x: 17, y: -29}
-        - {x: 17, y: 3}
-        - {x: 11, y: 29}
-    - name: Interior_House_Vent_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Vent_01
       rect:
         serializedVersion: 2
         x: 232
@@ -341,7 +394,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Vent_Open_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Vent_Open_01
       rect:
         serializedVersion: 2
         x: 232
@@ -352,7 +407,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Wall_Back_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Wall_Back_01
       rect:
         serializedVersion: 2
         x: 232
@@ -363,7 +420,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Wall_Door_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Wall_Door_01
       rect:
         serializedVersion: 2
         x: 175
@@ -374,7 +433,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Wall_Door_Open_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Wall_Door_Open_01
       rect:
         serializedVersion: 2
         x: 2
@@ -385,7 +446,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Wall_Front_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Wall_Front_01
       rect:
         serializedVersion: 2
         x: 219
@@ -396,7 +459,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Interior_House_Wall_Tile_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Wall_Tile_01
       rect:
         serializedVersion: 2
         x: 139
@@ -406,12 +471,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16, y: 29}
-        - {x: -16, y: -29}
-        - {x: 16, y: -29}
-        - {x: 16, y: 29}
-    - name: Interior_House_Window_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Interior_House_Window_01
       rect:
         serializedVersion: 2
         x: 184
@@ -422,7 +485,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: roof_section
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: roof_section
       rect:
         serializedVersion: 2
         x: 235
@@ -433,6 +498,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      tessellationDetail: -1
     outline: []
   spritePackingTag: 
   userData: 
