@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 /**
 * Internal Representation of a Tween<br>
@@ -82,8 +83,8 @@ public class LTDescr
 
 	#if !UNITY_3_5 && !UNITY_4_0 && !UNITY_4_0_1 && !UNITY_4_1 && !UNITY_4_2 && !UNITY_4_3 && !UNITY_4_5
 	public RectTransform rectTransform;
-	public UnityEngine.UI.Text uiText;
-	public UnityEngine.UI.Image uiImage;
+	public Text uiText;
+	public Image uiImage;
 	public UnityEngine.Sprite[] sprites;
 	#endif
 
