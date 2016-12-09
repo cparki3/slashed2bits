@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using System;
 using System.Net.Mime;
+using UnityEditor;
 
 public class streetViewManager : MonoBehaviour {
 
@@ -23,6 +24,12 @@ public class streetViewManager : MonoBehaviour {
 	public GameObject[] houseButtons;
 	public GameObject playButton;
 	public ScrollRectEnsureVisible scrollScript;
+	private int currentChild = 0;
+	public float transitionSpeed = .5f;
+	public Button nextButton;
+	public Button prevButton;
+	public Animator playerAnimator;
+	public RectTransform playerRect;
 
 	// Use this for initialization
 	void Start () {
@@ -122,7 +129,64 @@ public class streetViewManager : MonoBehaviour {
 		float housePos = 1 / (rectCount / houseNum);
 		Debug.Log (housePos);
 		scrollArea.horizontalNormalizedPosition = 0f;
+		moveComplete ();
 		//updateColors ();
+	}
+
+	public void rightButton()
+	{
+		if (currentChild < (rectList.Count -1)) {
+			disableButtons ();
+			currentChild++;
+			playerRect.localScale = new Vector3 (1,1);
+			Debug.Log ("Move all this direction");
+			playerAnimator.SetBool ("isWalking", true);
+			for (int i = 0; i < rectList.Count; i++) {
+				LeanTween.moveX (rectList [i], (rectList [i].anchoredPosition.x - offRight), transitionSpeed).setOnComplete (moveComplete);
+			}
+
+		} else {
+			Debug.Log ("can't move anymore this way");
+		}
+	}
+
+	private void moveComplete()
+	{
+		playerAnimator.SetBool ("isWalking", false);
+		if (currentChild == 0) {
+			prevButton.interactable = false;
+		} else {
+			prevButton.interactable = true;
+		}
+
+		if (currentChild == rectList.Count - 1) {
+			nextButton.interactable = false;
+		} else {
+			nextButton.interactable = true;
+		}
+	}
+
+	private void disableButtons()
+	{
+		nextButton.interactable = false;
+		prevButton.interactable = false;
+	}
+
+	public void leftButton()
+	{
+		if (currentChild != 0) {
+			disableButtons ();
+			currentChild--;
+			Debug.Log ("Move all this direction");
+			playerRect.localScale= new Vector3 (-1, 1);
+			playerAnimator.SetBool ("isWalking", true);
+			for (int i = 0; i < rectList.Count; i++) {
+				LeanTween.moveX (rectList [i], (rectList [i].anchoredPosition.x + offRight), transitionSpeed).setOnComplete (moveComplete);
+			}
+
+		} else {
+			Debug.Log ("can't move anymore this way");
+		}
 	}
 		
 	// Update is called once per frame

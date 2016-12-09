@@ -1,6 +1,6 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 
 /**
 * Internal Representation of a Tween<br>
@@ -83,8 +83,8 @@ public class LTDescr
 
 	#if !UNITY_3_5 && !UNITY_4_0 && !UNITY_4_0_1 && !UNITY_4_1 && !UNITY_4_2 && !UNITY_4_3 && !UNITY_4_5
 	public RectTransform rectTransform;
-	public Text uiText;
-	public Image uiImage;
+	//public Text uiText;
+	//public Image uiImage;
 	public UnityEngine.Sprite[] sprites;
 	#endif
 
@@ -436,8 +436,8 @@ public class LTDescr
 	public LTDescr setTextAlpha(){
 		this.type = TweenAction.TEXT_ALPHA;
 		this.initInternal = ()=>{
-			this.uiText = trans.gameObject.GetComponent<UnityEngine.UI.Text>();
-			this.fromInternal.x = this.uiText != null ? this.uiText.color.a : 1f;
+			//this.uiText = trans.gameObject.GetComponent<UnityEngine.UI.Text>();
+			//this.fromInternal.x = this.uiText != null ? this.uiText.color.a : 1f;
 		};
 		this.easeInternal = ()=>{ textAlphaRecursive( trans, easeMethod().x, this.useRecursion ); };
 		return this;
@@ -569,14 +569,14 @@ public class LTDescr
 	public LTDescr setTextColor(){
 		this.type = TweenAction.TEXT_COLOR;
 		this.initInternal = ()=>{
-			this.uiText = trans.gameObject.GetComponent<UnityEngine.UI.Text>();
-			this.setFromColor( this.uiText != null ? this.uiText.color : Color.white );
+			//this.uiText = trans.gameObject.GetComponent<UnityEngine.UI.Text>();
+			//this.setFromColor( this.uiText != null ? this.uiText.color : Color.white );
 		};
 		this.easeInternal = ()=>{
 			newVect = easeMethod();
 			val = newVect.x;
 			Color toColor = tweenColor(this, val);
-			this.uiText.color = toColor;
+			//this.uiText.color = toColor;
 			if (dt!=0f && this._optional.onUpdateColor != null)
 				this._optional.onUpdateColor(toColor);
 
@@ -589,15 +589,15 @@ public class LTDescr
 	public LTDescr setCanvasAlpha(){
 		this.type = TweenAction.CANVAS_ALPHA;
 		this.initInternal = ()=>{
-			this.uiImage = trans.gameObject.GetComponent<UnityEngine.UI.Image>();
-			this.fromInternal.x = this.uiImage != null ? this.uiImage.color.a : 1f;
+			//this.uiImage = trans.gameObject.GetComponent<UnityEngine.UI.Image>();
+			//this.fromInternal.x = this.uiImage != null ? this.uiImage.color.a : 1f;
 		};
 		this.easeInternal = ()=>{
 			newVect = easeMethod();
 			val = newVect.x;
-			if(this.uiImage!=null){
-				Color c = this.uiImage.color; c.a = val; this.uiImage.color = c;
-			}
+			//if(this.uiImage!=null){
+			//	Color c = this.uiImage.color; c.a = val; this.uiImage.color = c;
+			//}
 			if(this.useRecursion){
 				alphaRecursive( this.rectTransform, val, 0 );
 				textAlphaRecursive( this.rectTransform, val);
@@ -616,18 +616,18 @@ public class LTDescr
 	public LTDescr setCanvasColor(){
 		this.type = TweenAction.CANVAS_COLOR;
 		this.initInternal = ()=>{
-			this.uiImage = trans.gameObject.GetComponent<UnityEngine.UI.Image>();
-			if(this.uiImage != null){
-				this.setFromColor( this.uiImage.color );
-			}else{
-				this.setFromColor( Color.white );
-			}
+			//this.uiImage = trans.gameObject.GetComponent<UnityEngine.UI.Image>();
+			//if(this.uiImage != null){
+			//	this.setFromColor( this.uiImage.color );
+		//	}else{
+		///		this.setFromColor( Color.white );
+		//	}
 		};
 		this.easeInternal = ()=>{
 			newVect = easeMethod();
 			val = newVect.x;
 			Color toColor = tweenColor(this, val);
-			this.uiImage.color = toColor;
+		//	this.uiImage.color = toColor;
 			if (dt!=0f && this._optional.onUpdateColor != null)
 				this._optional.onUpdateColor(toColor);
 
@@ -703,14 +703,14 @@ public class LTDescr
 	public LTDescr setCanvasPlaySprite(){
 		this.type = TweenAction.CANVAS_PLAYSPRITE;
 		this.initInternal = ()=>{
-			this.uiImage = trans.gameObject.GetComponent<UnityEngine.UI.Image>();
-			this.fromInternal.x = 0f;
+		//	this.uiImage = trans.gameObject.GetComponent<UnityEngine.UI.Image>();
+		//	this.fromInternal.x = 0f;
 		};
 		this.easeInternal = ()=>{
 			newVect = easeMethod();
 			val = newVect.x;
 			int frame = (int)Mathf.Round( val );
-			this.uiImage.sprite = this.sprites[ frame ];
+		//	this.uiImage.sprite = this.sprites[ frame ];
 		};
 		return this;
 	}

@@ -1,14 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\levelManagerScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\streetViewManager.cs">
     <Files>
-      <File FileName="Assets\Plugins\LTDescr.cs" Line="87" Column="23" />
       <File FileName="Assets\ProCamera2D\Code\Extensions\ProCamera2DShake.cs" Line="1" Column="1" />
       <File FileName="Assets\ventTracker.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\DemoScene.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\lockerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\slasher_touch_controls.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\levelManagerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Plugins\LeanTween\LTDescrOptional.cs" Line="2" Column="22" />
+      <File FileName="Assets\Plugins\ILeanTween.cs" Line="18" Column="1" />
+      <File FileName="Assets\Plugins\LTDescr.cs" Line="87" Column="23" />
+      <File FileName="Assets\_scripts\streetViewManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
