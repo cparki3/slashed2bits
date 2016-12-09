@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using System;
 using System.Net.Mime;
-using UnityEditor;
 
 public class streetViewManager : MonoBehaviour {
 
@@ -30,6 +29,7 @@ public class streetViewManager : MonoBehaviour {
 	public Button prevButton;
 	public Animator playerAnimator;
 	public RectTransform playerRect;
+	public RectTransform sidewalkRect;
 
 	// Use this for initialization
 	void Start () {
@@ -142,6 +142,7 @@ public class streetViewManager : MonoBehaviour {
 			Debug.Log ("Move all this direction");
 			playerAnimator.SetBool ("isWalking", true);
 			for (int i = 0; i < rectList.Count; i++) {
+				LeanTween.moveX (sidewalkRect, (sidewalkRect.anchoredPosition.x - offRight), transitionSpeed);
 				LeanTween.moveX (rectList [i], (rectList [i].anchoredPosition.x - offRight), transitionSpeed).setOnComplete (moveComplete);
 			}
 
@@ -181,6 +182,7 @@ public class streetViewManager : MonoBehaviour {
 			playerRect.localScale= new Vector3 (-1, 1);
 			playerAnimator.SetBool ("isWalking", true);
 			for (int i = 0; i < rectList.Count; i++) {
+				LeanTween.moveX (sidewalkRect, (sidewalkRect.anchoredPosition.x + offRight), transitionSpeed);
 				LeanTween.moveX (rectList [i], (rectList [i].anchoredPosition.x + offRight), transitionSpeed).setOnComplete (moveComplete);
 			}
 
