@@ -100,6 +100,13 @@
      <Compile Include="Assets\ProCamera2D\Code\Triggers\ProCamera2DTriggerRails.cs" />
      <Compile Include="Assets\ProCamera2D\Code\Triggers\ProCamera2DTriggerZoom.cs" />
      <Compile Include="Assets\ProCamera2D\ProCamera2D.cs" />
+     <Compile Include="Assets\Projects\ConeOfVisibility\ExampleScene\ConeDetectionExample.cs" />
+     <Compile Include="Assets\Projects\ConeOfVisibility\Scripts\AI\ConeOfDetection\AIConeDetection.cs" />
+     <Compile Include="Assets\Projects\ConeOfVisibility\Scripts\AI\Patrolling\EnemyAIDynamicPatrolling.cs" />
+     <Compile Include="Assets\Projects\ConeOfVisibility\Scripts\AI\Patrolling\EnemyAIStaticPatrolling.cs" />
+     <Compile Include="Assets\Projects\ConeOfVisibility\Scripts\AI\WayPointPathPatrolling\AIDynamicPatrolling.cs" />
+     <Compile Include="Assets\Projects\ConeOfVisibility\Scripts\AI\WayPointPathPatrolling\AIStaticPatrolling.cs" />
+     <Compile Include="Assets\Projects\ConeOfVisibility\Scripts\Utils\TimeCountManager.cs" />
      <Compile Include="Assets\Rewired\Examples\ControlRemapping1\Scripts\ControlRemappingDemo1.cs" />
      <Compile Include="Assets\Rewired\Examples\CustomControllersTilt\Scripts\CustomControllersTiltDemo.cs" />
      <Compile Include="Assets\Rewired\Examples\CustomControllersTouch\Scripts\CustomControllerDemo.cs" />
