@@ -1031,12 +1031,12 @@ public class LTDescr
 	private static void alphaRecursive( RectTransform rectTransform, float val, int recursiveLevel = 0){
 		if(rectTransform.childCount>0){
 			foreach (RectTransform child in rectTransform) {
-				UnityEngine.UI.Image uiImage = child.GetComponent<UnityEngine.UI.Image>();
-				if(uiImage!=null){
-					Color c = uiImage.color;
-					c.a = val;
-					uiImage.color = c;
-				}
+				//UnityEngine.UI.Image uiImage = child.GetComponent<UnityEngine.UI.Image>();
+				//if(uiImage!=null){
+				//	Color c = uiImage.color;
+				//	c.a = val;
+				//	uiImage.color = c;
+				//}
 
 				alphaRecursive(child, val, recursiveLevel + 1);
 			}
@@ -1069,22 +1069,22 @@ public class LTDescr
 
 		if(rectTransform.childCount>0){
 			foreach (RectTransform child in rectTransform) {
-				UnityEngine.UI.Image uiImage = child.GetComponent<UnityEngine.UI.Image>();
-				if(uiImage!=null){
-					uiImage.color = toColor;
-				}
+				//UnityEngine.UI.Image uiImage = child.GetComponent<UnityEngine.UI.Image>();
+				//if(uiImage!=null){
+				//	uiImage.color = toColor;
+				//}
 				colorRecursive(child, toColor);
 			}
 		}
 	}
 
 	private static void textAlphaRecursive( Transform trans, float val, bool useRecursion = true ){
-		UnityEngine.UI.Text uiText = trans.gameObject.GetComponent<UnityEngine.UI.Text>();
-		if(uiText!=null){
-			Color c = uiText.color;
-			c.a = val;
-			uiText.color = c;
-		}
+		//UnityEngine.UI.Text uiText = trans.gameObject.GetComponent<UnityEngine.UI.Text>();
+		//if(uiText!=null){
+		//	Color c = uiText.color;
+		//	c.a = val;
+		//	uiText.color = c;
+		//}
 		if(useRecursion && trans.childCount>0){
 			foreach (Transform child in trans) {
 				textAlphaRecursive(child, val);
@@ -1095,10 +1095,10 @@ public class LTDescr
 	private static void textColorRecursive(Transform trans, Color toColor ){
 		if(trans.childCount>0){
 			foreach (Transform child in trans) {
-				UnityEngine.UI.Text uiText = child.gameObject.GetComponent<UnityEngine.UI.Text>();
-				if(uiText!=null){
-					uiText.color = toColor;
-				}
+				//UnityEngine.UI.Text uiText = child.gameObject.GetComponent<UnityEngine.UI.Text>();
+				//if(uiText!=null){
+				//	uiText.color = toColor;
+				//}
 				textColorRecursive(child, toColor);
 			}
 		}
