@@ -16,6 +16,7 @@ public class AIConeDetection : MonoBehaviour {
     public  float        m_vStartDistanceCone         = 2.0f;
     public  Material     m_matVisibilityCone          = null;
     public  bool 		 m_bHasStartDistance          = true;
+	public LayerMask ignoreMask;
     public  int          m_LayerMaskToIgnoreBegin     = 0;
     public  int          m_LayerMaskToIgnoreEnd       = 0;
     private int          m_LayerMaskToIgnore          = ~(1 << 8);
@@ -59,6 +60,12 @@ public class AIConeDetection : MonoBehaviour {
         UpdateAIConeDetection();
 	}
 
+	public void destroyCone()
+	{
+		GameObject.Destroy (m_goVisibilityCone);
+		GameObject.Destroy (this.gameObject);
+	}
+
     private void InitAIConeDetection() {
         m_goGameObjectIntoCone  = new ArrayList();
         m_goVisibilityCone      = GameObject.CreatePrimitive( PrimitiveType.Cube );
@@ -67,6 +74,8 @@ public class AIConeDetection : MonoBehaviour {
         m_goVisibilityCone.name                             = this.name + "_VisConeMesh";
         m_mConeMesh                                         = new Mesh();
         m_goVisibilityCone.GetComponent<MeshFilter>().mesh  = m_mConeMesh;
+		m_goVisibilityCone.GetComponent<Renderer>().sortingLayerName = "Player";
+		m_goVisibilityCone.GetComponent<Renderer> ().sortingOrder = 0;
 
         m_iVertMax       = m_iConeVisibilityPrecision * 2 + 2;
         m_iTrianglesMax  = m_iConeVisibilityPrecision * 2;
@@ -83,6 +92,7 @@ public class AIConeDetection : MonoBehaviour {
         m_mConeMesh.uv  = m_vUV;
 
         m_goVisibilityCone.GetComponent<Renderer>().material = m_matVisibilityCone;
+
 
         for ( int i = 0; i < m_iVertMax; ++i ) {
             m_vNormals[ i ] = Vector3.up;
@@ -155,7 +165,7 @@ public class AIConeDetection : MonoBehaviour {
 				Vector2 pos = new Vector2( this.transform.position.x, this.transform.position.y );
 				Vector2 dir = new Vector2( m_rayDir.direction.x, m_rayDir.direction.y );
 
-				RaycastHit2D hit = Physics2D.Raycast( pos, dir, Mathf.Infinity, m_LayerMaskToIgnore );
+				RaycastHit2D hit = Physics2D.Raycast( pos, dir, Mathf.Infinity, ignoreMask );
 				if ( hit.collider != null ) {
 					if ( hit.distance < m_fConeLenght ) {
 						bFoundWall = true;
@@ -209,7 +219,7 @@ public class AIConeDetection : MonoBehaviour {
             else
                 color = Color.yellow;
 			
-            Debug.DrawLine( this.transform.position, m_vVertices[ index + 1 ], color );
+            //Debug.DrawLine( this.transform.position, m_vVertices[ index + 1 ], color );
             index += 2;
         }
 

@@ -29,6 +29,7 @@ public class VictimController : MonoBehaviour {
 	public Transform startAlert;
 	public Transform endAlert;
 	private RaycastHit2D alertHit;
+	public GameObject victimCone;
 
 	public bool isAlert = false;
 	public GameObject blood;
@@ -218,6 +219,7 @@ public class VictimController : MonoBehaviour {
 			//sightContainer.SetActive (false);
 			isDead = true;
 			canKill = false;
+			victimCone.SendMessage ("destroyCone", null, SendMessageOptions.DontRequireReceiver);
 			vicSprite.color = Color.white;
 			canMove = false;
 			victimText.text = "";
