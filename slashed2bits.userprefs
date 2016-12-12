@@ -1,6 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Projects\ConeOfVisibility\Scripts\AI\ConeOfDetection\AIConeDetection.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Editor\XcodeProjectUpdater.cs">
     <Files>
       <File FileName="Assets\_scripts\streetViewManager.cs" Line="1" Column="1" />
       <File FileName="Assets\ventTracker.cs" Line="1" Column="1" />
@@ -8,10 +8,11 @@
       <File FileName="Assets\_scripts\highLightToggle.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\DemoScene.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\leftButtonController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Projects\ConeOfVisibility\Scripts\AI\ConeOfDetection\AIConeDetection.cs" Line="66" Column="38" />
+      <File FileName="Assets\Projects\ConeOfVisibility\Scripts\AI\ConeOfDetection\AIConeDetection.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\CharacterController2D.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\videoButton.cs" Line="3" Column="1" />
+      <File FileName="Assets\_scripts\videoButton.cs" Line="21" Column="5" />
       <File FileName="Assets\_scripts\VictimController.cs" Line="222" Column="87" />
+      <File FileName="Assets\Editor\XcodeProjectUpdater.cs" Line="32" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

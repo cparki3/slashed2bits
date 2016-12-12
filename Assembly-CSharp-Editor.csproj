@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Editor\XcodeProjectUpdater.cs" />
      <Compile Include="Assets\LeanTween\Editor\LeanTweenDocumentationEditor.cs" />
      <Compile Include="Assets\Movinarc\PackageUninstaller\Editor\PUManager.cs" />
      <Compile Include="Assets\Movinarc\PackageUninstaller\Editor\PUSelection.cs" />
