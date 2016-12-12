@@ -12,7 +12,8 @@
       <File FileName="Assets\_scripts\CharacterController2D.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\videoButton.cs" Line="21" Column="5" />
       <File FileName="Assets\_scripts\VictimController.cs" Line="222" Column="87" />
-      <File FileName="Assets\Editor\XcodeProjectUpdater.cs" Line="32" Column="1" />
+      <File FileName="Assets\Editor\XcodeProjectUpdater.cs" Line="56" Column="9" />
+      <File FileName="Assets\ProCamera2D\Code\Extensions\ProCamera2DShake.cs" Line="390" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

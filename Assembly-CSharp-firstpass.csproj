@@ -63,13 +63,6 @@
      <Compile Include="Assets\Plugins\LeanTween.cs" />
      <Compile Include="Assets\Plugins\LeanTween\LTDescrOptional.cs" />
      <Compile Include="Assets\Plugins\OutputStream.cs" />
-     <Compile Include="Assets\Plugins\OuyaContent.cs" />
-     <Compile Include="Assets\Plugins\OuyaController.cs" />
-     <Compile Include="Assets\Plugins\OuyaMod.cs" />
-     <Compile Include="Assets\Plugins\OuyaModScreenshot.cs" />
-     <Compile Include="Assets\Plugins\OuyaSDK.cs" />
-     <Compile Include="Assets\Plugins\OuyaUnityActivity.cs" />
-     <Compile Include="Assets\Plugins\OuyaUnityPlugin.cs" />
      <Compile Include="Assets\Plugins\UnityPlayer.cs" />
      <None Include="Assets\Anime Speed Lines\Readme.txt" />
      <None Include="Assets\ootii\MessageDispatcher\Version.txt" />

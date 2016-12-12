@@ -120,7 +120,6 @@
      <Compile Include="Assets\Rewired\Internal\Scripts\DataStorage\UserDataStore_PlayerPrefs.cs" />
      <Compile Include="Assets\Rewired\Internal\Scripts\InputManager.cs" />
      <Compile Include="Assets\Rewired\Internal\Scripts\Misc\ExternalTools.cs" />
-     <Compile Include="Assets\Rewired\Internal\Scripts\Platforms\Ouya\OuyaInputSource.cs" />
      <Compile Include="Assets\SpriteMask\Scripts\ClearStencilBufferComponent.cs" />
      <Compile Include="Assets\SpriteMask\Scripts\SkipMasking.cs" />
      <Compile Include="Assets\SpriteMask\Scripts\SpriteMask.cs" />

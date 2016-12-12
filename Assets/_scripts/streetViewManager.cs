@@ -7,7 +7,6 @@ using System;
 using System.Net.Mime;
 
 public class streetViewManager : MonoBehaviour {
-
 	public RectTransform streetItemsContainer;
 	public List<RectTransform> rectList;
 	private float offLeft;
