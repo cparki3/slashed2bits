@@ -50,7 +50,6 @@
      <Compile Include="Assets\Plugins\BitmapDrawable.cs" />
      <Compile Include="Assets\Plugins\BitmapFactory.cs" />
      <Compile Include="Assets\Plugins\ByteArrayOutputStream.cs" />
-     <Compile Include="Assets\Plugins\DebugInput.cs" />
      <Compile Include="Assets\Plugins\Drawable.cs" />
      <Compile Include="Assets\Plugins\ILeanTween.cs" />
      <Compile Include="Assets\Plugins\InputStream.cs" />
