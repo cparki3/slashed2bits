@@ -58,10 +58,12 @@ namespace Rewired {
 #if !UNITY_EDITOR
             // Handle special Android platforms
             if(CheckDeviceName("OUYA", deviceName, deviceModel)) {
-                //platform = Platform.Ouya;
+               // platform = Platform.Ouya;
             } else if(CheckDeviceName("Amazon AFT.*", deviceName, deviceModel)) {
                 platform = Platform.AmazonFireTV;
             } else if(CheckDeviceName("razer Forge", deviceName, deviceModel)) {
+#if REWIRED_OUYA && REWIRED_USE_OUYA_SDK_ON_FORGETV
+                //platform = Platform.Ouya;
 #else
                 platform = Platform.RazerForgeTV;
 #endif
