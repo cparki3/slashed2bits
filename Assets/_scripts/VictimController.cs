@@ -128,30 +128,6 @@ public class VictimController : MonoBehaviour {
 		}
 	}
 
-	/*
-
-	void sawSomething(GameObject[] objects)
-	{
-		foreach(GameObject item in objects)
-		{
-			if (item.name == "PLAYER") {
-				if (!isAlert) {
-					isAlert = true;
-					slasher = item;
-					//Debug.Log ("OH GOD ITS A MURDERER SAVE ME!");
-					MessageDispatcher.SendMessage ("SEND_COPS");
-
-				} else {
-					//Debug.Log ("CHANGE DIRECTION!!");
-					changeDirection ();
-				}
-			}
-		}
-	}
-
-*/
-
-
 	public void changeDirection()
 	{
 		if (normalizedHorizontalSpeed > 0) {

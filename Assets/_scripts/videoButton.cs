@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-//using UnityEngine.Advertisements;
+using UnityEngine.Advertisements;
 
 public class videoButton : MonoBehaviour {
 
@@ -15,10 +15,10 @@ public class videoButton : MonoBehaviour {
 
 	public void ShowAd()
 	{
-		//if (Advertisement.IsReady ())
-		//{
-		//	Advertisement.Show ();
-		//}
+		if (Advertisement.IsReady ())
+		{
+			Advertisement.Show ();
+		}
 	}
 
 }
