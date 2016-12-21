@@ -1,19 +1,19 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Editor\XcodeProjectUpdater.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\DoorController.cs">
     <Files>
       <File FileName="Assets\_scripts\streetViewManager.cs" Line="1" Column="1" />
       <File FileName="Assets\ventTracker.cs" Line="1" Column="1" />
       <File FileName="Assets\ventScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\highLightToggle.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\highLightToggle.cs" Line="27" Column="1" />
       <File FileName="Assets\_scripts\DemoScene.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\leftButtonController.cs" Line="1" Column="1" />
       <File FileName="Assets\Projects\ConeOfVisibility\Scripts\AI\ConeOfDetection\AIConeDetection.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\CharacterController2D.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\videoButton.cs" Line="21" Column="5" />
-      <File FileName="Assets\_scripts\VictimController.cs" Line="222" Column="87" />
-      <File FileName="Assets\Editor\XcodeProjectUpdater.cs" Line="56" Column="9" />
-      <File FileName="Assets\ProCamera2D\Code\Extensions\ProCamera2DShake.cs" Line="390" Column="1" />
+      <File FileName="Assets\_scripts\videoButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\VictimController.cs" Line="266" Column="35" />
+      <File FileName="Assets\Rewired\Internal\Scripts\InputManager.cs" Line="61" Column="18" />
+      <File FileName="Assets\DoorController.cs" Line="58" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

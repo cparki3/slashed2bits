@@ -224,7 +224,7 @@ public class VictimController : MonoBehaviour {
 			canMove = false;
 			victimText.text = "";
 			MessageDispatcher.RemoveListener ("SEND_COPS", setupAlert);
-			Instantiate(blood, this.transform.position, Quaternion.identity);
+			Instantiate(blood, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), blood.transform.rotation);
 			victimEyelids.SetActive (false);
 			victimAnimator.SetTrigger ("die");
 			VictimController vicController = this.GetComponent<VictimController> ();
