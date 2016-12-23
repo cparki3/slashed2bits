@@ -9,7 +9,10 @@ public class losePanelManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		sceneInfo = GameObject.Find ("SCENE_DATA").GetComponent <sceneData>();
+		if(GameObject.Find ("SCENE_DATA"))
+			{
+			sceneInfo = GameObject.Find ("SCENE_DATA").GetComponent <sceneData>();
+			}
 	}
 
 	// Update is called once per frame
