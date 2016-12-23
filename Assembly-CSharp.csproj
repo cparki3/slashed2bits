@@ -172,6 +172,8 @@
      <Compile Include="Assets\_scripts\videoButton.cs" />
      <Compile Include="Assets\_scripts\warp_exit.cs" />
      <Compile Include="Assets\_scripts\winPanelManager.cs" />
+     <Compile Include="Assets\floorDestroyer.cs" />
+     <Compile Include="Assets\floorGeneratorScript.cs" />
      <Compile Include="Assets\ootii\Framework_v1\Code\Collections\ObjectPool.cs" />
      <Compile Include="Assets\ootii\Framework_v1\Code\Helpers\EditorHelper.cs" />
      <Compile Include="Assets\ootii\Framework_v1\Code\Helpers\InterfaceHelper.cs" />
@@ -189,6 +191,7 @@
      <Compile Include="Assets\ootii\MessageDispatcher\Demos\Scenes\ObjectEx.cs" />
      <Compile Include="Assets\ootii\MessageDispatcher\Demos\Scenes\Sample.cs" />
      <Compile Include="Assets\ootii\MessageDispatcher\Demos\Scenes\UI.cs" />
+     <Compile Include="Assets\playerKiller.cs" />
      <Compile Include="Assets\ventScript.cs" />
      <Compile Include="Assets\ventTracker.cs" />
      <None Include="Assets\Anime Speed Lines\Readme.txt" />

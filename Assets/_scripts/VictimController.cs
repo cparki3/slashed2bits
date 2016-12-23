@@ -70,9 +70,13 @@ public class VictimController : MonoBehaviour {
 	public GameObject victimEyelids;
 	private BoxCollider2D victimCollider;
 	public bool lookForTarget = false;
-	
+	private GameObject playerKiller;
 	void Awake()
 	{
+		if (GameObject.Find ("PLAYER_KILLER")) {
+
+			playerKiller = GameObject.Find ("PLAYER_KILLER");
+		}
 		lookForTarget = false;
 		vicSprite = victimImage.GetComponent <SpriteRenderer> ();
 		victimCollider = this.GetComponent <BoxCollider2D> ();
@@ -84,7 +88,7 @@ public class VictimController : MonoBehaviour {
 		_controller.onTriggerStayEvent += onTriggerStayEvent;
 		_controller.onTriggerExitEvent += onTriggerExitEvent;
 		normalizedHorizontalSpeed = 1;
-		MessageDispatcher.AddListener ("SEND_COPS", setupAlert);
+		//MessageDispatcher.AddListener ("SEND_COPS", setupAlert);
 		victimAnimator.SetFloat ("victimSpeed", walkSpeed);
 	}
 	
@@ -100,14 +104,14 @@ public class VictimController : MonoBehaviour {
 		//Debug.Log( "flags: " + _controller.collisionState + ", hit.normal: " + hit.normal );
 	}
 
-	public void setupAlert(IMessage rMessage)
+	public void setupAlert()
 	{
 		isAlert = true;
 		slasher = GameObject.Find ("PLAYER");
 		walkSpeed = runSpeed;
 		victimText.text = "!";
 		victimAnimator.SetFloat ("victimSpeed", walkSpeed);
-		MessageDispatcher.RemoveListener ("SEND_COPS", setupAlert);
+		//MessageDispatcher.RemoveListener ("SEND_COPS", setupAlert);
 	}
 		
 	void checkForSlasher()
@@ -117,8 +121,9 @@ public class VictimController : MonoBehaviour {
 			//Debug.Log (sightHit.collider.tag);
 			if (alertHit.collider.tag == "Player") {
 				if (!isAlert) {
+					setupAlert ();
 					//Debug.Log ("OH GOD ITS A MURDERER SAVE ME!");
-					MessageDispatcher.SendMessage ("SEND_COPS");
+					//MessageDispatcher.SendMessage ("SEND_COPS");
 					//changeDirection ();
 				} else {
 					//Debug.Log ("CHANGE DIRECTION!!");
@@ -142,7 +147,6 @@ public class VictimController : MonoBehaviour {
 		hitWall = false;
 	}
 		
-	
 	void onTriggerStayEvent( Collider2D col )
 	{
 		string tagName = col.gameObject.tag;
@@ -199,7 +203,7 @@ public class VictimController : MonoBehaviour {
 			vicSprite.color = Color.white;
 			canMove = false;
 			victimText.text = "";
-			MessageDispatcher.RemoveListener ("SEND_COPS", setupAlert);
+			//MessageDispatcher.RemoveListener ("SEND_COPS", setupAlert);
 			Instantiate(blood, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), blood.transform.rotation);
 			victimEyelids.SetActive (false);
 			victimAnimator.SetTrigger ("die");
@@ -211,6 +215,18 @@ public class VictimController : MonoBehaviour {
 			}
 			//Destroy(this.gameObject);
 		}
+	}
+
+	private void destroyVictim()
+	{
+		isDead = true;
+		canKill = false;
+		if (victimCone) {
+			victimCone.SendMessage ("destroyCone", null, SendMessageOptions.DontRequireReceiver);
+		}
+		vicSprite.color = Color.white;
+		canMove = false;
+		Destroy (this.gameObject);
 	}
 	
 	
@@ -232,6 +248,11 @@ public class VictimController : MonoBehaviour {
 	// the Update loop contains a very simple example of moving the character around and controlling the animation
 	void FixedUpdate()
 	{
+		if (playerKiller != null) {
+			if (playerKiller.transform.position.y > this.transform.position.y - 10) {
+				destroyVictim ();
+			}
+		}
 		if(canMove && !isDead)
 		{
 			checkForSlasher ();
@@ -312,42 +333,44 @@ public class VictimController : MonoBehaviour {
 
 	void checkInterraction()
 	{
-		if (isAlert) {
-			if (slasher.transform.position.y > (this.transform.position.y + 1)) {
-				slasherPos = 1;
-			}
-			if (slasher.transform.position.y < (this.transform.position.y - 1)) {
-				slasherPos = -1;
-			}
-			if (Math.Abs (slasher.transform.position.y - this.transform.position.y) < 1) {
-				slasherPos = 0;
-			}
-			if (slasherPos > 0) {
-				if (canClimb) {
-					if (ladderScript.bottomTarget.position.y < (this.transform.position.y - 1)) {
-						canClimb = false;
-						canMove = false;
-						climb ();
-					}
+		if (!isDead) {
+			if (isAlert) {
+				if (slasher.transform.position.y > (this.transform.position.y + 1)) {
+					slasherPos = 1;
 				}
-			} else if (slasherPos < 0) {
-				if (canClimb) {
-					if (ladderScript.topTarget.position.y > (this.transform.position.y + 1)) {
+				if (slasher.transform.position.y < (this.transform.position.y - 1)) {
+					slasherPos = -1;
+				}
+				if (Math.Abs (slasher.transform.position.y - this.transform.position.y) < 1) {
+					slasherPos = 0;
+				}
+				if (slasherPos > 0) {
+					if (canClimb) {
+						if (ladderScript.bottomTarget.position.y < (this.transform.position.y - 1)) {
+							canClimb = false;
+							canMove = false;
+							climb ();
+						}
+					}
+				} else if (slasherPos < 0) {
+					if (canClimb) {
+						if (ladderScript.topTarget.position.y > (this.transform.position.y + 1)) {
+							canClimb = false;
+							canMove = false;
+							climb ();
+						}
+					}
+				} else {
+					if (canClimb) {
 						canClimb = false;
 						canMove = false;
 						climb ();
 					}
 				}
 			} else {
-				if (canClimb) {
-					canClimb = false;
-					canMove = false;
-					climb ();
+				if (lookForTarget) {
+					findTarget ();
 				}
-			}
-		} else {
-			if (lookForTarget) {
-				findTarget ();
 			}
 		}
 

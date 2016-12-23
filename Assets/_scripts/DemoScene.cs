@@ -159,6 +159,9 @@ public class DemoScene : MonoBehaviour
 			victim = col.gameObject;
 			canKill = true;
 			break;
+		case "kill_bar":
+			die ();
+			break;
 		}
 		canInterract = true;
 		touchingObject = col.gameObject;
