@@ -71,6 +71,7 @@ public class VictimController : MonoBehaviour {
 	private BoxCollider2D victimCollider;
 	public bool lookForTarget = false;
 	private GameObject playerKiller;
+
 	void Awake()
 	{
 		if (GameObject.Find ("PLAYER_KILLER")) {
@@ -107,6 +108,8 @@ public class VictimController : MonoBehaviour {
 	public void setupAlert()
 	{
 		isAlert = true;
+		playerKiller killScript = this.playerKiller.GetComponent <playerKiller> ();
+		killScript.killSpeed += .1f;
 		slasher = GameObject.Find ("PLAYER");
 		walkSpeed = runSpeed;
 		victimText.text = "!";
@@ -429,7 +432,7 @@ public class VictimController : MonoBehaviour {
 	{
 		canKill = true;
 		_velocity.x = 0;
-		canClimb = true;
+		canClimb = false;
 		canMove = true;
 	}	
 }

@@ -172,6 +172,7 @@
      <Compile Include="Assets\_scripts\videoButton.cs" />
      <Compile Include="Assets\_scripts\warp_exit.cs" />
      <Compile Include="Assets\_scripts\winPanelManager.cs" />
+     <Compile Include="Assets\floorData.cs" />
      <Compile Include="Assets\floorDestroyer.cs" />
      <Compile Include="Assets\floorGeneratorScript.cs" />
      <Compile Include="Assets\ootii\Framework_v1\Code\Collections\ObjectPool.cs" />

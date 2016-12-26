@@ -41,7 +41,14 @@ public class floorGeneratorScript : MonoBehaviour {
 		if (randomFloor == currentFloor) {
 			getRandomFloor ();
 		} else {
-			currentFloor = randomFloor;
+			string currentLadder = floors [currentFloor].GetComponent <floorData> ().ladderPosition;
+			string randomLadder = floors [randomFloor].GetComponent <floorData> ().ladderPosition;
+
+			if (currentLadder != randomLadder) {
+				currentFloor = randomFloor;
+			} else {
+				getRandomFloor ();
+			}
 		}
 	}
 }

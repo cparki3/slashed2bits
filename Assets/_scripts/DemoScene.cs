@@ -321,12 +321,7 @@ public class DemoScene : MonoBehaviour
 		proShake.Shake ();
 		playerCol.enabled = false;
 		canInterract = false;
-		Invoke ("gameOver", 2f);
-	}
-
-	public void gameOver()
-	{
-		levelScript.lostGame ();
+		levelScript.playerDead ();
 	}
 	
 	public void climb()
@@ -378,7 +373,7 @@ public class DemoScene : MonoBehaviour
 	public void climbComplete()
 	{
 		_velocity.x = 0;
-		canClimb = true;
+		canClimb = false;
 		canMove = true;
 	}
 	

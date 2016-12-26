@@ -17,6 +17,7 @@ public class levelManagerScript : MonoBehaviour {
 	private GameObject sceneData;
 	public GameObject exit;
 	public List<GameObject> victimList;
+	public bool isPlayerDead = false;
 	// Use this for initialization
 	void Awake () {
 		MessageDispatcher.AddListener ("SEND_COPS", sendCops);
@@ -67,9 +68,9 @@ public class levelManagerScript : MonoBehaviour {
 
 	public void victimKilled(GameObject victim)
 	{
-		victimList.Remove (victim);
+		//victimList.Remove (victim);
 		if (victimList.Count == 0) {
-			showExit ();
+			//showExit ();
 		}
 	}
 
@@ -86,6 +87,12 @@ public class levelManagerScript : MonoBehaviour {
 		}
 		SceneManager.LoadScene (winScene, LoadSceneMode.Additive);
 		SceneManager.MoveGameObjectToScene (sceneData, SceneManager.GetSceneByName (winScene));
+	}
+
+	public void playerDead()
+	{
+		isPlayerDead = true;
+		Invoke ("lostGame", 2f);
 	}
 
 	public void lostGame()
