@@ -21,8 +21,9 @@ public class houseButton : MonoBehaviour, IPointerClickHandler {
 	public void OnPointerClick(PointerEventData eventData)
 	{
 		levelScreen.SetActive (true);
-		charSelect.SetActive (true);
+		//charSelect.SetActive (true);
 		streetScript.playButton = this.playButton;
+		playButton.SetActive (true);
 		//Debug.Log ("YOU CLICKED ON MY HOUSE!");
 	}
 }

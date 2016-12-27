@@ -145,6 +145,14 @@ public class DemoScene : MonoBehaviour
 		//Debug.Log( "flags: " + _controller.collisionState + ", hit.normal: " + hit.normal );
 	}
 
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "soul") {
+			Destroy (col.gameObject);
+			levelScript.soulCollected ();
+		}
+	}
+
 
 	void onTriggerStayEvent( Collider2D col )
 	{
@@ -372,6 +380,7 @@ public class DemoScene : MonoBehaviour
 	
 	public void climbComplete()
 	{
+		levelScript.nextFloor ();
 		_velocity.x = 0;
 		canClimb = false;
 		canMove = true;

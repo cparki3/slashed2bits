@@ -71,6 +71,8 @@ public class VictimController : MonoBehaviour {
 	private BoxCollider2D victimCollider;
 	public bool lookForTarget = false;
 	private GameObject playerKiller;
+	private levelManagerScript levelScript;
+	public GameObject soulLauncher;
 
 	void Awake()
 	{
@@ -78,6 +80,7 @@ public class VictimController : MonoBehaviour {
 
 			playerKiller = GameObject.Find ("PLAYER_KILLER");
 		}
+		levelScript = GameObject.Find ("LEVEL_MANAGER").GetComponent <levelManagerScript> ();
 		lookForTarget = false;
 		vicSprite = victimImage.GetComponent <SpriteRenderer> ();
 		victimCollider = this.GetComponent <BoxCollider2D> ();
@@ -89,6 +92,7 @@ public class VictimController : MonoBehaviour {
 		_controller.onTriggerStayEvent += onTriggerStayEvent;
 		_controller.onTriggerExitEvent += onTriggerExitEvent;
 		normalizedHorizontalSpeed = 1;
+
 		//MessageDispatcher.AddListener ("SEND_COPS", setupAlert);
 		victimAnimator.SetFloat ("victimSpeed", walkSpeed);
 	}
@@ -108,6 +112,7 @@ public class VictimController : MonoBehaviour {
 	public void setupAlert()
 	{
 		isAlert = true;
+		levelScript.resetStealth ();
 		playerKiller killScript = this.playerKiller.GetComponent <playerKiller> ();
 		killScript.killSpeed += .1f;
 		slasher = GameObject.Find ("PLAYER");
@@ -207,6 +212,10 @@ public class VictimController : MonoBehaviour {
 			canMove = false;
 			victimText.text = "";
 			//MessageDispatcher.RemoveListener ("SEND_COPS", setupAlert);
+			if (!isAlert) {
+				levelScript.stealthKill ();
+			}
+			Instantiate (soulLauncher, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), soulLauncher.transform.rotation);
 			Instantiate(blood, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), blood.transform.rotation);
 			victimEyelids.SetActive (false);
 			victimAnimator.SetTrigger ("die");
@@ -215,6 +224,7 @@ public class VictimController : MonoBehaviour {
 			if (GameObject.Find ("LEVEL_MANAGER")) {
 				GameObject levelManager = GameObject.Find ("LEVEL_MANAGER");
 				levelManager.SendMessage ("victimKilled", this.gameObject);
+
 			}
 			//Destroy(this.gameObject);
 		}

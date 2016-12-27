@@ -12,6 +12,9 @@ public class particleLauncher : MonoBehaviour {
 	public bool launchAll = false;
 	// Use this for initialization
 	void Start () {
+		if (GameObject.Find ("LEVEL_MANAGER")) {
+			itemsToLauch = GameObject.Find ("LEVEL_MANAGER").GetComponent <levelManagerScript> ().stealthMultiplier;
+		}
 		if(launchAtStart)
 		{
 			if(launchAll)

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_scenes/levels/level_2.unity
+- path: Assets/_scenes/levels/TED_LEVEL.unity
   isLoaded: 1
   isActive: 1

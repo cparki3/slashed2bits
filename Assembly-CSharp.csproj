@@ -192,7 +192,9 @@
      <Compile Include="Assets\ootii\MessageDispatcher\Demos\Scenes\ObjectEx.cs" />
      <Compile Include="Assets\ootii\MessageDispatcher\Demos\Scenes\Sample.cs" />
      <Compile Include="Assets\ootii\MessageDispatcher\Demos\Scenes\UI.cs" />
+     <Compile Include="Assets\playButton.cs" />
      <Compile Include="Assets\playerKiller.cs" />
+     <Compile Include="Assets\soulScript.cs" />
      <Compile Include="Assets\ventScript.cs" />
      <Compile Include="Assets\ventTracker.cs" />
      <None Include="Assets\Anime Speed Lines\Readme.txt" />

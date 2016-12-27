@@ -18,6 +18,13 @@ public class levelManagerScript : MonoBehaviour {
 	public GameObject exit;
 	public List<GameObject> victimList;
 	public bool isPlayerDead = false;
+	public Text killsText;
+	private int kills = 0;
+	public Text floorText;
+	public int floor = 0;
+	public int souls = 0;
+	public Text soulText;
+	public int stealthMultiplier = 1;
 	// Use this for initialization
 	void Awake () {
 		MessageDispatcher.AddListener ("SEND_COPS", sendCops);
@@ -68,15 +75,35 @@ public class levelManagerScript : MonoBehaviour {
 
 	public void victimKilled(GameObject victim)
 	{
-		//victimList.Remove (victim);
-		if (victimList.Count == 0) {
-			//showExit ();
-		}
+		kills++;
+		killsText.text = "KILLS:" + kills.ToString ();
+	}
+
+	public void soulCollected()
+	{
+		souls++;
+		soulText.text = souls.ToString ();
+	}
+
+	public void nextFloor()
+	{
+		floor++;
+		floorText.text = "FLOOR:" + floor.ToString ();
 	}
 
 	public void showExit()
 	{
 		exit.SetActive (true);
+	}
+
+	public void stealthKill()
+	{
+		stealthMultiplier ++;
+	}
+
+	public void resetStealth()
+	{
+		stealthMultiplier = 1;
 	}
 
 	public void winGame()
