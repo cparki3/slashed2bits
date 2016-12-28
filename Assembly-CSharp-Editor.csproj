@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\XcodeProjectUpdater.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Editor\CFX_InspectorHelpEditor.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Editor\CFX_SpawnSystemEditor.cs" />
      <Compile Include="Assets\LeanTween\Editor\LeanTweenDocumentationEditor.cs" />
      <Compile Include="Assets\Movinarc\PackageUninstaller\Editor\PUManager.cs" />
      <Compile Include="Assets\Movinarc\PackageUninstaller\Editor\PUSelection.cs" />
@@ -91,6 +94,7 @@
      <Compile Include="Assets\SpriteMask\Scripts\Editor\SpriteMaskEditor.cs" />
      <Compile Include="Assets\ootii\Framework_v1\Code\Utilities\Debug\Editor\LogEditor.cs" />
      <None Include="Assets\Anime Speed Lines\Readme.txt" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
      <None Include="Assets\ootii\MessageDispatcher\Version.txt" />
      <None Include="Assets\codeandweb.com\Editor\SettingsTexturePackerImporter.txt" />
      <None Include="Assets\ootii\DMReadMe.txt" />
@@ -100,20 +104,26 @@
      <None Include="Assets\LeanTween\ReadMe.txt" />
      <None Include="Assets\Movinarc\PackageUninstaller\README.txt" />
      <None Include="Assets\Rewired\Documentation\ReadMe.txt" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX2 Particle Alpha Blend Add.shader" />
      <None Include="Assets\SpriteMask\Resources\ClearStencil.shader" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Circle.shader" />
+     <None Include="Assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
      <None Include="Assets\Plugins\Android\res\values\strings.xml" />
      <None Include="Assets\SpriteMask\Resources\SpriteMask.shader" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Wipe.shader" />
+     <None Include="Assets\JMO Assets\!JMO Assets Readme.txt" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Texture.shader" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Blinds.shader" />
      <None Include="Assets\ProCamera2D\Code\Helpers\Letterbox\Resources\Letterbox.shader" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_WaterWiggle.shader" />
      <None Include="Assets\ProCamera2D\README.txt" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Shutters.shader" />
      <None Include="Assets\ProCamera2D\TransitionFX Textures\README.txt" />
      <None Include="Assets\Rewired\Documentation\ReleaseNotes.txt" />
      <None Include="Assets\LeanTween\License.txt" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX2 Particle Alpha Blend Tint.shader" />
      <None Include="Assets\SpriteMask\Resources\SpriteDefault.shader" />
+     <None Include="Assets\JMO Assets\Cartoon FX\CartoonFX2 Readme.txt" />
      <None Include="Assets\SpriteMask\Resources\SpriteDiffuse.shader" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Fade.shader" />
      <None Include="Assets\codeandweb.com\Readme.txt" />
@@ -203,6 +213,9 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="JMOAssets">
+ <HintPath>C:/Users/cparki3/workspaces/slashed2bits/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

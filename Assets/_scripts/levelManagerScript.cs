@@ -76,7 +76,7 @@ public class levelManagerScript : MonoBehaviour {
 	public void victimKilled(GameObject victim)
 	{
 		kills++;
-		killsText.text = "KILLS:" + kills.ToString ();
+		killsText.text = kills.ToString ();
 	}
 
 	public void soulCollected()
@@ -88,7 +88,7 @@ public class levelManagerScript : MonoBehaviour {
 	public void nextFloor()
 	{
 		floor++;
-		floorText.text = "FLOOR:" + floor.ToString ();
+		floorText.text = floor.ToString ();
 	}
 
 	public void showExit()

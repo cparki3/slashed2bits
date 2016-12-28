@@ -60,12 +60,12 @@ TextureImporter:
     21300106: Street_Scene_Select_Check_Mark_01
     21300108: Street_Scene_Street_01
     21300110: Street_Scene_Swipe_Arrow_01
-  serializedVersion: 2
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
@@ -77,10 +77,8 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -2
   maxTextureSize: 512
@@ -91,9 +89,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -101,12 +97,60 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 32
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: 2
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: 2
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: 2
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: 2
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: 2
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: Logo_01
+    - serializedVersion: 2
+      name: Logo_01
       rect:
         serializedVersion: 2
         x: 424
@@ -116,13 +160,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -30.5, y: 46}
-        - {x: -30.5, y: 8}
-        - {x: -26.5, y: 0}
-        - {x: 30.5, y: 0}
-        - {x: 30.5, y: 46}
-    - name: Street_Scene_Arrow_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Arrow_01
       rect:
         serializedVersion: 2
         x: 403
@@ -133,7 +174,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_BG_Bush_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_BG_Bush_01
       rect:
         serializedVersion: 2
         x: 369
@@ -143,16 +186,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -27.5, y: 38}
-        - {x: -41.5, y: 25}
-        - {x: -41.5, y: 2}
-        - {x: -38.5, y: 0}
-        - {x: 34.5, y: 0}
-        - {x: 41.5, y: 1}
-        - {x: 41.5, y: 20}
-        - {x: 18.5, y: 38}
-    - name: Street_Scene_BG_Moon_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_BG_Moon_01
       rect:
         serializedVersion: 2
         x: 369
@@ -162,16 +199,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 8.5, y: 48}
-        - {x: -11.5, y: 48}
-        - {x: -21.5, y: 35}
-        - {x: -21.5, y: 15}
-        - {x: -8.5, y: 5}
-        - {x: 11.5, y: 5}
-        - {x: 21.5, y: 18}
-        - {x: 21.5, y: 38}
-    - name: Street_Scene_BG_Sky_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_BG_Sky_01
       rect:
         serializedVersion: 2
         x: 2
@@ -181,12 +212,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -80, y: 192}
-        - {x: -80, y: 0}
-        - {x: 80, y: 0}
-        - {x: 80, y: 192}
-    - name: Street_Scene_BG_Trees_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_BG_Trees_01
       rect:
         serializedVersion: 2
         x: 2
@@ -196,23 +225,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -98.5, y: 154}
-        - {x: -102.5, y: 135}
-        - {x: -102.5, y: 0}
-        - {x: -71.5, y: 0}
-        - {x: -71.5, y: 132}
-        - {x: -78.5, y: 154}
-      - - {x: 61.5, y: 154}
-        - {x: 59.5, y: 153}
-        - {x: 52.5, y: 93}
-        - {x: 52.5, y: 9}
-        - {x: 54.5, y: 0}
-        - {x: 96.5, y: 0}
-        - {x: 102.5, y: 4}
-        - {x: 102.5, y: 117}
-        - {x: 77.5, y: 154}
-    - name: Street_Scene_BG_Trees_02
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_BG_Trees_02
       rect:
         serializedVersion: 2
         x: 367
@@ -222,20 +238,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 34, y: 2}
-        - {x: 34, y: 154}
-        - {x: 15, y: 179}
-        - {x: -11, y: 179}
-        - {x: -12, y: 177}
-        - {x: -34, y: 150}
-        - {x: -34, y: 3}
-        - {x: -31, y: 0}
-        - {x: -13, y: 0}
-        - {x: -5, y: 7}
-        - {x: 1, y: 0}
-        - {x: 29, y: 0}
-    - name: Street_Scene_Button_Bar_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Button_Bar_01
       rect:
         serializedVersion: 2
         x: 164
@@ -246,7 +252,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Button_Down_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Button_Down_01
       rect:
         serializedVersion: 2
         x: 369
@@ -257,7 +265,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Button_Up_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Button_Up_01
       rect:
         serializedVersion: 2
         x: 419
@@ -268,7 +278,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_01
       rect:
         serializedVersion: 2
         x: 209
@@ -278,15 +290,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -61, y: 152}
-        - {x: -77, y: 149}
-        - {x: -79, y: 138}
-        - {x: -79, y: 0}
-        - {x: 79, y: 0}
-        - {x: 79, y: 138}
-        - {x: 73, y: 152}
-    - name: Street_Scene_Cabin_Window_Anim_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_01
       rect:
         serializedVersion: 2
         x: 323
@@ -297,7 +304,9 @@ TextureImporter:
       pivot: {x: 19, y: -31}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_02
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_02
       rect:
         serializedVersion: 2
         x: 318
@@ -308,7 +317,9 @@ TextureImporter:
       pivot: {x: -2.25, y: -0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_03
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_03
       rect:
         serializedVersion: 2
         x: 318
@@ -319,7 +330,9 @@ TextureImporter:
       pivot: {x: -1.6, y: -0.42857143}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_04
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_04
       rect:
         serializedVersion: 2
         x: 160
@@ -330,7 +343,9 @@ TextureImporter:
       pivot: {x: -0.85714287, y: -0.29411766}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_05
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_05
       rect:
         serializedVersion: 2
         x: 498
@@ -341,7 +356,9 @@ TextureImporter:
       pivot: {x: -0.625, y: -0.29411766}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_06
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_06
       rect:
         serializedVersion: 2
         x: 487
@@ -352,7 +369,9 @@ TextureImporter:
       pivot: {x: -0.3, y: -0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_07
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_07
       rect:
         serializedVersion: 2
         x: 391
@@ -363,7 +382,9 @@ TextureImporter:
       pivot: {x: -0.3, y: -0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_08
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_08
       rect:
         serializedVersion: 2
         x: 486
@@ -374,7 +395,9 @@ TextureImporter:
       pivot: {x: -0.3, y: -0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_09
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_09
       rect:
         serializedVersion: 2
         x: 486
@@ -385,7 +408,9 @@ TextureImporter:
       pivot: {x: -0.3, y: -0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_10
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_10
       rect:
         serializedVersion: 2
         x: 499
@@ -396,7 +421,9 @@ TextureImporter:
       pivot: {x: -0.3, y: -0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_11
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_11
       rect:
         serializedVersion: 2
         x: 487
@@ -407,7 +434,9 @@ TextureImporter:
       pivot: {x: 0.23529412, y: -0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_12
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_12
       rect:
         serializedVersion: 2
         x: 424
@@ -418,7 +447,9 @@ TextureImporter:
       pivot: {x: 0.31578946, y: -0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_13
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_13
       rect:
         serializedVersion: 2
         x: 187
@@ -429,7 +460,9 @@ TextureImporter:
       pivot: {x: 0.35, y: -0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_14
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_14
       rect:
         serializedVersion: 2
         x: 164
@@ -440,7 +473,9 @@ TextureImporter:
       pivot: {x: 0.42857143, y: -0.15789473}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_15
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_15
       rect:
         serializedVersion: 2
         x: 403
@@ -451,7 +486,9 @@ TextureImporter:
       pivot: {x: 0.47619048, y: -0.15789473}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_16
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_16
       rect:
         serializedVersion: 2
         x: 369
@@ -462,7 +499,9 @@ TextureImporter:
       pivot: {x: 0.55, y: -0.15789473}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_17
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_17
       rect:
         serializedVersion: 2
         x: 426
@@ -473,7 +512,9 @@ TextureImporter:
       pivot: {x: 0.6, y: -0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_18
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_18
       rect:
         serializedVersion: 2
         x: 486
@@ -484,7 +525,9 @@ TextureImporter:
       pivot: {x: 0.68421054, y: -0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_19
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_19
       rect:
         serializedVersion: 2
         x: 486
@@ -495,7 +538,9 @@ TextureImporter:
       pivot: {x: 0.7222222, y: -0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_20
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_20
       rect:
         serializedVersion: 2
         x: 498
@@ -506,7 +551,9 @@ TextureImporter:
       pivot: {x: 1.3, y: -0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_21
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_21
       rect:
         serializedVersion: 2
         x: 486
@@ -517,7 +564,9 @@ TextureImporter:
       pivot: {x: 1.3, y: -0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_22
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_22
       rect:
         serializedVersion: 2
         x: 486
@@ -528,7 +577,9 @@ TextureImporter:
       pivot: {x: 1.3, y: -0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_23
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_23
       rect:
         serializedVersion: 2
         x: 498
@@ -539,7 +590,9 @@ TextureImporter:
       pivot: {x: 1.3, y: -0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_24
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_24
       rect:
         serializedVersion: 2
         x: 498
@@ -550,7 +603,9 @@ TextureImporter:
       pivot: {x: 1.3, y: -0.29411766}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_25
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_25
       rect:
         serializedVersion: 2
         x: 354
@@ -561,7 +616,9 @@ TextureImporter:
       pivot: {x: 1.625, y: -0.3125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_26
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_26
       rect:
         serializedVersion: 2
         x: 318
@@ -572,7 +629,9 @@ TextureImporter:
       pivot: {x: 2.1666667, y: -0.33333334}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_27
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_27
       rect:
         serializedVersion: 2
         x: 318
@@ -583,7 +642,9 @@ TextureImporter:
       pivot: {x: 3.25, y: -0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_28
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_28
       rect:
         serializedVersion: 2
         x: 318
@@ -594,7 +655,9 @@ TextureImporter:
       pivot: {x: 4.3333335, y: -0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_29
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_29
       rect:
         serializedVersion: 2
         x: 323
@@ -605,7 +668,9 @@ TextureImporter:
       pivot: {x: 19, y: -31}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Cabin_Window_Anim_30
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Cabin_Window_Anim_30
       rect:
         serializedVersion: 2
         x: 323
@@ -616,7 +681,9 @@ TextureImporter:
       pivot: {x: 19, y: -31}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Character_Select_Frame_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Character_Select_Frame_01
       rect:
         serializedVersion: 2
         x: 164
@@ -626,12 +693,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -80, y: 37}
-        - {x: -80, y: 0}
-        - {x: 80, y: 0}
-        - {x: 80, y: 37}
-    - name: Street_Scene_Coming_Soon_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Coming_Soon_01
       rect:
         serializedVersion: 2
         x: 164
@@ -641,16 +706,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 74, y: 74}
-        - {x: 51, y: 84}
-        - {x: -23, y: 84}
-        - {x: -76, y: 41}
-        - {x: -76, y: 0}
-        - {x: 75, y: 0}
-        - {x: 76, y: 1}
-        - {x: 76, y: 65}
-    - name: Street_Scene_Head_Frame_Locked_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Head_Frame_Locked_01
       rect:
         serializedVersion: 2
         x: 454
@@ -661,7 +720,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Head_Frame_UnLocked_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Head_Frame_UnLocked_01
       rect:
         serializedVersion: 2
         x: 369
@@ -672,7 +733,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_House_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_House_01
       rect:
         serializedVersion: 2
         x: 209
@@ -682,14 +745,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -73, y: 134}
-        - {x: -76, y: 132}
-        - {x: -78, y: 106}
-        - {x: -78, y: 0}
-        - {x: 78, y: 0}
-        - {x: 78, y: 134}
-    - name: Street_Scene_Icon_Achievements_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Icon_Achievements_01
       rect:
         serializedVersion: 2
         x: 160
@@ -700,7 +759,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Icon_Home_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Icon_Home_01
       rect:
         serializedVersion: 2
         x: 160
@@ -711,7 +772,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Icon_Video_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Icon_Video_01
       rect:
         serializedVersion: 2
         x: 160
@@ -722,7 +785,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Level_Locked_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Level_Locked_01
       rect:
         serializedVersion: 2
         x: 487
@@ -733,7 +798,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Level_UnLocked_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Level_UnLocked_01
       rect:
         serializedVersion: 2
         x: 160
@@ -744,7 +811,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Overlay_Cabin_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Overlay_Cabin_01
       rect:
         serializedVersion: 2
         x: 326
@@ -754,15 +823,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -61, y: 152}
-        - {x: -77, y: 149}
-        - {x: -79, y: 138}
-        - {x: -79, y: 0}
-        - {x: 79, y: 0}
-        - {x: 79, y: 138}
-        - {x: 73, y: 152}
-    - name: Street_Scene_Overlay_House_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Overlay_House_01
       rect:
         serializedVersion: 2
         x: 2
@@ -772,14 +836,10 @@ TextureImporter:
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -73, y: 134}
-        - {x: -76, y: 132}
-        - {x: -78, y: 106}
-        - {x: -78, y: 0}
-        - {x: 78, y: 0}
-        - {x: 78, y: 134}
-    - name: Street_Scene_Select_Check_Mark_01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Select_Check_Mark_01
       rect:
         serializedVersion: 2
         x: 341
@@ -790,7 +850,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Street_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Street_01
       rect:
         serializedVersion: 2
         x: 164
@@ -801,7 +863,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Street_Scene_Swipe_Arrow_01
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Street_Scene_Swipe_Arrow_01
       rect:
         serializedVersion: 2
         x: 323
@@ -812,6 +876,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      tessellationDetail: -1
     outline: []
   spritePackingTag: 
   userData: 

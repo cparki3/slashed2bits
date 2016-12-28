@@ -1,0 +1,22 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: souls_particle.png (104 x 64)
+# $TexturePacker:SmartUpdate:038cbd9df3f60aa3245dab32b20d254f:2004f5245294147366109353774223a6:7d2b1a695e29f32a9aa29253f9d012a2$
+#
+
+Win_Popup_Ghost_01;2;33;32;29;0.5;0.5
+Win_Popup_Ghost_02;2;33;32;29;0.5;0.5
+Win_Popup_Ghost_03;36;33;32;29;0.5;0.5
+Win_Popup_Ghost_04;36;33;32;29;0.5;0.5
+Win_Popup_Ghost_05;70;33;32;29;0.5;0.5
+Win_Popup_Ghost_06;70;33;32;29;0.5;0.5
+Win_Popup_Ghost_07;2;2;32;29;0.5;0.5
+Win_Popup_Ghost_08;2;2;32;29;0.5;0.5
+Win_Popup_Ghost_09;36;2;32;29;0.5;0.5
+Win_Popup_Ghost_10;36;2;32;29;0.5;0.5
+Win_Popup_Ghost_11;70;2;32;29;0.5;0.5
+Win_Popup_Ghost_12;70;2;32;29;0.5;0.5

@@ -145,7 +145,7 @@ public class DemoScene : MonoBehaviour
 		//Debug.Log( "flags: " + _controller.collisionState + ", hit.normal: " + hit.normal );
 	}
 
-	void OnCollisionEnter2D(Collision2D col)
+	void OnCollisionStay2D(Collision2D col)
 	{
 		if (col.gameObject.tag == "soul") {
 			Destroy (col.gameObject);
