@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using com.ootii.Messages;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System;
 
 public class levelManagerScript : MonoBehaviour {
 
@@ -25,14 +26,15 @@ public class levelManagerScript : MonoBehaviour {
 	public int souls = 0;
 	public Text soulText;
 	public int stealthMultiplier = 1;
+	public GameManager GM;
 	// Use this for initialization
 	void Awake () {
+		if (GameObject.Find ("GAME_MANAGER")) {
+			GM = GameObject.Find ("GAME_MANAGER").GetComponent <GameManager> ();
+			souls = GM.souls;
+		}
 		MessageDispatcher.AddListener ("SEND_COPS", sendCops);
 		sceneData = GameObject.Find ("SCENE_DATA");
-		GameObject[] victims = GameObject.FindGameObjectsWithTag ("victim");
-		for (int i = 0; i < victims.Length; i++) {
-			victimList.Add (victims[i]);
-		}
 	}
 
 	void OnDestroy()
@@ -98,7 +100,9 @@ public class levelManagerScript : MonoBehaviour {
 
 	public void stealthKill()
 	{
-		stealthMultiplier ++;
+		if (stealthMultiplier < 5) {
+			stealthMultiplier++;
+		}
 	}
 
 	public void resetStealth()
@@ -119,6 +123,10 @@ public class levelManagerScript : MonoBehaviour {
 	public void playerDead()
 	{
 		isPlayerDead = true;
+		if (GM) {
+			GM.souls = this.souls;
+			GM.Save ();
+		}
 		Invoke ("lostGame", 2f);
 	}
 

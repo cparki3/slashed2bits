@@ -136,6 +136,7 @@
      <Compile Include="Assets\Rewired\Internal\Scripts\DataStorage\UserDataStore_PlayerPrefs.cs" />
      <Compile Include="Assets\Rewired\Internal\Scripts\InputManager.cs" />
      <Compile Include="Assets\Rewired\Internal\Scripts\Misc\ExternalTools.cs" />
+     <Compile Include="Assets\SoulsPanelManager.cs" />
      <Compile Include="Assets\SpriteMask\Scripts\ClearStencilBufferComponent.cs" />
      <Compile Include="Assets\SpriteMask\Scripts\SkipMasking.cs" />
      <Compile Include="Assets\SpriteMask\Scripts\SpriteMask.cs" />
@@ -179,6 +180,7 @@
      <Compile Include="Assets\_scripts\lose_animation_controller.cs" />
      <Compile Include="Assets\_scripts\particleLauncher.cs" />
      <Compile Include="Assets\_scripts\rightButtonController.cs" />
+     <Compile Include="Assets\_scripts\s2bData.cs" />
      <Compile Include="Assets\_scripts\sceneData.cs" />
      <Compile Include="Assets\_scripts\shootScript.cs" />
      <Compile Include="Assets\_scripts\slasher_touch_controls.cs" />

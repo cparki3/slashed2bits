@@ -325,6 +325,7 @@ public class DemoScene : MonoBehaviour
 
 	public void die()
 	{
+		canMove = false;
 		_animator.SetTrigger ("shot");
 		proShake.Shake ();
 		playerCol.enabled = false;
