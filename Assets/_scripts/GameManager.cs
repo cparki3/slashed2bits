@@ -66,10 +66,10 @@ public class GameManager : MonoBehaviour {
 
 	public void Load()
 	{
-		if (File.Exists (Application.persistentDataPath + "/playerInfo.dat")) {
+		if (File.Exists (Application.persistentDataPath + "/s2bInfo.dat")) {
 			Debug.Log ("found save file");
 			BinaryFormatter bf = new BinaryFormatter ();
-			FileStream file = File.Open (Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
+			FileStream file = File.Open (Application.persistentDataPath + "/s2bInfo.dat", FileMode.Open);
 			s2bData data = (s2bData)bf.Deserialize (file);
 			file.Close ();
 
