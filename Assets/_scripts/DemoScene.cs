@@ -74,6 +74,7 @@ public class DemoScene : MonoBehaviour
 
 	public void addPlayer()
 	{
+		portal.SetActive (true);
 		if (GameObject.Find ("GAME_MANAGER")) {
 			GM = GameObject.Find ("GAME_MANAGER").GetComponent <GameManager> ();
 			if (GM.player1 != null) {
@@ -96,6 +97,24 @@ public class DemoScene : MonoBehaviour
 
 	}
 
+	public void revivePlayer()
+	{
+		portal.SetActive (true);
+		sprite = slasher.GetComponent<SpriteRenderer>();
+		sprite.color = startColor;
+		slasher.transform.parent = this.transform;
+		slasher.transform.position = new Vector2 (slasher.transform.position.x, slasher.transform.position.y + .5f);
+		LeanTween.moveLocalY (slasher, 0f, .5f);
+		LeanTween.color (slasher, Color.white, .5f);
+		LeanTween.scaleX (slasher, 1f, .5f).setOnComplete (movePlayer);
+		LeanTween.scaleY (slasher, 1f, .5f);
+		_animator.SetTrigger ("revive");
+		playerCol.enabled = true;
+		canInterract = true;
+		//_animator = slasher.GetComponent<Animator>();
+
+	}
+
 	public void movePlayer()
 	{
 		Invoke("removePortal", .5f);
@@ -111,7 +130,8 @@ public class DemoScene : MonoBehaviour
 	public void destroyPortal()
 	{
 		canMove = true;
-		Destroy (portal, 1f);
+		portal.SetActive (false);
+		//Destroy (portal, 1f);
 	}
 
 	public void stopMovement()

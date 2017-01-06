@@ -8,10 +8,13 @@ public class playerKiller : MonoBehaviour {
 	public float killSpeed = .2f;
 	private GameObject player;
 	private levelManagerScript levelManager;
+	private float originalSpeed;
 	// Use this for initialization
 	void Awake () {
+		originalSpeed = killSpeed;
 		player = GameObject.Find ("PLAYER");
 		levelManager = GameObject.Find ("LEVEL_MANAGER").GetComponent <levelManagerScript> ();
+
 	}
 	
 	// Update is called once per frame
@@ -22,5 +25,11 @@ public class playerKiller : MonoBehaviour {
 				this.transform.position = new Vector2 (this.transform.position.x, (player.transform.position.y - 24f));
 			}
 		}
+	}
+
+	public void resetKill()
+	{
+		killSpeed = originalSpeed;
+		this.transform.position = new Vector2 (this.transform.position.x, (player.transform.position.y - 24f));
 	}
 }

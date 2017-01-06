@@ -27,8 +27,12 @@ public class levelManagerScript : MonoBehaviour {
 	public Text soulText;
 	public int stealthMultiplier = 1;
 	public GameManager GM;
+	private DemoScene playerScript;
+	private playerKiller pKiller;
 	// Use this for initialization
 	void Awake () {
+		playerScript = GameObject.Find ("PLAYER").GetComponent <DemoScene> ();
+		pKiller = GameObject.Find ("PLAYER_KILLER").GetComponent<playerKiller> ();
 		if (GameObject.Find ("GAME_MANAGER")) {
 			GM = GameObject.Find ("GAME_MANAGER").GetComponent <GameManager> ();
 			souls = GM.souls;
@@ -135,5 +139,12 @@ public class levelManagerScript : MonoBehaviour {
 		//TODO make sure controls are disabled before loading scene
 		SceneManager.LoadScene (loseScene, LoadSceneMode.Additive);
 		SceneManager.MoveGameObjectToScene (sceneData, SceneManager.GetSceneByName (loseScene));
+	}
+
+	public void revivePlayer()
+	{
+		isPlayerDead = false;
+		pKiller.resetKill ();
+		playerScript.revivePlayer ();
 	}
 }
