@@ -70,16 +70,16 @@ public class VictimController : MonoBehaviour {
 	public GameObject victimEyelids;
 	private BoxCollider2D victimCollider;
 	public bool lookForTarget = false;
-	private GameObject playerKiller;
+	//private GameObject playerKiller;
 	private levelManagerScript levelScript;
 	public GameObject soulLauncher;
 
 	void Awake()
 	{
-		if (GameObject.Find ("PLAYER_KILLER")) {
+		/*if (GameObject.Find ("PLAYER_KILLER")) {
 
 			playerKiller = GameObject.Find ("PLAYER_KILLER");
-		}
+		}*/
 		levelScript = GameObject.Find ("LEVEL_MANAGER").GetComponent <levelManagerScript> ();
 		lookForTarget = false;
 		vicSprite = victimImage.GetComponent <SpriteRenderer> ();
@@ -113,8 +113,8 @@ public class VictimController : MonoBehaviour {
 	{
 		isAlert = true;
 		levelScript.resetStealth ();
-		playerKiller killScript = this.playerKiller.GetComponent <playerKiller> ();
-		killScript.killSpeed += .1f;
+		//playerKiller killScript = this.playerKiller.GetComponent <playerKiller> ();
+		//killScript.killSpeed += .1f;
 		slasher = GameObject.Find ("PLAYER");
 		walkSpeed = runSpeed;
 		victimText.text = "!";
@@ -261,11 +261,12 @@ public class VictimController : MonoBehaviour {
 	// the Update loop contains a very simple example of moving the character around and controlling the animation
 	void FixedUpdate()
 	{
-		if (playerKiller != null) {
+/*		if (playerKiller != null) {
 			if (playerKiller.transform.position.y > this.transform.position.y - 10) {
 				destroyVictim ();
 			}
 		}
+		*/
 		if(canMove && !isDead)
 		{
 			checkForSlasher ();

@@ -142,6 +142,7 @@
      <Compile Include="Assets\SpriteMask\Scripts\SpriteMask.cs" />
      <Compile Include="Assets\SpriteMask\Scripts\SpriteMaskingComponent.cs" />
      <Compile Include="Assets\SpriteMask\Scripts\SpriteMaskingPart.cs" />
+     <Compile Include="Assets\SwatController.cs" />
      <Compile Include="Assets\_scripts\CharacterController2D.cs" />
      <Compile Include="Assets\_scripts\CharacterPanel.cs" />
      <Compile Include="Assets\_scripts\CharacterSelect.cs" />
@@ -189,6 +190,8 @@
      <Compile Include="Assets\_scripts\videoButton.cs" />
      <Compile Include="Assets\_scripts\warp_exit.cs" />
      <Compile Include="Assets\_scripts\winPanelManager.cs" />
+     <Compile Include="Assets\characterData.cs" />
+     <Compile Include="Assets\characterPanelScript.cs" />
      <Compile Include="Assets\floorData.cs" />
      <Compile Include="Assets\floorDestroyer.cs" />
      <Compile Include="Assets\floorGeneratorScript.cs" />

@@ -1,0 +1,27 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: swat.png (64 x 128)
+# $TexturePacker:SmartUpdate:97a948c4d78916bb7baab458ce9e15a6:c9d733e46625c80e4d2b3f3e0a6f2620:6fd603b8958fbe9320b520cb580123fb$
+#
+
+Swat_Parts_Arm_01;52;81;9;8;0.5;0
+Swat_Parts_Gun_01;40;113;21;13;0.5;0
+Swat_Parts_Head_01;40;91;20;20;0.5;0
+Swat_Parts_Leg_01;52;73;6;6;0.5;0
+Swat_Parts_Torso_01;40;79;10;10;0.5;0
+Swat_Walk_01;2;39;36;27;0.3055555555555556;0
+Swat_Walk_02;2;39;36;27;0.3055555555555556;0
+Swat_Walk_03;2;39;36;27;0.3055555555555556;0
+Swat_Walk_04;2;98;36;28;0.3055555555555556;0
+Swat_Walk_05;2;98;36;28;0.3055555555555556;0
+Swat_Walk_06;2;98;36;28;0.3055555555555556;0
+Swat_Walk_07;2;10;36;27;0.3055555555555556;0
+Swat_Walk_08;2;10;36;27;0.3055555555555556;0
+Swat_Walk_09;2;10;36;27;0.3055555555555556;0
+Swat_Walk_10;2;68;36;28;0.3055555555555556;0
+Swat_Walk_11;2;68;36;28;0.3055555555555556;0
+Swat_Walk_12;2;68;36;28;0.3055555555555556;0

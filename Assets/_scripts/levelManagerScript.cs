@@ -28,11 +28,11 @@ public class levelManagerScript : MonoBehaviour {
 	public int stealthMultiplier = 1;
 	public GameManager GM;
 	private DemoScene playerScript;
-	private playerKiller pKiller;
+	//private playerKiller pKiller;
 	// Use this for initialization
 	void Awake () {
 		playerScript = GameObject.Find ("PLAYER").GetComponent <DemoScene> ();
-		pKiller = GameObject.Find ("PLAYER_KILLER").GetComponent<playerKiller> ();
+		//pKiller = GameObject.Find ("PLAYER_KILLER").GetComponent<playerKiller> ();
 		if (GameObject.Find ("GAME_MANAGER")) {
 			GM = GameObject.Find ("GAME_MANAGER").GetComponent <GameManager> ();
 			souls = GM.souls;
@@ -129,6 +129,11 @@ public class levelManagerScript : MonoBehaviour {
 		isPlayerDead = true;
 		if (GM) {
 			GM.souls = this.souls;
+			if (GM.currentLevel == "TED") {
+				GM.tedKills = this.kills;
+				GM.tedFloors = this.floor;
+				GM.tedScore = this.floor * this.kills;
+			}
 			GM.Save ();
 		}
 		Invoke ("lostGame", 2f);
@@ -144,7 +149,7 @@ public class levelManagerScript : MonoBehaviour {
 	public void revivePlayer()
 	{
 		isPlayerDead = false;
-		pKiller.resetKill ();
+		//pKiller.resetKill ();
 		playerScript.revivePlayer ();
 	}
 }

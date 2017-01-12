@@ -140,6 +140,7 @@ public class streetViewManager : MonoBehaviour {
 			playerRect.localScale = new Vector3 (1,1);
 			Debug.Log ("Move all this direction");
 			playerAnimator.SetBool ("isWalking", true);
+
 			for (int i = 0; i < rectList.Count; i++) {
 				LeanTween.moveX (sidewalkRect, (sidewalkRect.anchoredPosition.x - offRight), transitionSpeed);
 				LeanTween.moveX (rectList [i], (rectList [i].anchoredPosition.x - offRight), transitionSpeed).setOnComplete (moveComplete);
@@ -152,6 +153,10 @@ public class streetViewManager : MonoBehaviour {
 
 	private void moveComplete()
 	{
+		hideHouses ();
+		if (playButton != null) {
+			hidePlay ();
+		}
 		playerAnimator.SetBool ("isWalking", false);
 		if (currentChild == 0) {
 			prevButton.interactable = false;
