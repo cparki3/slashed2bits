@@ -119,6 +119,7 @@ public class VictimController : MonoBehaviour {
 		walkSpeed = runSpeed;
 		victimText.text = "!";
 		victimAnimator.SetFloat ("victimSpeed", walkSpeed);
+		levelScript.speedUpSwat ();
 		//MessageDispatcher.RemoveListener ("SEND_COPS", setupAlert);
 	}
 		

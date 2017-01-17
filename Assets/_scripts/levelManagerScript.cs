@@ -28,6 +28,7 @@ public class levelManagerScript : MonoBehaviour {
 	public int stealthMultiplier = 1;
 	public GameManager GM;
 	private DemoScene playerScript;
+	public GameObject swatManager;
 	//private playerKiller pKiller;
 	// Use this for initialization
 	void Awake () {
@@ -77,6 +78,11 @@ public class levelManagerScript : MonoBehaviour {
 			//lostGame ();
 			cop.SetActive(true);
 		}
+	}
+
+	public void speedUpSwat()
+	{
+		swatManager.SendMessage ("speedUpSwat");
 	}
 
 	public void victimKilled(GameObject victim)
@@ -148,8 +154,16 @@ public class levelManagerScript : MonoBehaviour {
 
 	public void revivePlayer()
 	{
-		isPlayerDead = false;
+		
 		//pKiller.resetKill ();
+		swatManager.SendMessage ("killAllSwat", null, SendMessageOptions.DontRequireReceiver);
+		Invoke ("startRevive", 1f);
+	}
+
+	public void startRevive()
+	{
+		isPlayerDead = false;
 		playerScript.revivePlayer ();
+		swatManager.SendMessage ("resetSwat", null, SendMessageOptions.DontRequireReceiver);
 	}
 }

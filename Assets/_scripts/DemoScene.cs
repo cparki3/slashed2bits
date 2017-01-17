@@ -49,6 +49,7 @@ public class DemoScene : MonoBehaviour
 	private BoxCollider2D playerCol;
 	private ProCamera2D proCam;
 	private ProCamera2DShake proShake;
+	public GameObject swatManager;
 
 
 	void Awake()
@@ -187,7 +188,7 @@ public class DemoScene : MonoBehaviour
 			victim = col.gameObject;
 			canKill = true;
 			break;
-		case "kill_bar":
+		case "swat":
 			die ();
 			break;
 		}
@@ -351,6 +352,7 @@ public class DemoScene : MonoBehaviour
 		playerCol.enabled = false;
 		canInterract = false;
 		levelScript.playerDead ();
+		swatManager.SendMessage ("targetDead", null, SendMessageOptions.DontRequireReceiver);
 	}
 	
 	public void climb()

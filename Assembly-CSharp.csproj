@@ -190,6 +190,7 @@
      <Compile Include="Assets\_scripts\videoButton.cs" />
      <Compile Include="Assets\_scripts\warp_exit.cs" />
      <Compile Include="Assets\_scripts\winPanelManager.cs" />
+     <Compile Include="Assets\bulletScript.cs" />
      <Compile Include="Assets\characterData.cs" />
      <Compile Include="Assets\characterPanelScript.cs" />
      <Compile Include="Assets\floorData.cs" />
@@ -216,6 +217,7 @@
      <Compile Include="Assets\playerKiller.cs" />
      <Compile Include="Assets\soulParticleController.cs" />
      <Compile Include="Assets\soulScript.cs" />
+     <Compile Include="Assets\swatManagerScript.cs" />
      <Compile Include="Assets\ventScript.cs" />
      <Compile Include="Assets\ventTracker.cs" />
      <None Include="Assets\Anime Speed Lines\Readme.txt" />

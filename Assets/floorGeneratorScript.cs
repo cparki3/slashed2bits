@@ -6,6 +6,7 @@ public class floorGeneratorScript : MonoBehaviour {
 
 	[Header("Possible Floors")]
 	public GameObject[] floors;
+	public List<GameObject> createdFloors;
 	// Use this for initialization
 
 	public float floorHeight = .5f;
@@ -33,6 +34,11 @@ public class floorGeneratorScript : MonoBehaviour {
 		getRandomFloor ();
 		GameObject newFloor = Instantiate (floors [currentFloor], this.transform.position, Quaternion.identity) as GameObject;
 		this.transform.position = new Vector2 (this.transform.position.x, this.transform.position.y + floorHeight);
+		createdFloors.Add (newFloor);
+		if (createdFloors.Count >= 14) {
+			Destroy (createdFloors[0]);
+			createdFloors.RemoveAt (0);
+		}
 	}
 
 	public void getRandomFloor()

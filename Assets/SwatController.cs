@@ -65,6 +65,11 @@ public class SwatController : MonoBehaviour {
 	//private GameObject playerKiller;
 	private levelManagerScript levelScript;
 	public GameObject soulLauncher;
+	public bool canShoot = true;
+	public float reloadTime = 0.5f;
+	public Transform bulletSpawn;
+	public Rigidbody2D bulletPrefab;
+	public float bulletSpeed = 600;
 
 	void Awake()
 	{
@@ -72,6 +77,7 @@ public class SwatController : MonoBehaviour {
 
 			playerKiller = GameObject.Find ("PLAYER_KILLER");
 		}*/
+		slasher = GameObject.Find ("PLAYER");
 		levelScript = GameObject.Find ("LEVEL_MANAGER").GetComponent <levelManagerScript> ();
 		lookForTarget = false;
 		vicSprite = victimImage.GetComponent <SpriteRenderer> ();
@@ -100,18 +106,7 @@ public class SwatController : MonoBehaviour {
 		// logs any collider hits if uncommented. it gets noisy so it is commented out for the demo
 		//Debug.Log( "flags: " + _controller.collisionState + ", hit.normal: " + hit.normal );
 	}
-
-	public void setupAlert()
-	{
-		isAlert = true;
-		levelScript.resetStealth ();
-		//playerKiller killScript = this.playerKiller.GetComponent <playerKiller> ();
-		//killScript.killSpeed += .1f;
-		slasher = GameObject.Find ("PLAYER");
-		walkSpeed = runSpeed;
-		//victimAnimator.SetFloat ("victimSpeed", walkSpeed);
-		//MessageDispatcher.RemoveListener ("SEND_COPS", setupAlert);
-	}
+		
 
 	void checkForSlasher()
 	{
@@ -119,17 +114,36 @@ public class SwatController : MonoBehaviour {
 		if (alertHit.collider != null) {
 			//Debug.Log (sightHit.collider.tag);
 			if (alertHit.collider.tag == "Player") {
-				if (!isAlert) {
-					setupAlert ();
-					//Debug.Log ("OH GOD ITS A MURDERER SAVE ME!");
-					//MessageDispatcher.SendMessage ("SEND_COPS");
-					//changeDirection ();
+				if (canShoot) {
+					canShoot = false;
+					shoot ();
 				} else {
 					//Debug.Log ("CHANGE DIRECTION!!");
-					changeDirection ();
+					//changeDirection ();
 				}
 			}
 		}
+	}
+
+	public void shoot()
+	{
+		Debug.Log ("BANG!");
+		Rigidbody2D newBullet = Instantiate (bulletPrefab, bulletSpawn.position, bulletSpawn.localRotation);
+		if (victimImage.transform.localScale.x < 0) {
+			Debug.Log ("shoot left");
+			newBullet.transform.localScale = new Vector2 (-1, 1);
+			newBullet.AddForce ((newBullet.transform.right * bulletSpeed) * -1);
+		}
+		else
+		{
+			newBullet.AddForce (newBullet.transform.right * bulletSpeed);
+		}
+		Invoke ("resetShoot", reloadTime);
+	}
+
+	public void resetShoot()
+	{
+		canShoot = true;
 	}
 
 	public void changeDirection()
@@ -146,6 +160,11 @@ public class SwatController : MonoBehaviour {
 		hitWall = false;
 	}
 
+	public void boostSpeed(float boostAmount)
+	{
+		walkSpeed += boostAmount;
+	}
+
 	void onTriggerStayEvent( Collider2D col )
 	{
 		string tagName = col.gameObject.tag;
@@ -155,6 +174,11 @@ public class SwatController : MonoBehaviour {
 			canClimb = true;
 			touchingObject = col.gameObject;
 		}
+
+		if (tagName == "Player") {
+			//ssher.SendMessage ("die");
+		}
+
 		canInterract = true;
 
 		if (tagName == "darkness" && lookForTarget == false) {
@@ -182,7 +206,12 @@ public class SwatController : MonoBehaviour {
 
 	public void hideHighlight()
 	{
-		vicSprite.color = Color.white;
+		//vicSprite.color = Color.white;
+	}
+
+	public void resetSpeed(float newSpeed)
+	{
+		this.walkSpeed = newSpeed;
 	}
 
 	public void die()
@@ -192,24 +221,21 @@ public class SwatController : MonoBehaviour {
 			//sightContainer.SetActive (false);
 			isDead = true;
 			canKill = false;
-			vicSprite.color = Color.white;
+			//vicSprite.enabled = false;
 			canMove = false;
-			victimText.text = "";
+			//victimText.text = "";
 			//MessageDispatcher.RemoveListener ("SEND_COPS", setupAlert);
-			if (!isAlert) {
-				levelScript.stealthKill ();
-			}
-			Instantiate (soulLauncher, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), soulLauncher.transform.rotation);
+			//Instantiate (soulLauncher, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), soulLauncher.transform.rotation);
 			Instantiate(blood, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), blood.transform.rotation);
 			//victimAnimator.SetTrigger ("die");
 			VictimController vicController = this.GetComponent<VictimController> ();
 			walkSpeed = 0;
 			if (GameObject.Find ("LEVEL_MANAGER")) {
 				GameObject levelManager = GameObject.Find ("LEVEL_MANAGER");
-				levelManager.SendMessage ("victimKilled", this.gameObject);
+				//levelManager.SendMessage ("victimKilled", this.gameObject);
 
 			}
-			//Destroy(this.gameObject);
+			Destroy(this.gameObject);
 		}
 	}
 
@@ -247,6 +273,9 @@ public class SwatController : MonoBehaviour {
 			}
 		}
 		*/
+		if (slasher.transform.position.y > (this.transform.position.y + 12)) {
+			this.transform.position = new Vector2 (this.transform.position.x, this.transform.position.y + 2);
+		}
 		if(canMove && !isDead)
 		{
 			checkForSlasher ();
@@ -328,17 +357,16 @@ public class SwatController : MonoBehaviour {
 	void checkInterraction()
 	{
 		if (!isDead) {
-			if (isAlert) {
-				if (slasher.transform.position.y > (this.transform.position.y + 1)) {
-					slasherPos = 1;
-				}
+			if (slasher.transform.position.y > (this.transform.position.y + 1)) {
+				slasherPos = 1;
+			}
 				if (slasher.transform.position.y < (this.transform.position.y - 1)) {
 					slasherPos = -1;
 				}
 				if (Math.Abs (slasher.transform.position.y - this.transform.position.y) < 1) {
 					slasherPos = 0;
 				}
-				if (slasherPos > 0) {
+				if (slasherPos < 0) {
 					if (canClimb) {
 						if (ladderScript.bottomTarget.position.y < (this.transform.position.y - 1)) {
 							canClimb = false;
@@ -346,7 +374,7 @@ public class SwatController : MonoBehaviour {
 							climb ();
 						}
 					}
-				} else if (slasherPos < 0) {
+				} else if (slasherPos > 0) {
 					if (canClimb) {
 						if (ladderScript.topTarget.position.y > (this.transform.position.y + 1)) {
 							canClimb = false;
@@ -354,58 +382,8 @@ public class SwatController : MonoBehaviour {
 							climb ();
 						}
 					}
-				} else {
-					if (canClimb) {
-						canClimb = false;
-						canMove = false;
-						climb ();
-					}
-				}
-			} else {
-				if (lookForTarget) {
-					findTarget ();
-				}
+				} 
 			}
-		}
-
-	}
-
-	private void findTarget()
-	{
-		int targetPos = 0;
-		if (target.position.y > (this.transform.position.y + 1)) {
-			targetPos = 1;
-		}
-		if (target.position.y < (this.transform.position.y - 1)) {
-			targetPos = -1;
-		}
-		if (Math.Abs (target.position.y - this.transform.position.y) < 1) {
-			targetPos = 0;
-		}
-		if (targetPos < 0) {
-			if (canClimb) {
-				if (ladderScript.bottomTarget.position.y < (this.transform.position.y - 1)) {
-					canClimb = false;
-					canMove = false;
-					climb ();
-				}
-			}
-		} else if (targetPos > 0) {
-			if (canClimb) {
-				if (ladderScript.topTarget.position.y > (this.transform.position.y + 1)) {
-					canClimb = false;
-					canMove = false;
-					climb ();
-				}
-			}
-		} else {
-			if (Math.Abs (target.position.x - this.transform.position.x) < .01) {
-			//	victimAnimator.SetFloat ("victimSpeed", 0f);
-				canMove = false;
-				Invoke ("activateTarget", 1f);
-				//Debug.Log ("found target");
-			}
-		}
 	}
 
 	public void activateTarget()
