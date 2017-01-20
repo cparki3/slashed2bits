@@ -190,6 +190,8 @@
      <Compile Include="Assets\_scripts\videoButton.cs" />
      <Compile Include="Assets\_scripts\warp_exit.cs" />
      <Compile Include="Assets\_scripts\winPanelManager.cs" />
+     <Compile Include="Assets\bodyPartLauncher.cs" />
+     <Compile Include="Assets\bodyPartManager.cs" />
      <Compile Include="Assets\bulletScript.cs" />
      <Compile Include="Assets\characterData.cs" />
      <Compile Include="Assets\characterPanelScript.cs" />

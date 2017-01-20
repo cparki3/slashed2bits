@@ -70,6 +70,7 @@ public class SwatController : MonoBehaviour {
 	public Transform bulletSpawn;
 	public Rigidbody2D bulletPrefab;
 	public float bulletSpeed = 600;
+	public GameObject bodyPartLauncher;
 
 	void Awake()
 	{
@@ -227,6 +228,7 @@ public class SwatController : MonoBehaviour {
 			//MessageDispatcher.RemoveListener ("SEND_COPS", setupAlert);
 			//Instantiate (soulLauncher, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), soulLauncher.transform.rotation);
 			Instantiate(blood, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), blood.transform.rotation);
+			Instantiate(bodyPartLauncher, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), Quaternion.identity);
 			//victimAnimator.SetTrigger ("die");
 			VictimController vicController = this.GetComponent<VictimController> ();
 			walkSpeed = 0;
