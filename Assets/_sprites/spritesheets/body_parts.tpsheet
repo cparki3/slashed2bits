@@ -1,0 +1,14 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: body_parts.png (32 x 64)
+# $TexturePacker:SmartUpdate:a4d1645eb409bf776bbe3c3201ef5287:9c7b829270aefb144952777813351bdc:1eb971f70b46ff3335a09658f0be1f9a$
+#
+
+Body_Part_Ham_01;2;27;14;10;0.5;0.5
+Body_Part_Ribs_01;2;39;15;8;0.5;0.5
+Body_Part_Skull_01;2;49;15;13;0.5;0.5
+Body_Part_Steak_01;19;53;11;9;0.5;0.5

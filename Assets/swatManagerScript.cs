@@ -10,9 +10,11 @@ public class swatManagerScript : MonoBehaviour {
 	public float speedBoost = 1f;
 	public GameObject player;
 	public float originalSpeed = 1f;
+	public float walkSpeed = 1f;
+	public float speedIncrease = .3f;
 	// Use this for initialization
 	void Awake () {
-		Invoke ("spawnSwat", 5f);
+		Invoke ("spawnSwat", 10f);
 		player = GameObject.Find ("PLAYER");
 	}
 
@@ -27,29 +29,33 @@ public class swatManagerScript : MonoBehaviour {
 
 	public void speedUpSwat()
 	{
-		for (int i = 0; i < swatTeam.Count; i++) {
+		/*for (int i = 0; i < swatTeam.Count; i++) {
 			swatTeam [i].SendMessage ("boostSpeed", speedBoost);
-		}
+		}*/
+		walkSpeed = walkSpeed += .3f;
 	}
 
 	public void killAllSwat()
 	{
-		foreach(GameObject go in swatTeam)
+		GameObject[] livingSwat = GameObject.FindGameObjectsWithTag ("swat");
+		/*foreach(GameObject go in swatTeam)
 		{
 			go.SendMessage ("die", null, SendMessageOptions.DontRequireReceiver);
-		}
+		}*/
 		/*swatTeam.ForEach ()
 		{
 			
 		};*/
-		/*for (int i = 0; i < swatTeam.Count; i++) {
-			
-		}*/
+		for (int i = 0; i < livingSwat.Length; i++) {
+			livingSwat[i].SendMessage ("die", null, SendMessageOptions.DontRequireReceiver);
+		}
+		walkSpeed = originalSpeed;
 		swatTeam.Clear ();
 	}
 
 	public void targetDead()
 	{
+		walkSpeed = originalSpeed;
 		for (int i = 0; i < swatTeam.Count; i++) {
 			swatTeam [i].SendMessage ("resetSpeed", originalSpeed, SendMessageOptions.DontRequireReceiver);
 		}

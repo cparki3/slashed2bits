@@ -219,9 +219,11 @@
      <Compile Include="Assets\playerKiller.cs" />
      <Compile Include="Assets\soulParticleController.cs" />
      <Compile Include="Assets\soulScript.cs" />
+     <Compile Include="Assets\starterVictim.cs" />
      <Compile Include="Assets\swatManagerScript.cs" />
      <Compile Include="Assets\ventScript.cs" />
      <Compile Include="Assets\ventTracker.cs" />
+     <Compile Include="Assets\vicSpawn.cs" />
      <None Include="Assets\Anime Speed Lines\Readme.txt" />
      <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
      <None Include="Assets\ootii\MessageDispatcher\Version.txt" />

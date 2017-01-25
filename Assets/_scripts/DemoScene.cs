@@ -50,6 +50,8 @@ public class DemoScene : MonoBehaviour
 	private ProCamera2D proCam;
 	private ProCamera2DShake proShake;
 	public GameObject swatManager;
+	public GameObject partLauncher;
+	public GameObject blood;
 
 
 	void Awake()
@@ -57,7 +59,6 @@ public class DemoScene : MonoBehaviour
 		startColor = this.GetComponent <SpriteRenderer> ().color;
 		this.GetComponent <SpriteRenderer>().enabled = false;
 		player = ReInput.players.GetPlayer (playerId);
-
 		_controller = GetComponent<CharacterController2D>();
 		playerCol = this.GetComponent<BoxCollider2D> ();
 		rb2d = this.GetComponent <Rigidbody2D> ();
@@ -87,6 +88,7 @@ public class DemoScene : MonoBehaviour
 			slasher = Instantiate (defaultSlasher, this.transform.position, Quaternion.identity) as GameObject;
 		}
 		sprite = slasher.GetComponent<SpriteRenderer>();
+		sprite.enabled = true;
 		sprite.color = startColor;
 		slasher.transform.parent = this.transform;
 		slasher.transform.position = new Vector2 (slasher.transform.position.x, slasher.transform.position.y + .5f);
@@ -103,6 +105,7 @@ public class DemoScene : MonoBehaviour
 		portal.SetActive (true);
 		sprite = slasher.GetComponent<SpriteRenderer>();
 		sprite.color = startColor;
+		sprite.enabled = true;
 		slasher.transform.parent = this.transform;
 		slasher.transform.position = new Vector2 (slasher.transform.position.x, slasher.transform.position.y + .5f);
 		LeanTween.moveLocalY (slasher, 0f, .5f);
@@ -350,6 +353,9 @@ public class DemoScene : MonoBehaviour
 		_animator.SetTrigger ("shot");
 		proShake.Shake ();
 		playerCol.enabled = false;
+		sprite.enabled = false;
+		Instantiate (partLauncher, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), Quaternion.identity);
+		Instantiate(blood, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), blood.transform.rotation);
 		canInterract = false;
 		levelScript.playerDead ();
 		swatManager.SendMessage ("targetDead", null, SendMessageOptions.DontRequireReceiver);

@@ -73,6 +73,7 @@ public class VictimController : MonoBehaviour {
 	//private GameObject playerKiller;
 	private levelManagerScript levelScript;
 	public GameObject soulLauncher;
+	public GameObject partLauncher;
 
 	void Awake()
 	{
@@ -216,7 +217,9 @@ public class VictimController : MonoBehaviour {
 			if (!isAlert) {
 				levelScript.stealthKill ();
 			}
+			vicSprite.enabled = false;
 			Instantiate (soulLauncher, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), soulLauncher.transform.rotation);
+			Instantiate (partLauncher, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), Quaternion.identity);
 			Instantiate(blood, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), blood.transform.rotation);
 			victimEyelids.SetActive (false);
 			victimAnimator.SetTrigger ("die");

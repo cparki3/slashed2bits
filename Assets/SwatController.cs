@@ -71,7 +71,7 @@ public class SwatController : MonoBehaviour {
 	public Rigidbody2D bulletPrefab;
 	public float bulletSpeed = 600;
 	public GameObject bodyPartLauncher;
-
+	public swatManagerScript sm;
 	void Awake()
 	{
 		/*if (GameObject.Find ("PLAYER_KILLER")) {
@@ -79,6 +79,7 @@ public class SwatController : MonoBehaviour {
 			playerKiller = GameObject.Find ("PLAYER_KILLER");
 		}*/
 		slasher = GameObject.Find ("PLAYER");
+		sm = GameObject.Find ("SWAT_MANAGER").GetComponent <swatManagerScript> ();
 		levelScript = GameObject.Find ("LEVEL_MANAGER").GetComponent <levelManagerScript> ();
 		lookForTarget = false;
 		vicSprite = victimImage.GetComponent <SpriteRenderer> ();
@@ -269,6 +270,7 @@ public class SwatController : MonoBehaviour {
 	// the Update loop contains a very simple example of moving the character around and controlling the animation
 	void FixedUpdate()
 	{
+		walkSpeed = sm.walkSpeed;
 		/*		if (playerKiller != null) {
 			if (playerKiller.transform.position.y > this.transform.position.y - 10) {
 				destroyVictim ();
