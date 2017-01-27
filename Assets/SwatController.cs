@@ -181,6 +181,20 @@ public class SwatController : MonoBehaviour {
 			//ssher.SendMessage ("die");
 		}
 
+		if (tagName == "hideable") {
+			if (col.gameObject.GetComponent<DoorController> ()) {
+				DoorController dcon = col.gameObject.GetComponent <DoorController> ();
+				if (!dcon.isOpen) {
+					//DOOR IS CLOSED SO BASH IT DOWN!
+					if (this.transform.position.x > col.gameObject.transform.position.x) {
+						dcon.destroy ("right");
+					} else {
+						dcon.destroy ("left");
+					}
+				}
+			}
+		}
+
 		canInterract = true;
 
 		if (tagName == "darkness" && lookForTarget == false) {

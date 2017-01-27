@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System.Runtime.InteropServices;
 
 public class DoorController : MonoBehaviour {
 
@@ -10,12 +11,14 @@ public class DoorController : MonoBehaviour {
 	public BoxCollider2D wallCollider;
 	public GameObject openHiglight;
 	public GameObject closedHighlight;
+	public GameObject doorParticles;
+	private BoxCollider2D[] colliders;
 
-
-	private bool isOpen = false;
+	public bool isOpen = false;
 	// Use this for initialization
 	void Awake () {
 		doorClosed = this.gameObject.GetComponent <SpriteRenderer> ();
+		colliders = this.GetComponents <BoxCollider2D> ();
 	}
 	
 	// Update is called once per frame
@@ -39,6 +42,25 @@ public class DoorController : MonoBehaviour {
 		} else {
 			closedHighlight.SetActive (false);
 		}
+	}
+
+	public void destroy(string direction)
+	{
+		for (int i = 0; i < colliders.Length; i++) {
+			colliders [i].enabled = false;
+		}
+		if (direction == "left") {
+			Instantiate (doorParticles, transform.position, Quaternion.Euler(new Vector3 (0,90,0)));
+		} else {
+			Instantiate (doorParticles, transform.position, Quaternion.Euler (new Vector3 (180,90,0)));
+		}
+		isOpen = true;
+		doorClosed.enabled = false;
+		closedHighlight.SetActive (false);
+		openHiglight.SetActive (false);
+		doorOpen.SetActive (false);
+		wallCollider.enabled = false;
+
 	}
 
 	public void activate()
