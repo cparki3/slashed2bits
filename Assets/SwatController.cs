@@ -133,7 +133,7 @@ public class SwatController : MonoBehaviour {
 		Rigidbody2D newBullet = Instantiate (bulletPrefab, bulletSpawn.position, bulletSpawn.localRotation);
 		if (victimImage.transform.localScale.x < 0) {
 			Debug.Log ("shoot left");
-			newBullet.transform.localScale = new Vector2 (-1, 1);
+			newBullet.transform.localScale = new Vector2 (-3, 3);
 			newBullet.AddForce ((newBullet.transform.right * bulletSpeed) * -1);
 		}
 		else

@@ -70,6 +70,7 @@
      <None Include="Assets\ootii\DMReadMe.txt" />
      <None Include="Assets\SpriteMask\Readme.txt" />
      <None Include="Assets\Shaders\Sprites-Outline.shader" />
+     <None Include="Assets\_sprites\spritesheets\flaming_vent.txt" />
      <None Include="Assets\Rewired\Documentation\licences.txt" />
      <None Include="Assets\LeanTween\ReadMe.txt" />
      <None Include="Assets\Movinarc\PackageUninstaller\README.txt" />

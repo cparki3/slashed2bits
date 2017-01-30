@@ -1,0 +1,786 @@
+fileFormatVersion: 2
+guid: ed6a998a5b4980342a608727493c6a92
+timeCreated: 1485804454
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Flaming_Vent_00
+    21300002: Flaming_Vent_01
+    21300004: Flaming_Vent_02
+    21300006: Flaming_Vent_03
+    21300008: Flaming_Vent_04
+    21300010: Flaming_Vent_05
+    21300012: Flaming_Vent_06
+    21300014: Flaming_Vent_07
+    21300016: Flaming_Vent_08
+    21300018: Flaming_Vent_09
+    21300020: Flaming_Vent_10
+    21300022: Flaming_Vent_11
+    21300024: Flaming_Vent_12
+    21300026: Flaming_Vent_13
+    21300028: Flaming_Vent_14
+    21300030: Flaming_Vent_15
+    21300032: Flaming_Vent_16
+    21300034: Flaming_Vent_17
+    21300036: Flaming_Vent_18
+    21300038: Flaming_Vent_19
+    21300040: Flaming_Vent_20
+    21300042: Flaming_Vent_21
+    21300044: Flaming_Vent_22
+    21300046: Flaming_Vent_23
+    21300048: Flaming_Vent_30
+    21300050: Flaming_Vent_31
+    21300052: Flaming_Vent_38
+    21300054: Flaming_Vent_39
+    21300056: Flaming_Vent_46
+    21300058: Flaming_Vent_47
+    21300060: Flaming_Vent_48
+    21300062: Flaming_Vent_24
+    21300064: Flaming_Vent_25
+    21300066: Flaming_Vent_26
+    21300068: Flaming_Vent_27
+    21300070: Flaming_Vent_28
+    21300072: Flaming_Vent_29
+    21300074: Flaming_Vent_32
+    21300076: Flaming_Vent_33
+    21300078: Flaming_Vent_34
+    21300080: Flaming_Vent_35
+    21300082: Flaming_Vent_36
+    21300084: Flaming_Vent_37
+    21300086: Flaming_Vent_40
+    21300088: Flaming_Vent_41
+    21300090: Flaming_Vent_42
+    21300092: Flaming_Vent_43
+    21300094: Flaming_Vent_44
+    21300096: Flaming_Vent_45
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Flaming_Vent_00
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_01
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_02
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_03
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_04
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_05
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_06
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 12
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_07
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 12
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_08
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 12
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_09
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 12
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_10
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 12
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_11
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 12
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_12
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_13
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_14
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_15
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_16
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_17
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 11
+        width: 15
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: -0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_19
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 11
+        width: 15
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: -0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_20
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 34
+        width: 16
+        height: 45
+      alignment: 9
+      pivot: {x: 0.46875, y: -0.13333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_21
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 34
+        width: 16
+        height: 45
+      alignment: 9
+      pivot: {x: 0.46875, y: -0.13333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_22
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 34
+        width: 15
+        height: 45
+      alignment: 9
+      pivot: {x: 0.5, y: -0.13333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_23
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 34
+        width: 15
+        height: 45
+      alignment: 9
+      pivot: {x: 0.5, y: -0.13333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_24
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 43
+        width: 15
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: -0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_25
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 43
+        width: 15
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: -0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_26
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 84
+        width: 15
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: -0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_27
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 84
+        width: 15
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: -0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_28
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 37
+        width: 17
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5588235, y: -0.13953489}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_29
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 37
+        width: 17
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5588235, y: -0.13953489}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_30
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 81
+        width: 15
+        height: 45
+      alignment: 9
+      pivot: {x: 0.5, y: -0.13333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_31
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 81
+        width: 15
+        height: 45
+      alignment: 9
+      pivot: {x: 0.5, y: -0.13333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_32
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 85
+        width: 16
+        height: 41
+      alignment: 9
+      pivot: {x: 0.46875, y: -0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_33
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 85
+        width: 16
+        height: 41
+      alignment: 9
+      pivot: {x: 0.46875, y: -0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_34
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 86
+        width: 16
+        height: 40
+      alignment: 9
+      pivot: {x: 0.46875, y: -0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_35
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 86
+        width: 16
+        height: 40
+      alignment: 9
+      pivot: {x: 0.46875, y: -0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_36
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 84
+        width: 17
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5588235, y: -0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_37
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 84
+        width: 17
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5588235, y: -0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_38
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 81
+        width: 17
+        height: 45
+      alignment: 9
+      pivot: {x: 0.44117647, y: -0.13333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_39
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 81
+        width: 17
+        height: 45
+      alignment: 9
+      pivot: {x: 0.44117647, y: -0.13333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_40
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 34
+        width: 15
+        height: 45
+      alignment: 9
+      pivot: {x: 0.5, y: -0.13333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_41
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 34
+        width: 15
+        height: 45
+      alignment: 9
+      pivot: {x: 0.5, y: -0.13333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_42
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 82
+        width: 15
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5, y: -0.13636364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_43
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 82
+        width: 15
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5, y: -0.13636364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_44
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 42
+        width: 15
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: -0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_45
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 42
+        width: 15
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: -0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_46
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_47
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Flaming_Vent_48
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 15
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: -0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

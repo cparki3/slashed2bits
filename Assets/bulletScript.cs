@@ -6,7 +6,7 @@ public class bulletScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		Destroy (this.gameObject, 3f);
+		Destroy (this.gameObject, 5f);
 	}
 	
 	// Update is called once per frame
@@ -17,10 +17,13 @@ public class bulletScript : MonoBehaviour {
 	public void OnCollisionEnter2D(Collision2D coll)
 	{
 		if (coll.gameObject.tag == "Player" || coll.gameObject.tag == "wall") {
-			Invoke ("killBullet", .1f);
+			coll.gameObject.SendMessage ("die", null, SendMessageOptions.DontRequireReceiver);
+			Destroy (this.gameObject);
 		}
-		Invoke ("killBullet", .5f);
+		//Invoke ("killBullet", .05f);
 	}
+
+
 
 	public void killBullet()
 	{

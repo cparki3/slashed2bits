@@ -100,6 +100,7 @@
      <None Include="Assets\ootii\DMReadMe.txt" />
      <None Include="Assets\SpriteMask\Readme.txt" />
      <None Include="Assets\Shaders\Sprites-Outline.shader" />
+     <None Include="Assets\_sprites\spritesheets\flaming_vent.txt" />
      <None Include="Assets\Rewired\Documentation\licences.txt" />
      <None Include="Assets\LeanTween\ReadMe.txt" />
      <None Include="Assets\Movinarc\PackageUninstaller\README.txt" />
@@ -180,6 +181,9 @@
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="TexturePackerImporter">
+ <HintPath>C:/Users/cparki3/workspaces/slashed2bits/Assets/codeandweb.com/Editor/TexturePackerImporter.dll</HintPath>
  </Reference>
  <Reference Include="JMOAssets">
  <HintPath>C:/Users/cparki3/workspaces/slashed2bits/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>

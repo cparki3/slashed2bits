@@ -1,0 +1,55 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: cop.png (128 x 128)
+# $TexturePacker:SmartUpdate:00ebeb17d2a1677b6cdfe6681fcc44f8:4358adfc021956cb087388e277bdfcbd:db10765671280567691985906813eaef$
+#
+
+Officer_Blink_01;111;121;14;5;0.5;0
+Officer_Bullet_01;46;4;3;1;0.5;0
+Officer_Idol_01;29;37;20;28;0.55;0
+Officer_Kneeling_Shoot_01;84;99;25;27;0.44;0
+Officer_Kneeling_Shoot_02;84;99;25;27;0.44;0
+Officer_Kneeling_Shoot_03;58;69;26;27;0.4230769230769231;0
+Officer_Kneeling_Shoot_04;58;69;26;27;0.4230769230769231;0
+Officer_Kneeling_Shoot_05;51;38;27;27;0.4074074074074074;0
+Officer_Kneeling_Shoot_06;51;38;27;27;0.4074074074074074;0
+Officer_Walk_01;29;37;20;28;0.55;0
+Officer_Walk_02;29;37;20;28;0.55;0
+Officer_Walk_03;29;37;20;28;0.55;0
+Officer_Walk_04;2;4;20;29;0.55;0
+Officer_Walk_05;2;4;20;29;0.55;0
+Officer_Walk_06;2;4;20;29;0.55;0
+Officer_Walk_07;46;7;20;28;0.55;0
+Officer_Walk_08;46;7;20;28;0.55;0
+Officer_Walk_09;46;7;20;28;0.55;0
+Officer_Walk_10;24;4;20;29;0.55;0
+Officer_Walk_11;24;4;20;29;0.55;0
+Officer_Walk_12;24;4;20;29;0.55;0
+Officer_Walk_Gun_Out_01;30;98;25;28;0.44;0
+Officer_Walk_Gun_Out_02;30;98;25;28;0.44;0
+Officer_Walk_Gun_Out_03;30;98;25;28;0.44;0
+Officer_Walk_Gun_Out_04;2;66;25;29;0.44;0
+Officer_Walk_Gun_Out_05;2;66;25;29;0.44;0
+Officer_Walk_Gun_Out_06;2;66;25;29;0.44;0
+Officer_Walk_Gun_Out_07;57;98;25;28;0.44;0
+Officer_Walk_Gun_Out_08;57;98;25;28;0.44;0
+Officer_Walk_Gun_Out_09;57;98;25;28;0.44;0
+Officer_Walk_Gun_Out_10;2;35;25;29;0.44;0
+Officer_Walk_Gun_Out_11;2;35;25;29;0.44;0
+Officer_Walk_Gun_Out_12;2;35;25;29;0.44;0
+Officer_Walk_Shoot_01;30;98;25;28;0.44;0
+Officer_Walk_Shoot_02;30;98;25;28;0.44;0
+Officer_Walk_Shoot_03;30;98;25;28;0.44;0
+Officer_Walk_Shoot_04;2;97;26;29;0.4230769230769231;0
+Officer_Walk_Shoot_05;2;97;26;29;0.4230769230769231;0
+Officer_Walk_Shoot_06;2;97;26;29;0.4230769230769231;0
+Officer_Walk_Shoot_07;29;67;27;28;0.4074074074074074;0
+Officer_Walk_Shoot_08;29;67;27;28;0.4074074074074074;0
+Officer_Walk_Shoot_09;29;67;27;28;0.4074074074074074;0
+Officer_Walk_Shoot_10;2;35;25;29;0.44;0
+Officer_Walk_Shoot_11;2;35;25;29;0.44;0
+Officer_Walk_Shoot_12;2;35;25;29;0.44;0
