@@ -5,7 +5,8 @@ using UnityEngine;
 public class floorData : MonoBehaviour {
 
 	public string ladderPosition;
-
+	public bool hasCop = false;
+	public string copPosition;
 	// Use this for initialization
 	void Start () {
 		

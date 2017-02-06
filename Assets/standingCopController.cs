@@ -100,7 +100,6 @@ public class standingCopController : MonoBehaviour {
 
 	public void shoot()
 	{
-		Debug.Log ("BANG!");
 		Rigidbody2D newBullet = Instantiate (bulletPrefab, bulletSpawn.position, bulletSpawn.localRotation);
 		if (victimImage.transform.localScale.x < 0) {
 			Debug.Log ("shoot left");
@@ -135,7 +134,7 @@ public class standingCopController : MonoBehaviour {
 				GameObject levelManager = GameObject.Find ("LEVEL_MANAGER");
 				levelManager.SendMessage ("victimKilled", this.gameObject);
 			}
-			//Destroy(this.gameObject);
+			Destroy(this.gameObject);
 		}
 	}
 

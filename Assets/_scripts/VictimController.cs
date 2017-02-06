@@ -230,7 +230,7 @@ public class VictimController : MonoBehaviour {
 				levelManager.SendMessage ("victimKilled", this.gameObject);
 
 			}
-			//Destroy(this.gameObject);
+			Destroy(this.gameObject);
 		}
 	}
 
