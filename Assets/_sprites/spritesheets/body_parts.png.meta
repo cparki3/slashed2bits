@@ -8,6 +8,10 @@ TextureImporter:
     21300002: body_parts_1
     21300004: body_parts_2
     21300006: body_parts_3
+    21300008: Body_Part_Ham_01
+    21300010: Body_Part_Ribs_01
+    21300012: Body_Part_Skull_01
+    21300014: Body_Part_Steak_01
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -98,46 +102,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: body_parts_0
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 49
-        width: 15
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: body_parts_1
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 53
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: body_parts_2
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 39
-        width: 15
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: body_parts_3
+      name: Body_Part_Ham_01
       rect:
         serializedVersion: 2
         x: 2
@@ -145,10 +110,49 @@ TextureImporter:
         width: 14
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: 0
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Body_Part_Ribs_01
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 39
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Body_Part_Skull_01
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 49
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Body_Part_Steak_01
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 53
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
     outline: []
   spritePackingTag: 
   userData: 

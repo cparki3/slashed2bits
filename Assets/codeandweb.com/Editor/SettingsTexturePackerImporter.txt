@@ -1,11 +1,17 @@
 version: 2
 importPivots: 1
 tpsheetFileNames:
+- Assets/_sprites/spritesheets/body_parts.tpsheet
 - Assets/_sprites/spritesheets/flaming_vent.tpsheet
+- Assets/_sprites/spritesheets/souls_particle.tpsheet
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
 textureFileNames:
+- Assets/_sprites/spritesheets/body_parts.png
 - Assets/_sprites/spritesheets/flaming_vent.png
+- Assets/_sprites/spritesheets/souls_particle.png
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 normalmapFileNames:
+- 
+- 
 - 
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
