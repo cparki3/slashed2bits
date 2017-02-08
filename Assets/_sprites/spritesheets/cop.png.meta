@@ -1,24 +1,54 @@
 fileFormatVersion: 2
 guid: aa0b908dec341034086bbf72aff5c3ea
-timeCreated: 1485800483
+timeCreated: 1486578973
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: cop_0
-    21300002: cop_1
-    21300004: cop_2
-    21300006: cop_3
-    21300008: cop_blink
-    21300010: cop_6
-    21300012: cop_7
-    21300014: cop_8
-    21300016: cop_9
-    21300018: cop_10
-    21300020: cop_11
-    21300022: cop_12
-    21300024: bullet
-    21300026: cop_14
-    21300028: cop_4
+    21300000: Officer_Blink_01
+    21300002: Officer_Bullet_01
+    21300004: Officer_Idol_01
+    21300006: Officer_Kneeling_Shoot_01
+    21300008: Officer_Kneeling_Shoot_02
+    21300010: Officer_Kneeling_Shoot_03
+    21300012: Officer_Kneeling_Shoot_04
+    21300014: Officer_Kneeling_Shoot_05
+    21300016: Officer_Kneeling_Shoot_06
+    21300018: Officer_Walk_01
+    21300020: Officer_Walk_02
+    21300022: Officer_Walk_03
+    21300024: Officer_Walk_04
+    21300026: Officer_Walk_05
+    21300028: Officer_Walk_06
+    21300030: Officer_Walk_07
+    21300032: Officer_Walk_08
+    21300034: Officer_Walk_09
+    21300036: Officer_Walk_10
+    21300038: Officer_Walk_11
+    21300040: Officer_Walk_12
+    21300042: Officer_Walk_Gun_Out_01
+    21300044: Officer_Walk_Gun_Out_02
+    21300046: Officer_Walk_Gun_Out_03
+    21300048: Officer_Walk_Gun_Out_04
+    21300050: Officer_Walk_Gun_Out_05
+    21300052: Officer_Walk_Gun_Out_06
+    21300054: Officer_Walk_Gun_Out_07
+    21300056: Officer_Walk_Gun_Out_08
+    21300058: Officer_Walk_Gun_Out_09
+    21300060: Officer_Walk_Gun_Out_10
+    21300062: Officer_Walk_Gun_Out_11
+    21300064: Officer_Walk_Gun_Out_12
+    21300066: Officer_Walk_Shoot_01
+    21300068: Officer_Walk_Shoot_02
+    21300070: Officer_Walk_Shoot_03
+    21300072: Officer_Walk_Shoot_04
+    21300074: Officer_Walk_Shoot_05
+    21300076: Officer_Walk_Shoot_06
+    21300078: Officer_Walk_Shoot_07
+    21300080: Officer_Walk_Shoot_08
+    21300082: Officer_Walk_Shoot_09
+    21300084: Officer_Walk_Shoot_10
+    21300086: Officer_Walk_Shoot_11
+    21300088: Officer_Walk_Shoot_12
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -66,41 +96,41 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 128
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Standalone
-    maxTextureSize: 256
+    maxTextureSize: 128
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: iPhone
-    maxTextureSize: 256
+    maxTextureSize: 128
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Android
-    maxTextureSize: 256
+    maxTextureSize: 128
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: WebGL
-    maxTextureSize: 256
+    maxTextureSize: 128
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,200 +139,590 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cop_0
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 97
-        width: 26
-        height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: cop_1
-      rect:
-        serializedVersion: 2
-        x: 30
-        y: 98
-        width: 25
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: cop_2
-      rect:
-        serializedVersion: 2
-        x: 57
-        y: 98
-        width: 25
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: cop_3
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 99
-        width: 25
-        height: 27
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: cop_blink
+      name: Officer_Blink_01
       rect:
         serializedVersion: 2
         x: 111
         y: 121
         width: 14
         height: 5
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: cop_6
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 66
-        width: 25
-        height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: cop_7
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 67
-        width: 27
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: cop_8
-      rect:
-        serializedVersion: 2
-        x: 58
-        y: 69
-        width: 26
-        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: 0
+      tessellationDetail: -1
     - serializedVersion: 2
-      name: cop_9
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 35
-        width: 25
-        height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: cop_10
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 37
-        width: 20
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: cop_11
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 38
-        width: 27
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: cop_12
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 4
-        width: 20
-        height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: bullet
+      name: Officer_Bullet_01
       rect:
         serializedVersion: 2
         x: 46
         y: 4
         width: 3
         height: 1
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 2, w: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: 0
+      tessellationDetail: -1
     - serializedVersion: 2
-      name: cop_14
+      name: Officer_Idol_01
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 37
+        width: 20
+        height: 28
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Kneeling_Shoot_01
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 99
+        width: 25
+        height: 27
+      alignment: 9
+      pivot: {x: 0.44, y: 0.5925926}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Kneeling_Shoot_02
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 99
+        width: 25
+        height: 27
+      alignment: 9
+      pivot: {x: 0.44, y: 0.5925926}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Kneeling_Shoot_03
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 69
+        width: 26
+        height: 27
+      alignment: 9
+      pivot: {x: 0.42307693, y: 0.5925926}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Kneeling_Shoot_04
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 69
+        width: 26
+        height: 27
+      alignment: 9
+      pivot: {x: 0.42307693, y: 0.5925926}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Kneeling_Shoot_05
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 38
+        width: 27
+        height: 27
+      alignment: 9
+      pivot: {x: 0.4074074, y: 0.5925926}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Kneeling_Shoot_06
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 38
+        width: 27
+        height: 27
+      alignment: 9
+      pivot: {x: 0.4074074, y: 0.5925926}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_01
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 37
+        width: 20
+        height: 28
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_02
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 37
+        width: 20
+        height: 28
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_03
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 37
+        width: 20
+        height: 28
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_04
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 20
+        height: 29
+      alignment: 9
+      pivot: {x: 0.55, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_05
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 20
+        height: 29
+      alignment: 9
+      pivot: {x: 0.55, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_06
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 20
+        height: 29
+      alignment: 9
+      pivot: {x: 0.55, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_07
       rect:
         serializedVersion: 2
         x: 46
         y: 7
         width: 20
         height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5714286}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: 0
+      tessellationDetail: -1
     - serializedVersion: 2
-      name: cop_4
+      name: Officer_Walk_08
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 7
+        width: 20
+        height: 28
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_09
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 7
+        width: 20
+        height: 28
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_10
       rect:
         serializedVersion: 2
         x: 24
         y: 4
         width: 20
         height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.55172414}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: 0
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_11
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 4
+        width: 20
+        height: 29
+      alignment: 9
+      pivot: {x: 0.55, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_12
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 4
+        width: 20
+        height: 29
+      alignment: 9
+      pivot: {x: 0.55, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Gun_Out_01
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 98
+        width: 25
+        height: 28
+      alignment: 9
+      pivot: {x: 0.44, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Gun_Out_02
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 98
+        width: 25
+        height: 28
+      alignment: 9
+      pivot: {x: 0.44, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Gun_Out_03
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 98
+        width: 25
+        height: 28
+      alignment: 9
+      pivot: {x: 0.44, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Gun_Out_04
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 66
+        width: 25
+        height: 29
+      alignment: 9
+      pivot: {x: 0.44, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Gun_Out_05
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 66
+        width: 25
+        height: 29
+      alignment: 9
+      pivot: {x: 0.44, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Gun_Out_06
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 66
+        width: 25
+        height: 29
+      alignment: 9
+      pivot: {x: 0.44, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Gun_Out_07
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 98
+        width: 25
+        height: 28
+      alignment: 9
+      pivot: {x: 0.44, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Gun_Out_08
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 98
+        width: 25
+        height: 28
+      alignment: 9
+      pivot: {x: 0.44, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Gun_Out_09
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 98
+        width: 25
+        height: 28
+      alignment: 9
+      pivot: {x: 0.44, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Gun_Out_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 35
+        width: 25
+        height: 29
+      alignment: 9
+      pivot: {x: 0.44, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Gun_Out_11
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 35
+        width: 25
+        height: 29
+      alignment: 9
+      pivot: {x: 0.44, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Gun_Out_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 35
+        width: 25
+        height: 29
+      alignment: 9
+      pivot: {x: 0.44, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Shoot_01
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 98
+        width: 25
+        height: 28
+      alignment: 9
+      pivot: {x: 0.44, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Shoot_02
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 98
+        width: 25
+        height: 28
+      alignment: 9
+      pivot: {x: 0.44, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Shoot_03
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 98
+        width: 25
+        height: 28
+      alignment: 9
+      pivot: {x: 0.44, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Shoot_04
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 97
+        width: 26
+        height: 29
+      alignment: 9
+      pivot: {x: 0.42307693, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Shoot_05
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 97
+        width: 26
+        height: 29
+      alignment: 9
+      pivot: {x: 0.42307693, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Shoot_06
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 97
+        width: 26
+        height: 29
+      alignment: 9
+      pivot: {x: 0.42307693, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Shoot_07
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 67
+        width: 27
+        height: 28
+      alignment: 9
+      pivot: {x: 0.4074074, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Shoot_08
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 67
+        width: 27
+        height: 28
+      alignment: 9
+      pivot: {x: 0.4074074, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Shoot_09
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 67
+        width: 27
+        height: 28
+      alignment: 9
+      pivot: {x: 0.4074074, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Shoot_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 35
+        width: 25
+        height: 29
+      alignment: 9
+      pivot: {x: 0.44, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Shoot_11
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 35
+        width: 25
+        height: 29
+      alignment: 9
+      pivot: {x: 0.44, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Officer_Walk_Shoot_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 35
+        width: 25
+        height: 29
+      alignment: 9
+      pivot: {x: 0.44, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
     outline: []
   spritePackingTag: 
   userData: 

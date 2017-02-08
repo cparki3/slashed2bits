@@ -3,36 +3,9 @@ importPivots: 1
 tpsheetFileNames:
 - Assets/_sprites/spritesheets/body_parts.tpsheet
 - Assets/_sprites/spritesheets/cop.tpsheet
-- Assets/_sprites/spritesheets/flaming_vent.tpsheet
-- Assets/_sprites/spritesheets/house_interior.tpsheet
-- Assets/_sprites/spritesheets/slasher_test.tpsheet
-- Assets/_sprites/spritesheets/souls_particle.tpsheet
-- Assets/_sprites/spritesheets/street_start.tpsheet
-- Assets/_sprites/spritesheets/swat.tpsheet
-- Assets/_sprites/spritesheets/TED.tpsheet
-- Assets/_sprites/spritesheets/warp.tpsheet
-- Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
 textureFileNames:
 - Assets/_sprites/spritesheets/body_parts.png
 - Assets/_sprites/spritesheets/cop.png
-- Assets/_sprites/spritesheets/flaming_vent.png
-- Assets/_sprites/spritesheets/house_interior.png
-- Assets/_sprites/spritesheets/slasher_test.png
-- Assets/_sprites/spritesheets/souls_particle.png
-- Assets/_sprites/spritesheets/street_start.png
-- Assets/_sprites/spritesheets/swat.png
-- Assets/_sprites/spritesheets/TED.png
-- Assets/_sprites/spritesheets/warp.png
-- Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 normalmapFileNames:
 - 
 - 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
