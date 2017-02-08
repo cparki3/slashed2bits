@@ -210,7 +210,6 @@
      <Compile Include="Assets\ventScript.cs" />
      <Compile Include="Assets\ventTracker.cs" />
      <Compile Include="Assets\vicSpawn.cs" />
-     <None Include="Assets\Anime Speed Lines\Readme.txt" />
      <None Include="Assets\ootii\MessageDispatcher\Version.txt" />
      <None Include="Assets\codeandweb.com\Editor\SettingsTexturePackerImporter.txt" />
      <None Include="Assets\ootii\DMReadMe.txt" />

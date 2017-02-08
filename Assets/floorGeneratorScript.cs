@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Text;
 
 public class floorGeneratorScript : MonoBehaviour {
 
@@ -54,7 +53,7 @@ public class floorGeneratorScript : MonoBehaviour {
 		floorData fdCurrent = floors [currentFloor].GetComponent <floorData> ();
 		floorData fd = floors [randomFloor].GetComponent <floorData> ();
 		if (fd.hasCop && !copsAllowed) {
-			Debug.Log ("Floor Number: " + floorsCreated + " has a cop on it");
+			//Debug.Log ("Floor Number: " + floorsCreated + " has a cop on it");
 			getRandomFloor ();
 			return;
 		}

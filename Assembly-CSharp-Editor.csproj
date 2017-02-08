@@ -90,7 +90,6 @@
      <Compile Include="Assets\SpriteMask\Scripts\Editor\ClearStencilBufferComponentEditor.cs" />
      <Compile Include="Assets\SpriteMask\Scripts\Editor\SpriteMaskEditor.cs" />
      <Compile Include="Assets\ootii\Framework_v1\Code\Utilities\Debug\Editor\LogEditor.cs" />
-     <None Include="Assets\Anime Speed Lines\Readme.txt" />
      <None Include="Assets\ootii\MessageDispatcher\Version.txt" />
      <None Include="Assets\codeandweb.com\Editor\SettingsTexturePackerImporter.txt" />
      <None Include="Assets\ootii\DMReadMe.txt" />
