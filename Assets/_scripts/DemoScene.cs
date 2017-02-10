@@ -341,7 +341,9 @@ public class DemoScene : MonoBehaviour
 			}
 			else
 			{
-				touchingObject.SendMessage("activate", null, SendMessageOptions.DontRequireReceiver);
+				if (touchingObject != null) {
+					touchingObject.SendMessage ("activate", null, SendMessageOptions.DontRequireReceiver);
+				}
 			}
 		}
 		

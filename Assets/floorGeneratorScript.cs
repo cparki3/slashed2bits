@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class floorGeneratorScript : MonoBehaviour {
 
 	[Header("Possible Floors")]
 	public GameObject[] floors;
+	public GameObject[] level_1_floors;
+	public GameObject[] level_2_floors;
+	public GameObject[] level_3_floors;
+	public int difficulty = 1;
 	public List<GameObject> createdFloors;
-	public bool copsAllowed = false;
 	private int floorsCreated = 0;
 	// Use this for initialization
 
@@ -17,11 +21,6 @@ public class floorGeneratorScript : MonoBehaviour {
 	private GameObject player;
 	void Awake () {
 		player = GameObject.Find ("PLAYER");
-		createNewFloor ();
-		createNewFloor ();
-		createNewFloor ();
-		createNewFloor ();
-		createNewFloor ();
 	}
 
 	// Update is called once per frame
@@ -33,13 +32,26 @@ public class floorGeneratorScript : MonoBehaviour {
 
 	public void createNewFloor()
 	{
+		switch (difficulty) {
+		case 1:
+			floors = level_1_floors;
+			break;
+		case 2:
+			floors = level_1_floors.Concat (level_2_floors).ToArray ();
+			break;
+		case 3:
+			floors = level_1_floors.Concat (level_2_floors).ToArray ().Concat (level_3_floors).ToArray ();
+			break;
+		default:
+			return;
+		}
 		getRandomFloor ();
 		GameObject newFloor = Instantiate (floors [currentFloor], this.transform.position, Quaternion.identity) as GameObject;
 		this.transform.position = new Vector2 (this.transform.position.x, this.transform.position.y + floorHeight);
 		createdFloors.Add (newFloor);
 		floorsCreated++;
-		if (floorsCreated > 6) {
-			copsAllowed = true;
+		if (floorsCreated > 10) {
+			difficulty = 2;
 		}
 		if (createdFloors.Count >= 14) {
 			Destroy (createdFloors[0]);
@@ -49,28 +61,31 @@ public class floorGeneratorScript : MonoBehaviour {
 
 	public void getRandomFloor()
 	{
-		int randomFloor = Random.Range (0, floors.Length);
-		floorData fdCurrent = floors [currentFloor].GetComponent <floorData> ();
-		floorData fd = floors [randomFloor].GetComponent <floorData> ();
-		if (fd.hasCop && !copsAllowed) {
-			//Debug.Log ("Floor Number: " + floorsCreated + " has a cop on it");
-			getRandomFloor ();
-			return;
-		}
-		string currentLadder = fdCurrent.ladderPosition;
-		string randomLadder = fd.ladderPosition;
-		if (randomFloor == currentFloor) {
-			getRandomFloor ();
-		} else {
-			if (!copsAllowed && fd.hasCop) {
-				getRandomFloor ();
-				return;
-			}
-			if (currentLadder != randomLadder) {
-				//Debug.Log (fd.hasCop);
-				currentFloor = randomFloor;
+		bool nextFloorFound = false;
+		Debug.Log (floors.Length);
+		while(!nextFloorFound)
+		{
+			if (floorsCreated == 0) {
+				currentFloor = Random.Range (0, floors.Length);
+				nextFloorFound = true;
 			} else {
-				getRandomFloor ();
+				floorData currentFloorData = floors [currentFloor].GetComponent<floorData> ();
+				int nextFloor = Random.Range (0, floors.Length);
+				if (nextFloor == currentFloor) {
+					//FLOOR IS THE SAME WHICH WE DONT WANT TO RELOOP
+					//Debug.Log ("same floor found... retrying");
+				} else {
+					floorData nextFloorData = floors [nextFloor].GetComponent <floorData> ();
+					for (int i = 0; i < currentFloorData.exitPoints.Length; i++) {
+						if (nextFloorData.entryPoints.Contains (currentFloorData.exitPoints [i])) {
+							currentFloor = nextFloor;
+							nextFloorFound = true;
+						} else {
+							// EXIT AND ENTRANCES DONT HAVE A MATCH SO RETRY
+							//Debug.Log ("entry and exits dont match!");
+						}
+					}
+				}
 			}
 		}
 	}

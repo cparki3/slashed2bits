@@ -1,13 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\standingCopController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\floorGeneratorScript.cs">
     <Files>
-      <File FileName="Assets\_scripts\VictimController.cs" Line="233" Column="4" />
-      <File FileName="Assets\standingCopController.cs" Line="37" Column="34" />
+      <File FileName="Assets\_scripts\VictimController.cs" Line="1" Column="1" />
+      <File FileName="Assets\standingCopController.cs" Line="105" Column="6" />
       <File FileName="Assets\bulletScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\floorGeneratorScript.cs" Line="56" Column="33" />
-      <File FileName="Assets\floorData.cs" Line="9" Column="28" />
-      <File FileName="Assets\_scripts\videoButton.cs" Line="3" Column="1" />
+      <File FileName="Assets\floorGeneratorScript.cs" Line="84" Column="56" />
+      <File FileName="Assets\floorData.cs" Line="8" Column="29" />
+      <File FileName="Assets\_scripts\videoButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\streetViewManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\DemoScene.cs" Line="346" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
