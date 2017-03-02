@@ -328,7 +328,7 @@ public class DemoScene : MonoBehaviour
 				} else {
 					_animator.SetTrigger ("attack2");
 				}
-				proShake.Shake ();
+				proShake.Shake (0);
 				victim.SendMessage ("die");
 				canKill = false;
 				return;
@@ -353,7 +353,8 @@ public class DemoScene : MonoBehaviour
 	{
 		canMove = false;
 		_animator.SetTrigger ("shot");
-		proShake.Shake ();
+		proShake.Shake (0);
+		//proShake.Shake ();
 		playerCol.enabled = false;
 		sprite.enabled = false;
 		Instantiate (partLauncher, new Vector2 (this.transform.position.x, this.transform.position.y + .4f), Quaternion.identity);

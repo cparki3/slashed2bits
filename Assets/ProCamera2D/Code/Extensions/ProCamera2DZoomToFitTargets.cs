@@ -82,11 +82,11 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
             _previousCamSize = ProCamera2D.ScreenSizeInWorldCoordinates.y;
 
-            return _targetCamSizeSmoothed = Mathf.SmoothDamp(_targetCamSizeSmoothed, _targetCamSize, ref _zoomVelocity, _targetCamSize < _targetCamSizeSmoothed ? ZoomInSmoothness : ZoomOutSmoothness);
+            return _targetCamSizeSmoothed = Mathf.SmoothDamp(_targetCamSizeSmoothed, _targetCamSize, ref _zoomVelocity, _targetCamSize < _targetCamSizeSmoothed ? ZoomInSmoothness : ZoomOutSmoothness, float.MaxValue, deltaTime);
         }
 
         public int SOOrder { get { return _soOrder; } set { _soOrder = value; } }
-        int _soOrder = 0;
+        int _soOrder;
 
         #endregion
 

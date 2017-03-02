@@ -1,7 +1,6 @@
 ﻿using UnityEditor;
 using UnityEngine;
 using UnityEditorInternal;
-using System.Collections.Generic;
 
 namespace Com.LuisPedroFonseca.ProCamera2D
 {
@@ -12,160 +11,203 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         GUIContent _tooltip;
 
         ReorderableList _shakePresetsList;
+        ReorderableList _constantShakePresetsList;
 
-        static List<ShakePreset> _playModePresets = new List<ShakePreset>();
-        static string _currentScene;
+        int _currentPickerWindow;
 
         void OnEnable()
         {
+            if (target == null) // What's going on here?! Maybe weird Unity 5.6.0b8 bug?
+                return;
+            
             ProCamera2DEditorHelper.AssignProCamera2D(target as BasePC2D);
 
             var proCamera2DShake = (ProCamera2DShake)target;
 
             _script = MonoScript.FromMonoBehaviour(proCamera2DShake);
 
-            // Get presets from play mode
-            if (_playModePresets == null)
-                _playModePresets = new List<ShakePreset>();
-            
-            serializedObject.Update();
-
-            #if UNITY_5_3_OR_NEWER
-            if (_currentScene != UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().name)
-                _playModePresets.Clear();
-
-            _currentScene = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().name;
-            #else
-            if (_currentScene != EditorApplication.currentScene)
-                _playModePresets.Clear();
-
-            _currentScene = EditorApplication.currentScene;
-            #endif
-
-            if (!Application.isPlaying && _playModePresets.Count > 0)
-            {
-                var list = serializedObject.FindProperty("ShakePresets");
-                list.ClearArray();
-                for (int i = 0; i < _playModePresets.Count; i++)
-                {
-                    list.InsertArrayElementAtIndex(i);
-                    var preset = list.GetArrayElementAtIndex(i);
-                    preset.FindPropertyRelative("Name").stringValue = _playModePresets[i].Name;
-                    preset.FindPropertyRelative("Strength").vector3Value = _playModePresets[i].Strength;
-                    preset.FindPropertyRelative("Duration").floatValue = _playModePresets[i].Duration;
-                    preset.FindPropertyRelative("Vibrato").intValue = _playModePresets[i].Vibrato;
-                    preset.FindPropertyRelative("Smoothness").floatValue = _playModePresets[i].Smoothness;
-                    preset.FindPropertyRelative("Randomness").floatValue = _playModePresets[i].Randomness;
-                    preset.FindPropertyRelative("InitialAngle").floatValue = _playModePresets[i].InitialAngle;
-                    preset.FindPropertyRelative("Rotation").vector3Value = _playModePresets[i].Rotation;
-                    preset.FindPropertyRelative("IgnoreTimeScale").boolValue = _playModePresets[i].IgnoreTimeScale;
-                }
-                _playModePresets.Clear();
-            }
-            serializedObject.ApplyModifiedProperties();
-
-            // Shake presets list
-            _shakePresetsList = new ReorderableList(serializedObject, serializedObject.FindProperty("ShakePresets"), false, true, false, true);
+            //
+            // ShakePresets list
+            //
+            _shakePresetsList = new ReorderableList(serializedObject, serializedObject.FindProperty("ShakePresets"), true, true, true, true);
 
             _shakePresetsList.drawElementCallback = (rect, index, isActive, isFocused) =>
             {
                 rect.y += 2;
                 var element = _shakePresetsList.serializedProperty.GetArrayElementAtIndex(index);
 
-                // Name field
-                EditorGUI.PropertyField(new Rect(
-                        rect.x,
-                        rect.y,
-                        rect.width / 4f,
-                        EditorGUIUtility.singleLineHeight * 1.1f),
-                    element.FindPropertyRelative("Name"), GUIContent.none);
-                   
-                // Load button
-                if (GUI.Button(new Rect(
-                            rect.x + rect.width / 4f + 5,
-                            rect.y,
-                            rect.width / 4f - 5,
-                            EditorGUIUtility.singleLineHeight * 1.1f), "Load"))
+                if (element == null || element.objectReferenceValue == null)
                 {
-                    proCamera2DShake.Strength = element.FindPropertyRelative("Strength").vector3Value;
-                    proCamera2DShake.Duration = element.FindPropertyRelative("Duration").floatValue;
-                    proCamera2DShake.Vibrato = element.FindPropertyRelative("Vibrato").intValue;
-                    proCamera2DShake.Smoothness = element.FindPropertyRelative("Smoothness").floatValue;
-                    proCamera2DShake.Randomness = element.FindPropertyRelative("Randomness").floatValue;
-                    proCamera2DShake.InitialAngle = element.FindPropertyRelative("InitialAngle").floatValue;
-                    proCamera2DShake.Rotation = element.FindPropertyRelative("Rotation").vector3Value;
-                    proCamera2DShake.IgnoreTimeScale = element.FindPropertyRelative("IgnoreTimeScale").boolValue;
-
-                    proCamera2DShake.UseRandomInitialAngle = proCamera2DShake.InitialAngle < 0;
-
-                    EditorUtility.SetDirty(target);
+                    proCamera2DShake.ShakePresets.RemoveAt(index);
+                    return;
                 }
 
-                // Save button
+                // Name field
+                EditorGUI.LabelField(
+                    new Rect(
+                        rect.x,
+                        rect.y,
+                        rect.width / 2f,
+                        EditorGUIUtility.singleLineHeight * 1.1f),
+                    ((ShakePreset)element.objectReferenceValue).name);
+
+                // Edit button
                 if (GUI.Button(new Rect(
                             rect.x + 2 * rect.width / 4f + 5,
-                            rect.y,
+                            rect.y - 2,
                             rect.width / 4f - 5,
-                            EditorGUIUtility.singleLineHeight * 1.1f), "Save"))
+                            EditorGUIUtility.singleLineHeight * 1.1f), "Edit"))
                 {
-                    element.FindPropertyRelative("Strength").vector3Value = proCamera2DShake.Strength;
-                    element.FindPropertyRelative("Duration").floatValue = proCamera2DShake.Duration;
-                    element.FindPropertyRelative("Vibrato").intValue = proCamera2DShake.Vibrato;
-                    element.FindPropertyRelative("Smoothness").floatValue = proCamera2DShake.Smoothness;
-                    element.FindPropertyRelative("Randomness").floatValue = proCamera2DShake.Randomness;
-                    element.FindPropertyRelative("InitialAngle").floatValue = proCamera2DShake.InitialAngle;
-                    element.FindPropertyRelative("Rotation").vector3Value = proCamera2DShake.Rotation;
-                    element.FindPropertyRelative("IgnoreTimeScale").boolValue = proCamera2DShake.IgnoreTimeScale;
-
-                    proCamera2DShake.UseRandomInitialAngle = proCamera2DShake.InitialAngle < 0;
-
-                    EditorUtility.SetDirty(target);
-
-                    Repaint();
+                    Selection.activeObject = (ShakePreset)element.objectReferenceValue;
                 }
 
                 // Shake button
                 GUI.enabled = Application.isPlaying;
                 if (GUI.Button(new Rect(
                             rect.x + 3 * rect.width / 4f + 5,
-                            rect.y,
+                            rect.y - 2,
                             rect.width / 4f - 5,
                             EditorGUIUtility.singleLineHeight * 1.1f), "Shake!"))
                 {
-                    proCamera2DShake.Shake(
-                        element.FindPropertyRelative("Duration").floatValue,
-                        element.FindPropertyRelative("Strength").vector3Value,
-                        element.FindPropertyRelative("Vibrato").intValue,
-                        element.FindPropertyRelative("Randomness").floatValue,
-                        element.FindPropertyRelative("InitialAngle").floatValue,
-                        element.FindPropertyRelative("Rotation").vector3Value,
-                        element.FindPropertyRelative("Smoothness").floatValue,
-                        element.FindPropertyRelative("IgnoreTimeScale").boolValue
-                    );
+                    proCamera2DShake.Shake((ShakePreset)element.objectReferenceValue);
+                }
+                GUI.enabled = true;
+
+            };
+
+            _shakePresetsList.onAddCallback = (list) =>
+            {
+                _currentPickerWindow = GUIUtility.GetControlID(FocusType.Passive) + 100;
+                EditorGUIUtility.ShowObjectPicker<ShakePreset>(null, false, "", _currentPickerWindow);
+            };
+
+            _shakePresetsList.onSelectCallback = (list) =>
+            {
+                var element = _shakePresetsList.serializedProperty.GetArrayElementAtIndex(list.index);
+
+                if (element != null)
+                    EditorGUIUtility.PingObject(element.objectReferenceValue);
+            };
+
+            _shakePresetsList.onRemoveCallback = (list) =>
+            {
+                var element = _shakePresetsList.serializedProperty.GetArrayElementAtIndex(list.index);
+
+                proCamera2DShake.ShakePresets.Remove((ShakePreset)element.objectReferenceValue);
+            };
+
+            _shakePresetsList.drawHeaderCallback = (Rect rect) =>
+            {
+                EditorGUI.LabelField(rect, "Shake Presets");
+            };
+
+
+            //
+            // ConstantShakePresets list
+            //
+
+            _constantShakePresetsList = new ReorderableList(serializedObject, serializedObject.FindProperty("ConstantShakePresets"), true, true, true, true);
+
+            _constantShakePresetsList.drawElementCallback = (rect, index, isActive, isFocused) =>
+            {
+                rect.y += 2;
+                var element = _constantShakePresetsList.serializedProperty.GetArrayElementAtIndex(index);
+
+                if (element == null || element.objectReferenceValue == null)
+                {
+                    proCamera2DShake.ConstantShakePresets.RemoveAt(index);
+                    return;
+                }
+
+                var preset = (ConstantShakePreset)element.objectReferenceValue;
+
+                // Name field
+                EditorGUI.LabelField(
+                    new Rect(
+                        rect.x,
+                        rect.y,
+                        rect.width / 2f,
+                        EditorGUIUtility.singleLineHeight * 1.1f),
+                    (preset).name);
+
+                // Toggle to enable on start
+                if (!Application.isPlaying)
+                {
+                    if (EditorGUI.ToggleLeft(
+                        new Rect(
+                            rect.x + 1 * rect.width / 4f + 5,
+                            rect.y - 2,
+                            rect.width / 4f - 5,
+                            EditorGUIUtility.singleLineHeight * 1.1f),
+                        "Enable on Start",
+                        proCamera2DShake.StartConstantShakePreset == preset))
+                    {
+                        proCamera2DShake.StartConstantShakePreset = preset;
+                    }
+                }
+
+                // Edit button
+                if (GUI.Button(new Rect(
+                            rect.x + 2 * rect.width / 4f + 5,
+                            rect.y - 2,
+                            rect.width / 4f - 5,
+                            EditorGUIUtility.singleLineHeight * 1.1f), "Edit"))
+                {
+                    Selection.activeObject = preset;
+                }
+
+                // Shake button
+                GUI.enabled = Application.isPlaying;
+                if (GUI.Button(new Rect(
+                            rect.x + 3 * rect.width / 4f + 5,
+                            rect.y - 2,
+                            rect.width / 4f - 5,
+                    EditorGUIUtility.singleLineHeight * 1.1f), (proCamera2DShake.CurrentConstantShakePreset != null && proCamera2DShake.CurrentConstantShakePreset.GetInstanceID() == preset.GetInstanceID()) ? "Disable" : "Enable"))
+                {
+                    if (proCamera2DShake.CurrentConstantShakePreset == null || proCamera2DShake.CurrentConstantShakePreset.GetInstanceID() != preset.GetInstanceID())
+                    {
+                        proCamera2DShake.StopConstantShaking(0f);
+                        proCamera2DShake.ConstantShake(preset);
+                    }
+                    else
+                    {
+                        proCamera2DShake.StopConstantShaking();
+                    }
                 }
                 GUI.enabled = true;
             };
 
-            _shakePresetsList.drawHeaderCallback = (Rect rect) =>
-            {  
-                EditorGUI.LabelField(rect, "Shake Presets");
+            _constantShakePresetsList.onAddCallback = (list) =>
+            {
+                _currentPickerWindow = GUIUtility.GetControlID(FocusType.Passive) + 100;
+                EditorGUIUtility.ShowObjectPicker<ConstantShakePreset>(null, false, "", _currentPickerWindow);
             };
-            
-            _shakePresetsList.elementHeight = 30;
-            _shakePresetsList.draggable = true;
-        }
 
-        void OnDisable()
-        {
-            var proCamera2DShake = (ProCamera2DShake)target;
+            _constantShakePresetsList.onSelectCallback = (list) =>
+            {
+                var element = _constantShakePresetsList.serializedProperty.GetArrayElementAtIndex(list.index);
 
-            _playModePresets = proCamera2DShake.ShakePresets;
+                if (element != null)
+                    EditorGUIUtility.PingObject(element.objectReferenceValue);
+            };
+
+            _constantShakePresetsList.onRemoveCallback = (list) =>
+            {
+                var element = _constantShakePresetsList.serializedProperty.GetArrayElementAtIndex(list.index);
+
+                proCamera2DShake.ConstantShakePresets.Remove((ConstantShakePreset)element.objectReferenceValue);
+            };
+
+            _constantShakePresetsList.drawHeaderCallback = (Rect rect) =>
+            {
+                EditorGUI.LabelField(rect, "Constant Shake Presets");
+            };
         }
 
         public override void OnInspectorGUI()
         {
             var proCamera2DShake = (ProCamera2DShake)target;
-            
+
             if (proCamera2DShake.ProCamera2D == null)
                 EditorGUILayout.HelpBox("ProCamera2D is not set.", MessageType.Error, true);
 
@@ -178,83 +220,71 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
             // ProCamera2D
             _tooltip = new GUIContent("Pro Camera 2D", "");
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("ProCamera2D"), _tooltip);            
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("ProCamera2D"), _tooltip);
 
-            // Strength
-            _tooltip = new GUIContent("Strength", "The shake strength on each axis");
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("Strength"), _tooltip);
+            EditorGUILayout.Space();
+            EditorGUILayout.Space();
 
-            // Duration
-            _tooltip = new GUIContent("Duration", "The duration of the shake");
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("Duration"), _tooltip);
-
-            // Vibrato
-            _tooltip = new GUIContent("Vibrato", "Indicates how much will the shake vibrate");
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("Vibrato"), _tooltip);
-
-            // Smoothness
-            _tooltip = new GUIContent("Smoothness", "Indicates how smooth the shake will be");
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("Smoothness"), _tooltip);
-
-            // Randomness
-            _tooltip = new GUIContent("Randomness", "Indicates how much random the shake will be");
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("Randomness"), _tooltip);
-
-            // Random initial direction
-            EditorGUILayout.BeginHorizontal();
-            _tooltip = new GUIContent("Use Random Initial Angle", "If enabled, the initial shaking angle will be random");
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("UseRandomInitialAngle"), _tooltip);
-
-            if (!proCamera2DShake.UseRandomInitialAngle)
+            // Create ShakePreset button
+            if (GUILayout.Button("Create ShakePreset"))
             {
-                _tooltip = new GUIContent("Initial Angle", "");
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("InitialAngle"), _tooltip);
-            }
-            EditorGUILayout.EndHorizontal();
+                Undo.RecordObject(proCamera2DShake, "Added shake preset");
 
-            // Rotation
-            _tooltip = new GUIContent("Rotation", "The maximum rotation the camera will reach");
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("Rotation"), _tooltip);
-
-            // Ignore time scale
-            _tooltip = new GUIContent("Ignore TimeScale", "If enabled, the shake will occur even if the timeScale is 0");
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("IgnoreTimeScale"), _tooltip);
-
-            // Shake test buttons
-            GUI.enabled = Application.isPlaying;
-            if (GUILayout.Button("Shake!"))
-            {
-                proCamera2DShake.Shake();
-            }
-                
-            if (GUILayout.Button("Stop!"))
-            {
-                proCamera2DShake.StopShaking();
-            }
-            GUI.enabled = true;
-
-            // Add to presets button
-            if (GUILayout.Button("Add To Presets"))
-            {
-                proCamera2DShake.ShakePresets.Add(new ShakePreset()
-                    {
-                        Name = "ShakePreset" + proCamera2DShake.ShakePresets.Count,
-                        Strength = proCamera2DShake.Strength,
-                        Duration = proCamera2DShake.Duration,
-                        Vibrato = proCamera2DShake.Vibrato,
-                        Randomness = proCamera2DShake.Randomness,
-                        Smoothness = proCamera2DShake.Smoothness,
-                        InitialAngle = proCamera2DShake.UseRandomInitialAngle ? -1f : proCamera2DShake.InitialAngle,
-                        Rotation = proCamera2DShake.Rotation,
-                        IgnoreTimeScale = proCamera2DShake.IgnoreTimeScale,
-                    });
+                proCamera2DShake.ShakePresets.Add(ScriptableObjectUtility.CreateAsset<ShakePreset>("ShakePreset"));
             }
 
-            // Presets list
+            // Shake Presets list
             EditorGUILayout.Space();
             _shakePresetsList.DoLayoutList();
 
+            // ShakePreset selected from picker window
+            if (Event.current.commandName == "ObjectSelectorUpdated" && EditorGUIUtility.GetObjectPickerControlID() == _currentPickerWindow)
+            {
+                var preset = EditorGUIUtility.GetObjectPickerObject() as ShakePreset;
 
+                if (preset != null)
+                {
+                    if (!proCamera2DShake.ShakePresets.Contains(preset))
+                    {
+                        Undo.RecordObject(proCamera2DShake, "Added shake preset");
+
+                        proCamera2DShake.ShakePresets.Add(preset);
+                    }
+                }
+            }
+
+            EditorGUILayout.Space();
+            EditorGUILayout.Space();
+
+            // Create ConstantShakePreset button
+            if (GUILayout.Button("Create ConstantShakePreset"))
+            {
+                Undo.RecordObject(proCamera2DShake, "Added shake preset");
+
+                ScriptableObjectUtility.CreateAsset<ConstantShakePreset>("ConstantShakePreset");
+            }
+
+            // ConstantShake Presets list
+            EditorGUILayout.Space();
+            _constantShakePresetsList.DoLayoutList();
+
+            // ConstantShakePreset selected from picker window
+            if (Event.current.commandName == "ObjectSelectorUpdated" && EditorGUIUtility.GetObjectPickerControlID() == _currentPickerWindow)
+            {
+                var preset = EditorGUIUtility.GetObjectPickerObject() as ConstantShakePreset;
+
+                if (preset != null)
+                {
+                    if (!proCamera2DShake.ConstantShakePresets.Contains(preset))
+                    {
+                        Undo.RecordObject(proCamera2DShake, "Added shake preset");
+
+                        proCamera2DShake.ConstantShakePresets.Add(preset);
+                    }
+                }
+            }
+
+            // Save changes
             serializedObject.ApplyModifiedProperties();
         }
     }

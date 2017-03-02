@@ -490,11 +490,20 @@ namespace Com.LuisPedroFonseca.ProCamera2D
                     var arrowSize = cameraDimensions.x * .1f;
                     if ((nextTargetPos - targetPos).magnitude > arrowSize)
                     {
+#if UNITY_5_5_OR_NEWER
+                        UnityEditor.Handles.ArrowHandleCap(
+                            i, 
+                            targetPos, 
+                            Quaternion.LookRotation(nextTargetPos - targetPos), 
+                            cameraDimensions.x * .1f,
+                            EventType.Repaint);
+#else
                         UnityEditor.Handles.ArrowCap(
                             i, 
                             targetPos, 
                             Quaternion.LookRotation(nextTargetPos - targetPos), 
                             cameraDimensions.x * .1f);
+#endif
                     }
                 }
             }

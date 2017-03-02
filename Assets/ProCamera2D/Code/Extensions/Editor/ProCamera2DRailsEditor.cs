@@ -279,14 +279,32 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
             // Draw left and right handles
             var rightHandlePos = (proCamera2DRails.RailNodes[nodesCount - 1] - proCamera2DRails.RailNodes[nodesCount - 2]).normalized * .5f + proCamera2DRails.RailNodes[nodesCount - 1];
-            if (Handles.Button(rightHandlePos, Quaternion.identity, handleSize * .5f, handleSize, Handles.RectangleCap))
+            if (Handles.Button(
+                rightHandlePos, 
+                Quaternion.identity, 
+                handleSize * .5f, 
+                handleSize, 
+                #if UNITY_5_5_OR_NEWER
+                Handles.RectangleHandleCap))
+                #else
+                Handles.RectangleCap))
+                #endif
             {
                 Undo.RecordObject(proCamera2DRails, "Add");
                 proCamera2DRails.RailNodes.Insert(nodesCount, rightHandlePos);
             }
 
             var leftHandlesPos = (proCamera2DRails.RailNodes[0] - proCamera2DRails.RailNodes[1]).normalized * .5f + proCamera2DRails.RailNodes[0];
-            if (Handles.Button(leftHandlesPos, Quaternion.identity, handleSize * .5f, handleSize, Handles.RectangleCap))
+            if (Handles.Button(
+                leftHandlesPos, 
+                Quaternion.identity, 
+                handleSize * .5f, 
+                handleSize, 
+                #if UNITY_5_5_OR_NEWER
+                Handles.RectangleHandleCap))
+                #else
+                Handles.RectangleCap))
+                #endif
             {
                 Undo.RecordObject(proCamera2DRails, "Add");
                 proCamera2DRails.RailNodes.Insert(0, leftHandlesPos);
@@ -304,7 +322,11 @@ namespace Com.LuisPedroFonseca.ProCamera2D
                                  Quaternion.identity,
                                  handleSize,
                                  pointSnap,
-                                 Handles.DotCap);
+                                #if UNITY_5_5_OR_NEWER
+                                Handles.DotHandleCap);
+                                #else
+                                Handles.DotCap);
+                                #endif
                 
                 // Move
                 if (newPos != oldPos)
@@ -322,7 +344,16 @@ namespace Com.LuisPedroFonseca.ProCamera2D
                 {
                     var midPoint = Vector3.Lerp(proCamera2DRails.RailNodes[i - 1], proCamera2DRails.RailNodes[i], 0.5f);
 
-                    if (Handles.Button(midPoint, Quaternion.identity, handleSize * .5f, handleSize, Handles.RectangleCap))
+                    if (Handles.Button(
+                        midPoint, 
+                        Quaternion.identity, 
+                        handleSize * .5f, 
+                        handleSize, 
+                        #if UNITY_5_5_OR_NEWER
+                        Handles.RectangleHandleCap))
+                        #else
+                        Handles.RectangleCap))
+                        #endif
                     {
                         Undo.RecordObject(proCamera2DRails, "Add");
                         proCamera2DRails.RailNodes.Insert(i, midPoint);
@@ -334,7 +365,16 @@ namespace Com.LuisPedroFonseca.ProCamera2D
                 {
                     Handles.color = Color.red;
                     var deleteButtonPos = proCamera2DRails.RailNodes[i];
-                    if (Handles.Button(deleteButtonPos, Quaternion.identity, handleSize, handleSize, Handles.DotCap))
+                    if (Handles.Button(
+                        deleteButtonPos, 
+                        Quaternion.identity, 
+                        handleSize, 
+                        handleSize, 
+                        #if UNITY_5_5_OR_NEWER
+                        Handles.DotHandleCap))
+                        #else
+                        Handles.DotCap))
+                        #endif
                     {
                         Undo.RecordObject(proCamera2DRails, "Remove");
                         proCamera2DRails.RailNodes.RemoveAt(i);

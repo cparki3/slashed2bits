@@ -56,13 +56,19 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         public Vector2 EdgesPanSpeed = new Vector2(2f, 2f);
 
         [Range(0, .99f)]
-        public float HorizontalPanEdges = .9f;
+        public float TopPanEdge = .9f;
 
         [Range(0, .99f)]
-        public float VerticalPanEdges = .9f;
+        public float BottomPanEdge = .9f;
+
+        [Range(0, .99f)]
+        public float LeftPanEdge = .9f;
+
+        [Range(0, .99f)]
+        public float RightPanEdge = .9f;
 
         [HideInInspector]
-        public bool ResetPrevPanPoint = false;
+        public bool ResetPrevPanPoint;
 
         Vector2 _panDelta;
 
@@ -228,14 +234,14 @@ namespace Com.LuisPedroFonseca.ProCamera2D
                 var normalizedMousePosY = (-Screen.height * .5f + Input.mousePosition.y) / Screen.height;
 
                 if (normalizedMousePosX < 0)
-                    normalizedMousePosX = normalizedMousePosX.Remap(-.5f, -HorizontalPanEdges * .5f, -.5f, 0f);
+                    normalizedMousePosX = normalizedMousePosX.Remap(-.5f, -LeftPanEdge * .5f, -.5f, 0f);
                 else if (normalizedMousePosX > 0)
-                    normalizedMousePosX = normalizedMousePosX.Remap(HorizontalPanEdges * .5f, .5f, 0f, .5f);
+                    normalizedMousePosX = normalizedMousePosX.Remap(RightPanEdge * .5f, .5f, 0f, .5f);
                 
                 if (normalizedMousePosY < 0)
-                    normalizedMousePosY = normalizedMousePosY.Remap(-.5f, -VerticalPanEdges * .5f, -.5f, 0f);
+                    normalizedMousePosY = normalizedMousePosY.Remap(-.5f, -BottomPanEdge * .5f, -.5f, 0f);
                 else if (normalizedMousePosY > 0)
-                    normalizedMousePosY = normalizedMousePosY.Remap(VerticalPanEdges * .5f, .5f, 0f, .5f);
+                    normalizedMousePosY = normalizedMousePosY.Remap(TopPanEdge * .5f, .5f, 0f, .5f);
 
                 _panDelta = new Vector2(normalizedMousePosX, normalizedMousePosY) * deltaTime;
 
@@ -350,7 +356,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             }
 
             // Zoom amount
-            _zoomAmount = Mathf.SmoothDamp(_prevZoomAmount, zoomInput * zoomSpeed * deltaTime, ref _zoomVelocity, ZoomSmoothness);
+            _zoomAmount = Mathf.SmoothDamp(_prevZoomAmount, zoomInput * zoomSpeed * deltaTime, ref _zoomVelocity, ZoomSmoothness, float.MaxValue, deltaTime);
 
             #if UNITY_STANDALONE || UNITY_WEBGL || UNITY_WEBPLAYER || UNITY_EDITOR
             // Reset smoothness once zoom stops
@@ -472,8 +478,13 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             if (UsePanByMoveToEdges)
             {
                 Gizmos.DrawWireCube(
-                    VectorHVD(Vector3H(ProCamera2D.transform.localPosition), Vector3V(ProCamera2D.transform.localPosition), cameraDepthOffset), 
-                    VectorHV(cameraDimensions.x * HorizontalPanEdges, cameraDimensions.y * VerticalPanEdges));
+                    VectorHVD(
+                        Vector3H(ProCamera2D.transform.localPosition) - (LeftPanEdge * cameraDimensions.x / 4f) + (RightPanEdge * cameraDimensions.x / 4f), 
+                        Vector3V(ProCamera2D.transform.localPosition) - (BottomPanEdge * cameraDimensions.y / 4f) + (TopPanEdge * cameraDimensions.y / 4f),
+                        cameraDepthOffset), 
+                    VectorHV(
+                        cameraDimensions.x * ((LeftPanEdge + RightPanEdge) / 2f),
+                        cameraDimensions.y * ((TopPanEdge + BottomPanEdge) / 2f)));
             }
 
             if (UsePanByDrag)

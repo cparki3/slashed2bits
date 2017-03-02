@@ -234,12 +234,16 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             }
 
             // Follow X
-            _tooltip = new GUIContent("Parallax " + hAxis, "Should the parallax occur on the horizontal axis?");
+            _tooltip = new GUIContent("Parallax " + hAxis, "Should the parallax occur on the horizontal axis? On by default.");
             EditorGUILayout.PropertyField(serializedObject.FindProperty("ParallaxHorizontal"), _tooltip);
 
             // Follow Y
-            _tooltip = new GUIContent("Parallax " + vAxis, "Should the parallax occur on the vertical axis?");
+            _tooltip = new GUIContent("Parallax " + vAxis, "Should the parallax occur on the vertical axis? On by default.");
             EditorGUILayout.PropertyField(serializedObject.FindProperty("ParallaxVertical"), _tooltip);
+
+            // Parallax Zoom
+            _tooltip = new GUIContent("Parallax Zoom", "Should the parallax layers size be affected? On by default.");
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("ParallaxZoom"), _tooltip);
 
             // Root Position
             _tooltip = new GUIContent("Root Position", "The position at which your camera is going to start.");

@@ -33,6 +33,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         public List<ProCamera2DParallaxLayer> ParallaxLayers = new List<ProCamera2DParallaxLayer>();
         public bool ParallaxHorizontal = true;
         public bool ParallaxVertical = true;
+        public bool ParallaxZoom = true;
         public Vector3 RootPosition = Vector3.zero;
 
         float _initialOrtographicSize;
@@ -160,11 +161,14 @@ namespace Com.LuisPedroFonseca.ProCamera2D
                     ParallaxLayers[i].CameraTransform.position = RootPosition + VectorHVD(x, y, Vector3D(_transform.position));
 
                     // Zoom
-                    ParallaxLayers[i].ParallaxCamera.orthographicSize = _initialOrtographicSize + (ProCamera2D.GameCamera.orthographicSize - _initialOrtographicSize) * ParallaxLayers[i].Speed;
-                    #if PC2D_TK2D_SUPPORT
-                    if (ParallaxLayers[i].ParallaxCameraTk2d != null)
-                        ParallaxLayers[i].ParallaxCameraTk2d.ZoomFactor = ProCamera2D.Tk2dCam.ZoomFactor;
-                    #endif
+                    if (ParallaxZoom)
+                    {
+                        ParallaxLayers[i].ParallaxCamera.orthographicSize = _initialOrtographicSize + (ProCamera2D.GameCamera.orthographicSize - _initialOrtographicSize) * ParallaxLayers[i].Speed;
+                        #if PC2D_TK2D_SUPPORT
+                        if (ParallaxLayers[i].ParallaxCameraTk2d != null)
+                            ParallaxLayers[i].ParallaxCameraTk2d.ZoomFactor = ProCamera2D.Tk2dCam.ZoomFactor;
+                        #endif
+                    }
                 }
             }
         }

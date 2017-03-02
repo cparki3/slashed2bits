@@ -16,7 +16,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
     [RequireComponent(typeof(Camera))]
     public class ProCamera2D : MonoBehaviour, ISerializationCallbackReceiver
     {
-        public static readonly Version Version = new Version("2.2.4");
+        public static readonly Version Version = new Version("2.3.0");
 
         #region Inspector Variables
 
@@ -61,6 +61,9 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         }
 
         static ProCamera2D _instance;
+
+        /// <summary>Property to know if there's a ProCamera2D present</summary>
+        public static bool Exists { get { return _instance != null; } }
 
         /// <summary>Update ProCamera2D's camera rect</summary>
         public Rect Rect
@@ -134,6 +137,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
         public Action<float> PreMoveUpdate;
         public Action<float> PostMoveUpdate;
+        public Action<Vector2> OnCameraResize;
         
         public Action OnReset;
 
@@ -175,6 +179,8 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
         float _previousCameraTargetHorizontalPositionSmoothed;
         float _previousCameraTargetVerticalPositionSmoothed;
+        int _previousScreenWidth;
+        int _previousScreenHeight;
 
         WaitForFixedUpdate _waitForFixedUpdate = new WaitForFixedUpdate();
 
@@ -221,8 +227,11 @@ namespace Com.LuisPedroFonseca.ProCamera2D
                 }
             }
 
-            _screenSizeInWorldCoordinates = _startScreenSizeInWorldCoordinates = Utils.GetScreenSizeInWorldCoords(GameCamera, Mathf.Abs(Vector3D(_transform.localPosition)));
+            // Calculates current screen size
+            CalculateScreenSize();
+            _startScreenSizeInWorldCoordinates = _screenSizeInWorldCoordinates;
 
+            // We save this so we know the direction of the camera when moving it on the depth axis
             _originalCameraDepthSign = Mathf.Sign(Vector3D(_transform.localPosition));
         }
 
@@ -236,7 +245,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             SortPostMovers();
 
             // Set some values ahead of the update loop so that other extensions can use them on Awake/Start
-            _targetsMidPoint = GetTargetsWeightedMidPoint(CameraTargets);
+            _targetsMidPoint = GetTargetsWeightedMidPoint(ref CameraTargets);
             _cameraTargetHorizontalPositionSmoothed = Vector3H(_targetsMidPoint);
             _cameraTargetVerticalPositionSmoothed = Vector3V(_targetsMidPoint);
             _deltaTime = Time.deltaTime;
@@ -244,7 +253,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             // Center on target
             if (CenterTargetOnStart && CameraTargets.Count > 0)
             {
-                var targetsMidPoint = GetTargetsWeightedMidPoint(CameraTargets);
+                var targetsMidPoint = GetTargetsWeightedMidPoint(ref CameraTargets);
                 var cameraTargetPositionX = FollowHorizontal ? Vector3H(targetsMidPoint) : Vector3H(_transform.localPosition);
                 var cameraTargetPositionY = FollowVertical ? Vector3V(targetsMidPoint) : Vector3V(_transform.localPosition);
                 var finalPos = new Vector2(cameraTargetPositionX, cameraTargetPositionY);
@@ -437,22 +446,62 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         /// <summary>Resets the camera movement and size and also all of its extensions to their start values.
         /// This could be useful if, for example, your player dies and respawns somewhere else on the level</summary>
         /// <param name="centerOnTargets">If true, the camera will move to the "final" targets position</param>
-        public void Reset(bool centerOnTargets = true)
+        /// <param name="resetSize">If true, resets the camera size to the start value</param>
+        /// <param name="resetExtensions">If true, resets all active extensions to their start values</param>
+        public void Reset(bool centerOnTargets = true, bool resetSize = true, bool resetExtensions = true)
         {
             if (centerOnTargets)
-            {
-                var targetsMidPoint = GetTargetsWeightedMidPoint(CameraTargets);
-                var finalPos = new Vector2(Vector3H(targetsMidPoint), Vector3V(targetsMidPoint));
-                finalPos += new Vector2(OverallOffset.x, OverallOffset.y);
-                MoveCameraInstantlyToPosition(finalPos);
-            }
+                CenterOnTargets();
             else
                 ResetMovement();
 
-            ResetSize();
+            if(resetSize)
+                ResetSize();
 
+            if (resetExtensions)
+                ResetExtensions();
+        }
+
+        /// <summary>
+        /// Cancels any existing camera movement easing. 
+        /// Also check CenterOnTargets and MoveCameraInstantlyToPosition.
+        /// </summary>
+        public void ResetMovement()
+        {
+            _cameraTargetPosition = _transform.localPosition;
+
+            _cameraTargetHorizontalPositionSmoothed = Vector3H(_cameraTargetPosition);
+            _cameraTargetVerticalPositionSmoothed = Vector3V(_cameraTargetPosition);
+
+            _previousCameraTargetHorizontalPositionSmoothed = _cameraTargetHorizontalPositionSmoothed;
+            _previousCameraTargetVerticalPositionSmoothed = _cameraTargetVerticalPositionSmoothed;
+        }
+
+        /// <summary>
+        /// Resets the camera size to the start value.
+        /// </summary>
+        public void ResetSize()
+        {
+            SetScreenSize(_startScreenSizeInWorldCoordinates.y / 2);
+        }
+
+        /// <summary>
+        /// Resets all active extensions to their start values.
+        /// Notice you can manually reset each extension using the "OnReset" method.
+        /// </summary>
+        public void ResetExtensions()
+        {
             if (OnReset != null)
                 OnReset();
+        }
+
+        /// <summary>Instantly moves the camera to the targets' position.</summary>
+        public void CenterOnTargets()
+        {
+            var targetsMidPoint = GetTargetsWeightedMidPoint(ref CameraTargets);
+            var finalPos = new Vector2(Vector3H(targetsMidPoint), Vector3V(targetsMidPoint));
+            finalPos += new Vector2(OverallOffset.x, OverallOffset.y);
+            MoveCameraInstantlyToPosition(finalPos);
         }
 
         /// <summary>Resize the camera to the supplied size</summary>
@@ -526,6 +575,10 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         /// <param name="deltaTime">The time in seconds it took to complete the last frame</param>
         public void Move(float deltaTime)
         {
+            //Detect resolution changes
+            if (Screen.width != _previousScreenWidth || Screen.height != _previousScreenHeight)
+                CalculateScreenSize();
+
             // Delta time
             _deltaTime = deltaTime;
             if (_deltaTime < .0001f)
@@ -543,7 +596,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
             // Calculate targets mid point
             _previousTargetsMidPoint = _targetsMidPoint;
-            _targetsMidPoint = GetTargetsWeightedMidPoint(CameraTargets);
+            _targetsMidPoint = GetTargetsWeightedMidPoint(ref CameraTargets);
             _cameraTargetPosition = _targetsMidPoint;
 
             // Calculate influences
@@ -682,7 +735,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             } 
         }
 
-        Vector3 GetTargetsWeightedMidPoint(IList<CameraTarget> targets)
+        Vector3 GetTargetsWeightedMidPoint(ref List<CameraTarget> targets)
         {
             var midPointH = 0f;
             var midPointV = 0f;
@@ -697,8 +750,11 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             var totalAccountableTargetsV = 0;
             for (int i = 0; i < totalTargets; i++)
             {
-                if (targets[i] == null)
+                if (targets[i] == null || targets[i].TargetTransform == null)
+                {
+                    targets.RemoveAt(i);
                     continue;
+                }
 
                 midPointH += (Vector3H(targets[i].TargetPosition) + targets[i].TargetOffset.x) * targets[i].TargetInfluenceH;
                 midPointV += (Vector3V(targets[i].TargetPosition) + targets[i].TargetOffset.y) * targets[i].TargetInfluenceV;
@@ -845,7 +901,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
             _screenSizeInWorldCoordinates = new Vector2(newSize * 2f * GameCamera.aspect, newSize * 2f);
 
-            #if PC2D_TK2D_SUPPORT
+#if PC2D_TK2D_SUPPORT
             if (Tk2dCam == null)
                 return;
 
@@ -855,29 +911,24 @@ namespace Com.LuisPedroFonseca.ProCamera2D
                     Tk2dCam.ZoomFactor = Tk2dCam.CameraSettings.orthographicSize / newSize;
                 else
                 {
-                    #if UNITY_EDITOR
+#if UNITY_EDITOR
                     if (Application.isPlaying)
-                    #endif
+#endif
                         Tk2dCam.ZoomFactor = (_startScreenSizeInWorldCoordinates.y * .5f) / newSize;
                 }
             }
-            #endif
+#endif
+
+            if (OnCameraResize != null)
+                OnCameraResize(_screenSizeInWorldCoordinates);
         }
 
-        void ResetMovement()
+        void CalculateScreenSize()
         {
-            _cameraTargetPosition = _transform.localPosition;
-
-            _cameraTargetHorizontalPositionSmoothed = Vector3H(_cameraTargetPosition);
-            _cameraTargetVerticalPositionSmoothed = Vector3V(_cameraTargetPosition);
-
-            _previousCameraTargetHorizontalPositionSmoothed = _cameraTargetHorizontalPositionSmoothed;
-            _previousCameraTargetVerticalPositionSmoothed = _cameraTargetVerticalPositionSmoothed;
-        }
-
-        void ResetSize()
-        {
-            SetScreenSize(_startScreenSizeInWorldCoordinates.y / 2);
+            GameCamera.ResetAspect();
+            _screenSizeInWorldCoordinates = Utils.GetScreenSizeInWorldCoords(GameCamera, Mathf.Abs(Vector3D(_transform.localPosition)));
+            _previousScreenWidth = Screen.width;
+            _previousScreenHeight = Screen.height;
         }
 
         float GetCameraDistanceForFOV(float fov, float cameraHeight)
@@ -1021,7 +1072,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
             // Targets mid point
             Gizmos.color = EditorPrefsX.GetColor(PrefsData.TargetsMidPointColorKey, PrefsData.TargetsMidPointColorValue);
-            var targetsMidPoint = GetTargetsWeightedMidPoint(CameraTargets);
+            var targetsMidPoint = GetTargetsWeightedMidPoint(ref CameraTargets);
             targetsMidPoint = VectorHVD(Vector3H(targetsMidPoint), Vector3V(targetsMidPoint), cameraDepthOffset);
             Gizmos.DrawWireSphere(targetsMidPoint, .01f * cameraDimensions.y);
 

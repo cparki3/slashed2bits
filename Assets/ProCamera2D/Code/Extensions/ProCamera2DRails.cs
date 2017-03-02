@@ -116,6 +116,9 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         /// <param name="targetOffset">A vector that offsets the target position that the camera will follow</param>
         public void AddRailsTarget(Transform targetTransform, float targetInfluenceH = 1f, float targetInfluenceV = 1f, Vector2 targetOffset = default(Vector2))
         {
+            if (GetRailsTarget(targetTransform) != null)
+                return;
+            
             var newCameraTarget = new CameraTarget()
             {
                     TargetTransform = targetTransform,
@@ -136,6 +139,19 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             ProCamera2D.AddCameraTarget(railTransform);
 
             enabled = true;
+        }
+
+        /// <summary>Removes a target from being followed on the rails</summary>
+        /// <param name="targetTransform">The Transform of the target</param>
+        public void RemoveRailsTarget(Transform targetTransform)
+        {
+            var cameraTarget = GetRailsTarget(targetTransform);
+
+            if (cameraTarget != null)
+            {
+                CameraTargets.Remove(cameraTarget);
+                ProCamera2D.RemoveCameraTarget(_cameraTargetsOnRails[cameraTarget]);
+            }
         }
 
         /// <summary>Gets the corresponding CameraTarget from an object's transform.</summary>

@@ -31,6 +31,12 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         {
             base.Awake();
 
+            if (ProCamera2D == null)
+            {
+                enabled = false;
+                return;
+            }
+
             GetPixelPerfectPlugin();
 
             GetSprite();
@@ -60,7 +66,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         #if UNITY_EDITOR
         void LateUpdate()
         {
-            if(!Application.isPlaying && !IsAMovingObject && _pixelPerfectPlugin.enabled)
+            if(enabled && !Application.isPlaying && !IsAMovingObject && _pixelPerfectPlugin.enabled)
                 SetAsPixelPerfect();
                 
             if(!Application.isPlaying)
@@ -166,7 +172,8 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         {
             base.OnDestroy();
 
-            ProCamera2D.RemovePostMover(this);
+            if(ProCamera2D != null)
+                ProCamera2D.RemovePostMover(this);
         }
     }
 }

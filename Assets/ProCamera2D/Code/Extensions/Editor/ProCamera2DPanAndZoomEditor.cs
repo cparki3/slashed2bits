@@ -110,11 +110,17 @@ namespace Com.LuisPedroFonseca.ProCamera2D
                     _tooltip = new GUIContent("Edges Pan Speed", "The speed at which the camera will move when the mouse reaches the edges of the screen");
                     EditorGUILayout.PropertyField(serializedObject.FindProperty("EdgesPanSpeed"), _tooltip);
 
-                    _tooltip = new GUIContent("Horizontal Pan Edges", "If the mouse pointer goes beyond this edge the camera will start moving horizontally");
-                    EditorGUILayout.PropertyField(serializedObject.FindProperty("HorizontalPanEdges"), _tooltip);
+                    _tooltip = new GUIContent("Top Pan Edge", "If the mouse pointer goes beyond this edge the camera will start moving vertically");
+                    EditorGUILayout.PropertyField(serializedObject.FindProperty("TopPanEdge"), _tooltip);
 
-                    _tooltip = new GUIContent("Vertical Pan Edges", "If the mouse pointer goes beyond this edge the camera will start moving vertically");
-                    EditorGUILayout.PropertyField(serializedObject.FindProperty("VerticalPanEdges"), _tooltip);
+                    _tooltip = new GUIContent("Bottom Pan Edge", "If the mouse pointer goes beyond this edge the camera will start moving vertically");
+                    EditorGUILayout.PropertyField(serializedObject.FindProperty("BottomPanEdge"), _tooltip);
+
+                    _tooltip = new GUIContent("Left Pan Edge", "If the mouse pointer goes beyond this edge the camera will start moving horizontally");
+                    EditorGUILayout.PropertyField(serializedObject.FindProperty("LeftPanEdge"), _tooltip);
+
+                    _tooltip = new GUIContent("Right Pan Edge", "If the mouse pointer goes beyond this edge the camera will start moving horizontally");
+                    EditorGUILayout.PropertyField(serializedObject.FindProperty("RightPanEdge"), _tooltip);
                 }
 
                 EditorGUI.indentLevel = 0;

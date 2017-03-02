@@ -112,12 +112,12 @@ namespace Com.LuisPedroFonseca.ProCamera2D
                 // Detect if the camera size is bounded
                 _previousCamSize = ProCamera2D.ScreenSizeInWorldCoordinates.y;
 
+                // Yield
+                yield return ProCamera2D.GetYield();
+
                 // Update camera size if needed
                 if (Mathf.Abs(ProCamera2D.ScreenSizeInWorldCoordinates.y * .5f - _targetCamSize) > .0001f)
                     UpdateScreenSize(ResetSizeOnExit ? ResetSizeSmoothness : ZoomSmoothness);
-
-                // Yield
-                yield return ProCamera2D.GetYield();
 
                 // If the camera is bounded, reset the easing
                 if (_previousCamSize == ProCamera2D.ScreenSizeInWorldCoordinates.y)
@@ -143,7 +143,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
         protected void UpdateScreenSize(float smoothness)
         {
-            _targetCamSizeSmoothed = Mathf.SmoothDamp(_targetCamSizeSmoothed, _targetCamSize, ref _zoomVelocity, smoothness);
+            _targetCamSizeSmoothed = Mathf.SmoothDamp(_targetCamSizeSmoothed, _targetCamSize, ref _zoomVelocity, smoothness, float.MaxValue, ProCamera2D.DeltaTime);
 
             ProCamera2D.UpdateScreenSize(_targetCamSizeSmoothed);
         }

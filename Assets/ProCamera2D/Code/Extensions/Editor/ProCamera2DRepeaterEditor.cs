@@ -81,8 +81,11 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
             if (serializedObject.ApplyModifiedProperties())
             {
-                proCamera2DRepeater.RepeatHorizontal = serializedObject.FindProperty("_repeatHorizontal").boolValue;
-                proCamera2DRepeater.RepeatVertical = serializedObject.FindProperty("_repeatVertical").boolValue;
+                if (Application.isPlaying)
+                {
+                    proCamera2DRepeater.RepeatHorizontal = serializedObject.FindProperty("_repeatHorizontal").boolValue;
+                    proCamera2DRepeater.RepeatVertical = serializedObject.FindProperty("_repeatVertical").boolValue;
+                }
             }
         }
     }

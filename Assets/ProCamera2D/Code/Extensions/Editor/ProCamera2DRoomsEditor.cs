@@ -54,17 +54,6 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             // Script
             _script = MonoScript.FromMonoBehaviour(proCamera2DRooms);
 
-            // Create rooms if non-existant
-            if (proCamera2DRooms.Rooms.Count == 0)
-            {
-                proCamera2DRooms.Rooms.Add(new Room()
-                    {
-                        Dimensions = new Rect(0, 0, 10, 10),
-                        TransitionDuration = 1f,
-                        ZoomScale = 1.5f
-                    });
-            }
-
             // Rooms List
             _roomsList = new ReorderableList(serializedObject, serializedObject.FindProperty("Rooms"), false, true, true, true);
 
@@ -320,7 +309,16 @@ namespace Com.LuisPedroFonseca.ProCamera2D
                 // Button to toggle room editing
                 var buttonSize = Mathf.Min(proCamera2DRooms.Rooms[i].Dimensions.width / 2f, proCamera2DRooms.Rooms[i].Dimensions.height / 2f);
                 buttonSize = Mathf.Min(1, buttonSize);
-                if (Handles.Button(proCamera2DRooms.Rooms[i].Dimensions.position, Quaternion.LookRotation(VectorHVD(0, 0, 1)), buttonSize, buttonSize, Handles.RectangleCap))
+                if (Handles.Button(
+                    proCamera2DRooms.Rooms[i].Dimensions.position, 
+                    Quaternion.LookRotation(VectorHVD(0, 0, 1)), 
+                    buttonSize, 
+                    buttonSize, 
+                    #if UNITY_5_5_OR_NEWER
+                    Handles.RectangleHandleCap))
+                    #else
+                    Handles.RectangleCap))
+                    #endif
                 {
                     if (i == _currentlyEditingRoom)
                         _currentlyEditingRoom = -1;
@@ -343,11 +341,16 @@ namespace Com.LuisPedroFonseca.ProCamera2D
                 // Draw rect editor
                 var newDimensions = ResizeRect(
                                         currentDimensions,
+                                        #if UNITY_5_5_OR_NEWER
+                                        Handles.CubeHandleCap,
+                                        #else
                                         Handles.CubeCap,
+                                        #endif
                                         Color.green,
                                         Color.yellow,
                                         HandleUtility.GetHandleSize(Vector3.zero) * .1f,
                                         snap);
+
 
                 // Undo
                 if (newDimensions.x != currentDimensions.x ||
@@ -365,7 +368,11 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             }
         }
 
+        #if UNITY_5_5_OR_NEWER
+        Rect ResizeRect(Rect rect, UnityEditor.Handles.CapFunction capFunc, Color capCol, Color fillCol, float capSize, float snap)
+        #else
         Rect ResizeRect(Rect rect, UnityEditor.Handles.DrawCapFunction capFunc, Color capCol, Color fillCol, float capSize, float snap)
+        #endif
         {
             Vector2 halfSize = new Vector2(rect.size.x * 0.5f, rect.size.y * 0.5f);
 

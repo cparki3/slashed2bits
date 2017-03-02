@@ -4,23 +4,9 @@ using System.Collections.Generic;
 
 namespace Com.LuisPedroFonseca.ProCamera2D
 {
-    [System.Serializable]
-    public struct ShakePreset
-    {
-        public string Name;
-        public Vector3 Strength;
-        public float Duration;
-        public int Vibrato;
-        public float Randomness;
-        public float Smoothness;
-        public float InitialAngle;
-        public Vector3 Rotation;
-        public bool IgnoreTimeScale;
-    }
-
-    #if UNITY_5_3_OR_NEWER
+#if UNITY_5_3_OR_NEWER
     [HelpURL("http://www.procamera2d.com/user-guide/extension-shake/")]
-    #endif
+#endif
     public class ProCamera2DShake : BasePC2D
     {
         public static string ExtensionName = "Shake";
@@ -43,32 +29,19 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             }
         }
 
+        /// <summary>Property to know if there's a ProCamera2DShake present</summary>
+        public static bool Exists { get { return _instance != null; } }
+
         public System.Action OnShakeCompleted;
 
-        public Vector2 Strength = new Vector2(10, 10);
-
-        [RangeAttribute(.02f, 3f)]
-        public float Duration = .5f;
-
-        [RangeAttribute(1, 100)]
-        public int Vibrato = 10;
-
-        [RangeAttribute(0f, 1f)]
-        public float Randomness = .1f;
-
-        [RangeAttribute(0f, .5f)]
-        public float Smoothness = .1f;
-
-        [RangeAttribute(0f, 360f)]
-        public float InitialAngle = 0f;
-
-        public bool UseRandomInitialAngle = true;
-
-        public Vector3 Rotation;
-
-        public bool IgnoreTimeScale;
-
         public List<ShakePreset> ShakePresets;
+
+        public List<ConstantShakePreset> ConstantShakePresets;
+
+        public ConstantShakePreset StartConstantShakePreset;
+
+        /// <summary>Used internally by the editor</summary>
+        public ConstantShakePreset CurrentConstantShakePreset;
 
         Transform _shakeParent;
 
@@ -85,6 +58,10 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
         List<Vector3> _influences = new List<Vector3>();
         Vector3 _influencesSum = Vector3.zero;
+
+        Vector3[] _constantShakePositions;
+        Vector3 _constantShakePosition;
+        bool _isConstantShaking;
 
         override protected void Awake()
         {
@@ -107,6 +84,12 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             _originalRotation = _transform.localRotation;
         }
 
+        void Start()
+        {
+            if (StartConstantShakePreset != null)
+                ConstantShake(StartConstantShakePreset);
+        }
+
         void Update()
         {
             _influencesSum = Vector3.zero;
@@ -119,13 +102,13 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             }
         }
 
-        /// <summary>Shakes the camera position along its horizontal and vertical axes with the values set on the editor.</summary>
-        public void Shake()
-        {
-            Shake(Duration, Strength, Vibrato, Randomness, UseRandomInitialAngle ? -1f : InitialAngle, Rotation, Smoothness, IgnoreTimeScale);
-        }
+        /// <summary>Shakes the camera with the current values.</summary>
+        //public void Shake()
+        //{
+        //    Shake(Duration, Strength, Vibrato, Randomness, UseRandomInitialAngle ? -1f : InitialAngle, Rotation, Smoothness, IgnoreTimeScale);
+        //}
 
-        /// <summary>Shakes the camera along its horizontal and vertical axes with the given values.</summary>
+        /// <summary>Shakes the camera with the given values.</summary>
         /// <param name="duration">The duration of the shake</param>
         /// <param name="strength">The shake strength on each axis</param>
         /// <param name="vibrato">Indicates how much will the shake vibrate</param>
@@ -135,12 +118,12 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         /// <param name="smoothness">How smooth the shake should be, 0 being instant</param>
         /// <param name="ignoreTimeScale">If true, the shake will occur even if the timeScale is 0</param>
         public void Shake(
-            float duration, 
-            Vector2 strength, 
-            int vibrato = 10, 
-            float randomness = .1f, 
-            float initialAngle = -1f, 
-            Vector3 rotation = default(Vector3), 
+            float duration,
+            Vector2 strength,
+            int vibrato = 10,
+            float randomness = .1f,
+            float initialAngle = -1f,
+            Vector3 rotation = default(Vector3),
             float smoothness = .1f,
             bool ignoreTimeScale = false)
         {
@@ -204,17 +187,17 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
         /// <summary>Shakes the camera using the values defined on the provided preset</summary>
         /// <param name="presetIndex">The index of the preset</param>
-        public void ShakeUsingPreset(int presetIndex)
+        public void Shake(int presetIndex)
         {
             if (presetIndex <= ShakePresets.Count - 1)
             {
                 Shake(
-                    ShakePresets[presetIndex].Duration, 
-                    ShakePresets[presetIndex].Strength, 
-                    ShakePresets[presetIndex].Vibrato, 
-                    ShakePresets[presetIndex].Randomness, 
-                    ShakePresets[presetIndex].InitialAngle, 
-                    ShakePresets[presetIndex].Rotation, 
+                    ShakePresets[presetIndex].Duration,
+                    ShakePresets[presetIndex].Strength,
+                    ShakePresets[presetIndex].Vibrato,
+                    ShakePresets[presetIndex].Randomness,
+                    ShakePresets[presetIndex].UseRandomInitialAngle ? -1 : ShakePresets[presetIndex].InitialAngle,
+                    ShakePresets[presetIndex].Rotation,
                     ShakePresets[presetIndex].Smoothness,
                     ShakePresets[presetIndex].IgnoreTimeScale);
             }
@@ -226,27 +209,33 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
         /// <summary>Shakes the camera using the values defined on the provided preset</summary>
         /// <param name="presetName">The name of the preset</param>
-        public void ShakeUsingPreset(string presetName)
+        public void Shake(string presetName)
         {
             for (int i = 0; i < ShakePresets.Count; i++)
             {
-                if (ShakePresets[i].Name == presetName)
+                if (ShakePresets[i].name == presetName)
                 {
-                    Shake(
-                        ShakePresets[i].Duration, 
-                        ShakePresets[i].Strength, 
-                        ShakePresets[i].Vibrato, 
-                        ShakePresets[i].Randomness, 
-                        ShakePresets[i].InitialAngle, 
-                        ShakePresets[i].Rotation, 
-                        ShakePresets[i].Smoothness,
-                        ShakePresets[i].IgnoreTimeScale);
+                    Shake(i);
 
                     return;
                 }
             }
 
             Debug.LogWarning("Could not find a shake preset with the name: " + presetName);
+        }
+
+        /// <summary>Shakes the camera using the values defined on the provided preset</summary>
+        /// <param name="preset">The shake preset</param>
+        public void Shake(ShakePreset preset)
+        {
+            Shake(preset.Duration,
+                  preset.Strength,
+                  preset.Vibrato,
+                  preset.Randomness,
+                  preset.UseRandomInitialAngle ? -1 : preset.InitialAngle,
+                  preset.Rotation,
+                  preset.Smoothness,
+                  preset.IgnoreTimeScale);
         }
 
         /// <summary>Stops all current shakes</summary>
@@ -263,6 +252,91 @@ namespace Com.LuisPedroFonseca.ProCamera2D
                 StopCoroutine(_shakeCoroutine);
                 _shakeCoroutine = null;
             }
+
+            ShakeCompleted();
+        }
+
+        /// <summary>
+        /// Constantly shakes the camera until it's explicitly told to stop
+        /// </summary>
+        /// <param name="preset">The preset that contains all the constant shake parameters</param>
+        public void ConstantShake(ConstantShakePreset preset)
+        {
+            CurrentConstantShakePreset = preset;
+
+            _isConstantShaking = true;
+
+            if(_constantShakePositions == null || preset.Layers.Count > _constantShakePositions.Length)
+                _constantShakePositions = new Vector3[preset.Layers.Count];
+            
+            for (int i = 0; i < preset.Layers.Count; i++)
+            {
+                StartCoroutine(CalculateConstantShakePosition(
+                    i,
+                    preset.Layers[i].Frequency.x,
+                    preset.Layers[i].Frequency.y,
+                    preset.Layers[i].AmplitudeHorizontal,
+                    preset.Layers[i].AmplitudeVertical,
+                    preset.Layers[i].AmplitudeDepth));
+            }
+
+            StartCoroutine(ConstantShakeRoutine(preset.Intensity));
+        }
+
+        /// <summary>
+        /// Constantly shakes the camera until it's explicitly told to stop
+        /// </summary>
+        /// <param name="presetName">The name of the preset. It must be part of the ConstantShakePresets list.</param>
+        public void ConstantShake(string presetName)
+        {
+            for (int i = 0; i < ConstantShakePresets.Count; i++)
+            {
+                if (ConstantShakePresets[i].name == presetName)
+                {
+                    ConstantShake(ConstantShakePresets[i]);
+
+                    return;
+                }
+            }
+
+            Debug.LogWarning("Could not find a ConstantShakePreset with the name: " + presetName + ". Remember you need to add it to the ConstantShakePresets list first.");
+        }
+
+        /// <summary>
+        /// Constantly shakes the camera until it's explicitly told to stop
+        /// </summary>
+        /// <param name="presetIndex">The index of the preset. It must be part of the ConstantShakePresets list.</param>
+        public void ConstantShake(int presetIndex)
+        {
+            if (presetIndex <= ConstantShakePresets.Count - 1)
+            {
+                ConstantShake(ConstantShakePresets[presetIndex]);
+            }
+            else
+            {
+                Debug.LogWarning("Could not find a ConstantShakePreset with the index: " + presetIndex + ". Remember you need to add it to the ConstantShakePresets list first.");
+            }
+        }
+
+        /// <summary>
+        /// Stops constant shakes
+        /// </summary>
+        /// <param name="duration">How long it takes to stop the constant shake</param>
+        public void StopConstantShaking(float duration = .3f)
+        {
+            CurrentConstantShakePreset = null;
+
+            _isConstantShaking = false;
+
+            if (duration > 0f)
+                StartCoroutine(StopConstantShakeRoutine(duration));
+            else
+            {
+                StopAllCoroutines();
+                _constantShakePosition = Vector3.zero;
+                _influences.Clear();
+                _influences.Add(_constantShakePosition);
+            }
         }
 
         /// <summary>Apply the given influences to the camera during the corresponding durations.</summary>
@@ -272,10 +346,10 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         /// <param name="smoothness">How smooth the shake should be, 0 being instant</param>
         /// <param name="ignoreTimeScale">If true, the shake will occur even if the timeScale is 0</param>
         public Coroutine ApplyShakesTimed(
-            Vector2[] shakes, 
-            Vector3[] rotations, 
-            float[] durations, 
-            float smoothness = .1f, 
+            Vector2[] shakes,
+            Vector3[] rotations,
+            float[] durations,
+            float smoothness = .1f,
             bool ignoreTimeScale = false)
         {
             if (!enabled)
@@ -299,10 +373,10 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         }
 
         Coroutine ApplyShakesTimed(
-            Vector2[] shakes, 
-            Quaternion[] rotations, 
-            float[] durations, 
-            float smoothness = .1f, 
+            Vector2[] shakes,
+            Quaternion[] rotations,
+            float[] durations,
+            float smoothness = .1f,
             bool ignoreTimeScale = false)
         {
             var coroutine = StartCoroutine(ApplyShakesTimedRoutine(shakes, rotations, durations, ignoreTimeScale));
@@ -315,14 +389,16 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
         IEnumerator ShakeRoutine(float smoothness, bool ignoreTimeScale = false)
         {
-            while (_shakePositions.Count > 0 || _shakeParent.localPosition != _influencesSum || _transform.localRotation != _originalRotation)
+            while (_shakePositions.Count > 0 ||
+                   Vector3.Distance(_shakeParent.localPosition, _influencesSum) > .01f ||
+                   Quaternion.Angle(_transform.localRotation, _originalRotation) > .01f)
             {
                 var newShakePosition = Utils.GetVectorsSum(_shakePositions) + _influencesSum;
 
                 var newShakePositionSmoothed = Vector3.zero;
                 if (ignoreTimeScale)
                     newShakePositionSmoothed = Vector3.SmoothDamp(_shakeParent.localPosition, newShakePosition, ref _shakeVelocity, smoothness, float.MaxValue, Time.unscaledDeltaTime);
-                else if (ProCamera2D.DeltaTime > 0)
+                else if (ProCamera2D.DeltaTime > 0f)
                     newShakePositionSmoothed = Vector3.SmoothDamp(_shakeParent.localPosition, newShakePosition, ref _shakeVelocity, smoothness);
 
                 _shakeParent.localPosition = newShakePositionSmoothed;
@@ -331,8 +407,8 @@ namespace Com.LuisPedroFonseca.ProCamera2D
                 if (ignoreTimeScale)
                     _rotationTime = Mathf.SmoothDamp(_rotationTime, 1f, ref _rotationVelocity, smoothness, float.MaxValue, Time.unscaledDeltaTime);
                 else if (ProCamera2D.DeltaTime > 0)
-                    _rotationTime = Mathf.SmoothDamp(_rotationTime, 1f, ref _rotationVelocity, smoothness);
-            
+                    _rotationTime = Mathf.SmoothDamp(_rotationTime, 1f, ref _rotationVelocity, smoothness, float.MaxValue, ProCamera2D.DeltaTime);
+
                 var rotationTargetSmoothed = Quaternion.Slerp(_transform.localRotation, _rotationTarget, _rotationTime);
 
                 _transform.localRotation = rotationTargetSmoothed;
@@ -340,6 +416,18 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
                 yield return ProCamera2D.GetYield();
             }
+
+            ShakeCompleted();
+        }
+
+        void ShakeCompleted()
+        {
+            _shakeParent.localPosition = _influencesSum;
+            _transform.localRotation = _originalRotation;
+            _shakeCoroutine = null;
+
+            if (OnShakeCompleted != null)
+                OnShakeCompleted();
         }
 
         IEnumerator ApplyShakesTimedRoutine(IList<Vector2> shakes, IList<Quaternion> rotations, float[] durations, bool ignoreTimeScale = false)
@@ -352,13 +440,6 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
                 yield return StartCoroutine(ApplyShakeTimedRoutine(shakes[count], rotations[count], duration, ignoreTimeScale));
             }
-
-            _shakeParent.localPosition = _influencesSum;
-            _transform.localRotation = _originalRotation;
-            _shakeCoroutine = null;
-
-            if (OnShakeCompleted != null)
-                OnShakeCompleted();
         }
 
         IEnumerator ApplyShakeTimedRoutine(Vector2 shake, Quaternion rotation, float duration, bool ignoreTimeScale = false)
@@ -380,7 +461,56 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             }
         }
 
-        #if UNITY_EDITOR
+        IEnumerator StopConstantShakeRoutine(float duration)
+        {
+            var velocity = Vector3.zero;
+            _influences.Clear();
+            while (duration >= 0)
+            {
+                duration -= ProCamera2D.DeltaTime;
+
+                _constantShakePosition = Vector3.SmoothDamp(_constantShakePosition, Vector3.zero, ref velocity, duration, float.MaxValue);
+
+                _influences.Add(_constantShakePosition);
+
+                yield return ProCamera2D.GetYield();
+            }
+        }
+
+        IEnumerator CalculateConstantShakePosition(int index, float frequencyMin, float frequencyMax, float amplitudeX, float amplitudeY, float amplitudeZ)
+        {
+            while (_isConstantShaking)
+            {
+                var randomFrequency = Random.Range(frequencyMin, frequencyMax);
+                var unitSphere = Random.insideUnitSphere;
+                var randomAmplitudeX = unitSphere.x * amplitudeX;
+                var randomAmplitudeY = unitSphere.y * amplitudeY;
+                var randomAmplitudeZ = unitSphere.z * amplitudeZ;
+
+                _constantShakePositions[index] = VectorHVD(randomAmplitudeX, randomAmplitudeY, randomAmplitudeZ);
+
+                //Debug.DrawLine(transform.localPosition, transform.localPosition + VectorHVD(randomAmplitudeX, randomAmplitudeY, randomAmplitudeZ), Color.green, randomFrequency);
+
+                yield return new WaitForSeconds(randomFrequency);
+            }
+        }
+
+        IEnumerator ConstantShakeRoutine(float intensity)
+        {
+            while (_isConstantShaking)
+            {
+                var result = Utils.GetVectorsSum(_constantShakePositions) / _constantShakePositions.Length;
+                _constantShakePosition.Set(Utils.SmoothApproach(_constantShakePosition.x, result.x, result.x, intensity, ProCamera2D.DeltaTime),
+                                           Utils.SmoothApproach(_constantShakePosition.y, result.y, result.y, intensity, ProCamera2D.DeltaTime),
+                                           Utils.SmoothApproach(_constantShakePosition.z, result.z, result.z, intensity, ProCamera2D.DeltaTime));
+
+                _influences.Add(_constantShakePosition);
+
+                yield return ProCamera2D.GetYield();
+            }
+        }
+
+#if UNITY_EDITOR
         override protected void DrawGizmos()
         {
             base.DrawGizmos();
@@ -393,6 +523,6 @@ namespace Com.LuisPedroFonseca.ProCamera2D
                 Utils.DrawArrowForGizmo(ProCamera2D.TargetsMidPoint, _shakeParent.localPosition, .04f * cameraDimensions.y);
             }
         }
-        #endif
+#endif
     }
 }

@@ -28,7 +28,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             
             if (ProCamera2D == null)
             {
-                Debug.LogError(GetType().Name + ": ProCamera2D not set and not found on the MainCamera, or no camera with the MainCamera tag assigned.");
+                Debug.LogWarning(GetType().Name + ": ProCamera2D not found! Please add the ProCamera2D.cs component to your main camera.");
                 return;
             }
 
@@ -60,7 +60,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
         void Enable()
         {
-            if (_enabled)
+            if (_enabled || ProCamera2D == null)
                 return;
             
             _enabled = true;

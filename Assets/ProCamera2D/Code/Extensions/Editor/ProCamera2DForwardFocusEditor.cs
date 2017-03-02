@@ -49,11 +49,20 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
 
             // Transition smoothness
-            _tooltip = new GUIContent("Transition smoothness", "How smoothly should the forward focus influence move?");
+            _tooltip = new GUIContent("Transition Smoothness", "How smoothly should the forward focus influence move?");
 
             EditorGUILayout.PropertyField(serializedObject.FindProperty("TransitionSmoothness"), _tooltip);
 
             if(proCamera2DForwardFocus.TransitionSmoothness < 0f) proCamera2DForwardFocus.TransitionSmoothness = 0f;
+
+
+            // Movement threshold
+            _tooltip = new GUIContent ("Movement Threshold", "If the camera movement is smaller than this, it will be ignored. Use it to prevent unexpected forward focus direction changes");
+
+            EditorGUILayout.PropertyField (serializedObject.FindProperty ("MovementThreshold"), _tooltip);
+
+            if (proCamera2DForwardFocus.MovementThreshold.x < 0f) proCamera2DForwardFocus.MovementThreshold.x = 0f;
+            if (proCamera2DForwardFocus.MovementThreshold.y < 0f) proCamera2DForwardFocus.MovementThreshold.y = 0f;
 
 
             // Maintain Influence On Stop

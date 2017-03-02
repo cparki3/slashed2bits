@@ -135,6 +135,20 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             ProCamera2D.RemoveSizeOverrider(this);
         }
 
+        void Reset()
+        {
+            // Create rooms if non-existant
+            if (Rooms.Count == 0)
+            {
+                Rooms.Add(new Room()
+                {
+                    Dimensions = new Rect(0, 0, 10, 10),
+                    TransitionDuration = 1f,
+                    ZoomScale = 1.5f
+                });
+            }
+        }
+
         #region IPositionOverrider implementation
 
         public Vector3 OverridePosition(float deltaTime, Vector3 originalPosition)
@@ -314,7 +328,21 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         }
 
         /// <summary>
-        /// Sets the default numeric boundaries settings.
+        /// Removes a specific room from the list.
+        /// </summary>
+        /// <param name="roomName">Room name / ID</param>
+        public void RemoveRoom(string roomName)
+        {
+            var room = Rooms.Find((Room obj) => obj.ID == roomName);
+
+            if(room != null)
+                Rooms.Remove(room);
+            else
+                Debug.LogWarning(roomName + " not found in the Rooms list.");
+        }
+
+        /// <summary>
+        /// Sets the default numeric boundaries settings (i.e. The boundaries to use when not inside any room).
         /// </summary>
         /// <param name="settings">The numeric boundaries settings. 
         /// You can grab them from the NumericBoundaries extension, or manually create them</param>
