@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-//using UnityEngine.Advertisements;
+using UnityEngine.Advertisements;
 using UnityEngine.SceneManagement;
 
 public class videoButton : MonoBehaviour {
@@ -19,7 +19,7 @@ public class videoButton : MonoBehaviour {
 	void Update () {
 	
 	}
-	/*
+
 	public void ShowAd()
 	{
 		if (!canRestart) {
@@ -59,6 +59,6 @@ public class videoButton : MonoBehaviour {
 			Debug.LogError("The ad failed to be shown.");
 			break;
 		}
-	}*/
+	}
 }
 	
